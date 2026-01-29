@@ -84,6 +84,17 @@ app.get('/documentacao', (req, res) => {
   serveHTML(path.join(publicPath, 'documentacao.html'), res);
 });
 
+// Checkout result pages
+app.get('/sucesso', (req, res) => {
+  serveHTML(path.join(publicPath, 'sucesso.html'), res);
+});
+app.get('/cancelado', (req, res) => {
+  serveHTML(path.join(publicPath, 'cancelado.html'), res);
+});
+app.get('/expirado', (req, res) => {
+  serveHTML(path.join(publicPath, 'expirado.html'), res);
+});
+
 // Redirect .html URLs to clean URLs (without extension)
 // This must come AFTER the specific routes to avoid conflicts
 app.get('*.html', (req, res) => {

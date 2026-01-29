@@ -273,7 +273,8 @@
       "cnpj": "CNPJ: 64.494.403/0001-17",
       "phone": "Tel: +55 62 99355-7070",
       "privacy": "Política de Privacidade",
-      "terms": "Termos de Uso"
+      "terms": "Termos de Uso",
+      "docs": "Documentação"
     },
     "lang": {
       "switchTo": "EN",
@@ -554,7 +555,8 @@
       "cnpj": "CNPJ: 64.494.403/0001-17",
       "phone": "Phone: +55 62 99355-7070",
       "privacy": "Privacy Policy",
-      "terms": "Terms of Use"
+      "terms": "Terms of Use",
+      "docs": "Documentation"
     },
     "lang": {
       "switchTo": "PT",

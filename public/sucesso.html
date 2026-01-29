@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagamento confirmado - Clerky</title>
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+    <meta name="description" content="Seu pagamento foi confirmado. Acesse a plataforma Clerky e comece a usar." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="bg-slate-950 text-white antialiased" data-page="sucesso">
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-950"
+      aria-hidden="true"
+    ></div>
+
+    <div class="min-h-screen flex flex-col">
+      <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+          <a href="/" class="flex items-center gap-2">
+            <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-8 w-auto" />
+            <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-8 w-auto" />
+          </a>
+          <div class="flex items-center gap-3">
+            <a href="https://app.clerky.com.br" class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline">Entrar</a>
+            <a href="https://app.clerky.com.br/signup" class="hidden rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 shadow-sm hover:bg-slate-100 sm:inline">Começar agora</a>
+            <button type="button" class="hidden rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/80 hover:border-white/40 hover:text-white sm:inline-flex items-center gap-1" data-theme-toggle aria-label="Alternar tema claro/escuro">
+              <span class="theme-toggle-label">Tema claro</span>
+            </button>
+            <button type="button" class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white hover:border-white/40 md:hidden" aria-label="Abrir menu" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden border-t border-white/5 md:hidden">
+          <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+            <a href="https://app.clerky.com.br" class="flex-1 rounded-full border border-white/15 px-4 py-1.5 text-center text-sm font-medium text-white/80">Entrar</a>
+            <a href="https://app.clerky.com.br/signup" class="flex-1 rounded-full bg-white px-4 py-1.5 text-center text-sm font-semibold text-slate-950">Começar agora</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 py-12 sm:py-16">
+        <div class="mx-auto max-w-xl px-4 text-center sm:px-6 lg:px-8">
+          <div class="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-8 w-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </div>
+          <h1 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Pagamento confirmado</h1>
+          <p class="mt-3 text-white/70">
+            Obrigado! Seu pagamento foi processado com sucesso. Você já pode acessar a plataforma e usar todos os recursos do seu plano.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
+            <a href="https://app.clerky.com.br" class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 hover:bg-primary-400">
+              Acessar a plataforma
+            </a>
+            <a href="/" class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/90 hover:border-white/40">
+              Voltar ao site
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="border-t border-white/5 bg-slate-950/90 py-8">
+        <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-7 w-auto" />
+              <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-7 w-auto" />
+              <span> • Plataforma de comunicação multicanal</span>
+            </div>
+            <p>© 2026 • Todos os direitos reservados.</p>
+            <p class="text-white/50">CNPJ: 64.494.403/0001-17 • Tel: +55 62 99355-7070</p>
+          </div>
+          <div class="flex flex-col items-start gap-2 text-xs sm:items-end">
+            <div class="flex flex-wrap gap-4">
+              <a href="/politica-privacidade" class="hover:text-primary-200">Política de Privacidade</a>
+              <a href="/termos" class="hover:text-primary-200">Termos de Uso</a>
+              <a href="/documentacao" class="hover:text-primary-200">Documentação</a>
+            </div>
+            <div class="flex flex-wrap gap-3 text-white/70">
+              <a href="https://facebook.com/clerky.hub" target="_blank" rel="noreferrer" class="hover:text-primary-200">Facebook</a>
+              <a href="https://instagram.com/clerky_hub" target="_blank" rel="noreferrer" class="hover:text-primary-200">Instagram</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/smooth-scroll.js"></script>
+    <script src="/assets/js/language.js"></script>
+  </body>
+</html>
