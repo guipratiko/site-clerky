@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Clerky - Plataforma de Automação e Gestão de Comunicação Multicanal</title>
+    <meta
+      name="description"
+      content="Plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram e outros canais em um único ambiente, com IA, CRM Kanban e disparo em massa."
+    />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="bg-slate-950 text-white antialiased" data-page="home">
+    <!-- Background gradient -->
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-primary-950 via-slate-950 to-slate-950"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Page wrapper -->
+    <div class="min-h-screen">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur"
+      >
+        <div
+          class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+        >
+          <!-- Logo -->
+          <a href="#top" class="flex items-center gap-2">
+            <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-8 w-auto" />
+            <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-8 w-auto" />
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+            <a href="#sobre" class="text-white/80 hover:text-white" data-i18n="nav.about"
+              >Sobre</a
+            >
+            <a href="#integracoes" class="text-white/80 hover:text-white" data-i18n="nav.integrations"
+              >Integrações</a
+            >
+            <a href="#como-funciona" class="text-white/80 hover:text-white" data-i18n="nav.howItWorks"
+              >Como funciona</a
+            >
+            <a href="#planos" class="text-white/80 hover:text-white" data-i18n="nav.plans"
+              >Planos</a
+            >
+            <a href="#depoimentos" class="text-white/80 hover:text-white" data-i18n="nav.testimonials"
+              >Clientes</a
+            >
+            <a href="#faq" class="text-white/80 hover:text-white" data-i18n="nav.faq">FAQ</a>
+            <a
+              href="/status"
+              class="rounded-full border border-emerald-400/40 bg-emerald-500/10 px-3 py-1 text-xs font-semibold text-emerald-200 hover:border-emerald-300 hover:text-emerald-100"
+              data-i18n="nav.status"
+              >Status</a
+            >
+          </nav>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-3">
+            <a
+              href="https://app.clerky.com.br"
+              class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline"
+              data-i18n="nav.enter"
+              >Entrar</a
+            >
+            <a
+              href="https://app.clerky.com.br/signup"
+              class="hidden rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 shadow-sm hover:bg-slate-100 sm:inline"
+              data-i18n="nav.startNow"
+              >Começar agora</a
+            >
+            <!-- Theme toggle -->
+            <button
+              type="button"
+              class="hidden rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/80 hover:border-white/40 hover:text-white sm:inline-flex items-center gap-1"
+              data-theme-toggle
+              aria-label="Alternar tema claro/escuro"
+            >
+              <span class="theme-toggle-label">Tema claro</span>
+            </button>
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white hover:border-white/40 md:hidden"
+              aria-label="Abrir menu"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden border-t border-white/5 md:hidden">
+          <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+            <a href="#sobre" class="py-1 text-sm text-white/80" data-i18n="nav.about">Sobre</a>
+            <a href="#integracoes" class="py-1 text-sm text-white/80" data-i18n="nav.integrations"
+              >Integrações</a
+            >
+            <a href="#como-funciona" class="py-1 text-sm text-white/80" data-i18n="nav.howItWorks"
+              >Como funciona</a
+            >
+            <a href="#planos" class="py-1 text-sm text-white/80" data-i18n="nav.plans">Planos</a>
+            <a href="#depoimentos" class="py-1 text-sm text-white/80" data-i18n="nav.testimonials"
+              >Clientes</a
+            >
+            <a href="#faq" class="py-1 text-sm text-white/80" data-i18n="nav.faq">FAQ</a>
+            <a
+              href="/status"
+              class="py-1 text-sm font-semibold text-emerald-300 hover:text-emerald-200"
+              >Status da plataforma</a
+            >
+            <div class="mt-2 flex flex-wrap gap-2">
+              <a
+                href="https://app.clerky.com.br"
+                class="flex-1 rounded-full border border-white/15 px-4 py-1.5 text-center text-sm font-medium text-white/80"
+                data-i18n="nav.enter"
+                >Entrar</a
+              >
+              <a
+                href="https://app.clerky.com.br/signup"
+                class="flex-1 rounded-full bg-white px-4 py-1.5 text-center text-sm font-semibold text-slate-950"
+                data-i18n="nav.startNow"
+                >Começar agora</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main id="top">
+        <!-- Hero -->
+        <section class="relative overflow-hidden">
+          <div
+            class="pointer-events-none absolute inset-x-0 -top-40 -z-10 flex justify-center"
+            aria-hidden="true"
+          >
+            <div
+              class="h-72 w-[40rem] rounded-full bg-primary-500/20 blur-3xl"
+            ></div>
+          </div>
+
+          <div
+            class="mx-auto flex max-w-6xl flex-col gap-12 px-4 pb-24 pt-16 sm:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8 lg:pt-20"
+          >
+            <div class="max-w-xl space-y-6">
+              <span
+                class="inline-flex items-center gap-1 rounded-full border border-primary-500/30 bg-primary-500/10 px-3 py-1 text-xs font-medium text-primary-200"
+                data-i18n="hero.badge"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                Plataforma completa de comunicação com IA
+              </span>
+              <h1
+                class="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl"
+              >
+                <span data-i18n="hero.title">Plataforma de automação e gestão de comunicação</span>
+                <span class="text-primary-300" data-i18n="hero.titleHighlight">multicanal</span>
+              </h1>
+              <p class="text-base text-white/70 sm:text-lg" data-i18n="hero.description">
+                O Clerky é uma plataforma de automação e gestão de comunicação
+                que centraliza WhatsApp, Instagram e outros canais em um único
+                ambiente. Automatize atendimentos, gerencie relacionamento com
+                clientes e execute campanhas em escala.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <a
+                  href="https://app.clerky.com.br/signup"
+                  class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 hover:bg-primary-400"
+                  data-i18n="hero.ctaStart"
+                  >Começar agora</a
+                >
+                <a
+                  href="#integracoes"
+                  class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/90 hover:border-white/40"
+                  data-i18n="hero.ctaIntegrations"
+                >
+                  Ver integrações
+                </a>
+                <a
+                  href="#contato"
+                  class="inline-flex items-center gap-2 text-sm font-medium text-emerald-300/90 hover:text-emerald-200"
+                  data-i18n="hero.ctaWhatsApp"
+                >
+                  Falar no WhatsApp
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
+              <div class="flex flex-wrap gap-3 text-xs text-white/60">
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1"
+                  data-i18n="hero.featureAI"
+                >
+                  <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+                  IA sem código
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1"
+                  data-i18n="hero.featureWhatsApp"
+                >
+                  WhatsApp &amp; Instagram
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1"
+                  data-i18n="hero.featureWorkflows"
+                >
+                  Workflows visuais
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1"
+                  data-i18n="hero.featureCRM"
+                >
+                  CRM Kanban
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1"
+                  data-i18n="hero.featureBulk"
+                >
+                  Disparo em massa
+                </span>
+                <span
+                  class="inline-flex items-center gap-1 rounded-full bg-white/5 px-3 py-1"
+                  data-i18n="hero.featureApps"
+                >
+                  Apps iOS &amp; Android
+                </span>
+              </div>
+
+              <div class="pt-4">
+                <p class="text-xs font-medium uppercase tracking-[0.2em] text-white/40" data-i18n="hero.trustedBy">
+                  Empresas que confiam na Clerky
+                </p>
+                <div class="mt-3 flex flex-wrap items-center gap-x-8 gap-y-3">
+                  <img src="/img/logoCacursos.png" alt="CA Cursos" class="trusted-logo h-8 w-auto" />
+                  <img src="/img/logoConexaoProb.png" alt="Conexão Prob" class="trusted-logo h-8 w-auto" />
+                  <img src="/img/logoTesteMatch.png" alt="Teste Match" class="trusted-logo h-8 w-auto" />
+                  <img src="/img/LogoScancal.png" alt="Scancal" class="trusted-logo h-8 w-auto" />
+                  <img src="/img/LogoTokCash.png" alt="TokCash" class="trusted-logo h-8 w-auto" />
+                  <img src="/img/logoMvb.png" alt="MVB" class="trusted-logo h-8 w-auto" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero mockup -->
+            <div
+              class="relative flex-1 lg:flex lg:justify-end"
+              aria-hidden="true"
+            >
+              <div
+                class="relative mx-auto w-full max-w-md rounded-3xl border border-white/10 bg-slate-900/80 p-4 shadow-2xl shadow-primary-500/20"
+              >
+                <div class="flex items-center justify-between text-xs text-white/40">
+                  <span>CRM Kanban</span>
+                  <span>Hoje</span>
+                </div>
+                <div class="mt-4 grid grid-cols-3 gap-3 text-xs">
+                  <div class="space-y-2 rounded-2xl bg-slate-800/80 p-3">
+                    <p class="text-[10px] font-medium uppercase text-white/50">
+                      Novos Leads
+                    </p>
+                    <div class="space-y-2">
+                      <div
+                        class="rounded-xl bg-slate-900/80 p-2.5 text-[11px] text-white/80"
+                      >
+                        <p class="font-semibold">João Silva</p>
+                        <p class="text-[10px] text-white/60">Tech Corp</p>
+                        <p class="mt-1 text-[10px] text-emerald-300 text-gradient-primary">
+                          R$ 5.000 • Hoje
+                        </p>
+                      </div>
+                      <div
+                        class="rounded-xl bg-slate-900/80 p-2.5 text-[11px] text-white/80"
+                      >
+                        <p class="font-semibold">Maria Santos</p>
+                        <p class="text-[10px] text-white/60">StartUp XYZ</p>
+                        <p class="mt-1 text-[10px] text-emerald-300 text-gradient-primary">
+                          R$ 8.000 • Hoje
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-2 rounded-2xl bg-slate-800/80 p-3">
+                    <p class="text-[10px] font-medium uppercase text-white/50">
+                      Em negociação
+                    </p>
+                    <div class="space-y-2">
+                      <div
+                        class="rounded-xl bg-slate-900/80 p-2.5 text-[11px] text-white/80"
+                      >
+                        <p class="font-semibold">Pedro Costa</p>
+                        <p class="text-[10px] text-white/60">Agência ABC</p>
+                        <p class="mt-1 text-[10px] text-amber-300 text-gradient-primary">
+                          R$ 12.000 • Hoje
+                        </p>
+                      </div>
+                      <div
+                        class="rounded-xl bg-slate-900/80 p-2.5 text-[11px] text-white/80"
+                      >
+                        <p class="font-semibold">Ana Lima</p>
+                        <p class="text-[10px] text-white/60">E-commerce Plus</p>
+                        <p class="mt-1 text-[10px] text-amber-300 text-gradient-primary">
+                          R$ 15.000 • Hoje
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="space-y-2 rounded-2xl bg-slate-800/80 p-3">
+                    <p class="text-[10px] font-medium uppercase text-white/50">
+                      Fechados
+                    </p>
+                    <div class="space-y-2">
+                      <div
+                        class="rounded-xl bg-emerald-600/20 p-2.5 text-[11px] text-emerald-50 ring-1 ring-emerald-400/40"
+                      >
+                        <p class="font-semibold">Carlos Rocha</p>
+                        <p class="text-[10px] text-emerald-100/80">
+                          Mega Store
+                        </p>
+                        <p class="mt-1 text-[10px] text-gradient-primary">R$ 20.000 • Hoje</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-4 rounded-2xl border border-dashed border-white/10 bg-slate-900/50 p-3 text-xs text-white/70"
+                >
+                  <p class="font-medium">Agente de IA - Vendedor</p>
+                  <p class="mt-1 text-[11px] text-primary-100">
+                    “Olá! Como posso ajudar você hoje?”
+                  </p>
+                  <p class="mt-2 text-[11px] text-white/60">
+                    “Quero saber mais sobre o plano Pro”
+                  </p>
+                  <p class="mt-2 text-[11px] text-primary-100">
+                    “O Plano Pro inclui 10.000 mensagens/mês, agentes
+                    ilimitados e CRM Kanban. Posso te enviar uma demonstração?”
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Sobre -->
+        <section
+          id="sobre"
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid gap-10 lg:grid-cols-[1.3fr,1fr] lg:items-start">
+              <div>
+                <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300">
+                  Sobre o aplicativo
+                </h2>
+                <p class="mt-3 text-2xl font-semibold tracking-tight">
+                  Tudo que você precisa para centralizar suas conversas em um
+                  único lugar.
+                </p>
+                <p class="mt-4 text-sm text-white/70 sm:text-base">
+                  O Clerky é uma plataforma criada para empresas que precisam
+                  automatizar atendimento, gerenciar relacionamento com clientes
+                  e executar campanhas de comunicação em escala. Conecte
+                  múltiplas contas WhatsApp, Instagram e outros canais, crie
+                  agentes de IA, construa workflows visuais e organize tudo no
+                  CRM Kanban.
+                </p>
+                <p class="mt-3 text-sm text-white/60 sm:text-base">
+                  Disponível também em apps nativos para iOS e Android, com
+                  autenticação biométrica e sincronização em tempo real.
+                </p>
+              </div>
+              <div
+                class="space-y-3 rounded-3xl border border-white/10 bg-slate-900/70 p-5 text-sm text-white/80"
+              >
+                <h3 class="text-xs font-semibold uppercase tracking-[0.2em] text-white/50" data-i18n="about.integrationsTitle">
+                  Integrações e permissões
+                </h3>
+                <p class="text-xs text-white/60" data-i18n="about.integrationsDesc">
+                  O Clerky se conecta a diversos serviços para oferecer uma
+                  solução completa. Todas as permissões são usadas
+                  exclusivamente para as funcionalidades descritas abaixo.
+                </p>
+                <ul class="space-y-2 text-xs">
+                  <li data-i18n="about.google">
+                    <span class="font-semibold text-primary-200">Google</span>
+                    (Sheets e Drive): sincronização de leads com planilhas e
+                    armazenamento de arquivos.
+                  </li>
+                  <li data-i18n="about.meta">
+                    <span class="font-semibold text-primary-200">Meta</span>
+                    (Instagram): automações em DMs, comentários e sequências de
+                    mensagens.
+                  </li>
+                  <li data-i18n="about.openai">
+                    <span class="font-semibold text-primary-200">OpenAI</span>:
+                    agentes de IA, respostas com contexto e transcrição de
+                    áudio.
+                  </li>
+                  <li data-i18n="about.typebot">
+                    <span class="font-semibold text-primary-200">Typebot</span>:
+                    chatbots externos conectados ao MindClerky.
+                  </li>
+                  <li data-i18n="about.whatsapp">
+                    <span class="font-semibold text-primary-200">WhatsApp</span
+                    >: múltiplas instâncias, grupos e histórico de conversas.
+                  </li>
+                </ul>
+                <p class="pt-2 text-[11px] text-white/50">
+                  <span data-i18n="about.privacyNote">Não vendemos nem compartilhamos seus dados com terceiros sem consentimento. Veja</span>
+                  <a
+                    href="/politica-privacidade"
+                    class="text-primary-200 underline-offset-2 hover:underline"
+                    data-i18n="about.privacyLink"
+                    >Política de Privacidade</a
+                  >
+                  e
+                  <a
+                    href="/termos"
+                    class="text-primary-200 underline-offset-2 hover:underline"
+                    data-i18n="about.termsLink"
+                    >Termos de Uso</a
+                  >.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tudo que você precisa -->
+        <section
+          id="integracoes"
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300" data-i18n="features.label">
+                Tudo que você precisa
+              </h2>
+              <p class="mt-3 text-2xl font-semibold tracking-tight" data-i18n="features.title">
+                Do primeiro contato à conversão, em uma única plataforma.
+              </p>
+              <p class="mt-3 text-sm text-white/70 sm:text-base" data-i18n="features.description">
+                Gerencie toda a jornada do cliente com inteligência artificial:
+                captação, atendimento, nutrição e fechamento de vendas.
+              </p>
+            </div>
+
+            <div
+              class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+            >
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-4"
+              >
+                <p class="text-sm font-semibold" data-i18n="features.aiAgents.title">Agentes de IA sem código</p>
+                <p class="text-sm text-white/70" data-i18n="features.aiAgents.desc">
+                  Crie agentes com OpenAI (GPT-4, GPT-3.5) para responder com
+                  contexto, manter memória das conversas e qualificar leads.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-4"
+              >
+                <p class="text-sm font-semibold" data-i18n="features.whatsapp.title">Múltiplas instâncias WhatsApp</p>
+                <p class="text-sm text-white/70" data-i18n="features.whatsapp.desc">
+                  Conecte várias contas, gere QR Codes, acompanhe status em
+                  tempo real e configure webhooks.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-4"
+              >
+                <p class="text-sm font-semibold" data-i18n="features.instagram.title">Automações para Instagram</p>
+                <p class="text-sm text-white/70" data-i18n="features.instagram.desc">
+                  Conecte via OAuth Meta, automatize DMs, comentários,
+                  sequências de mensagens e relatórios.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-4"
+              >
+                <p class="text-sm font-semibold" data-i18n="features.crm.title">CRM Kanban integrado</p>
+                <p class="text-sm text-white/70" data-i18n="features.crm.desc">
+                  Organize contatos em colunas personalizáveis, veja histórico,
+                  envie mensagens e filtre rapidamente.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-4"
+              >
+                <p class="text-sm font-semibold" data-i18n="features.bulk.title">Disparo em massa</p>
+                <p class="text-sm text-white/70" data-i18n="features.bulk.desc">
+                  Crie campanhas segmentadas com agendamento, controle de
+                  velocidade, validação de contatos e relatórios.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/60 p-4"
+              >
+                <p class="text-sm font-semibold" data-i18n="features.workflows.title">Workflows visuais</p>
+                <p class="text-sm text-white/70" data-i18n="features.workflows.desc">
+                  Monte fluxos no MindClerky com nós condicionais, Typebot,
+                  Google Sheets, OpenAI e webhooks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Como funciona -->
+        <section
+          id="como-funciona"
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300" data-i18n="howItWorks.label">
+                Como funciona
+              </h2>
+              <p class="mt-3 text-2xl font-semibold tracking-tight" data-i18n="howItWorks.title">
+                Configure sua automação em minutos.
+              </p>
+              <p class="mt-3 text-sm text-white/70 sm:text-base" data-i18n="howItWorks.description">
+                Em poucos passos você conecta seus canais, cria agentes de IA,
+                integra com seus sistemas e começa a escalar resultados.
+              </p>
+            </div>
+
+            <div
+              class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-7"
+            >
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/70 p-4"
+              >
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200" data-i18n="howItWorks.step1.label">
+                  Passo 1
+                </p>
+                <p class="text-sm font-semibold" data-i18n="howItWorks.step1.title">Conecte seu WhatsApp</p>
+                <p class="text-sm text-white/70" data-i18n="howItWorks.step1.desc">
+                  Escaneie o QR Code e vincule sua conta em segundos. Conexão
+                  segura e criptografada.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/70 p-4"
+              >
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200" data-i18n="howItWorks.step2.label">
+                  Passo 2
+                </p>
+                <p class="text-sm font-semibold" data-i18n="howItWorks.step2.title">
+                  Escolha ou crie seu agente de IA
+                </p>
+                <p class="text-sm text-white/70" data-i18n="howItWorks.step2.desc">
+                  Use personas prontas (vendedor, suporte, secretária) ou
+                  configure o comportamento do zero.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/70 p-4"
+              >
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200" data-i18n="howItWorks.step3.label">
+                  Passo 3
+                </p>
+                <p class="text-sm font-semibold" data-i18n="howItWorks.step3.title">Integre com seu sistema</p>
+                <p class="text-sm text-white/70" data-i18n="howItWorks.step3.desc">
+                  Configure APIs e webhooks para conectar CRM, ERP, planilhas e
+                  qualquer ferramenta com API.
+                </p>
+              </div>
+              <div
+                class="flex flex-col gap-2 rounded-2xl border border-white/10 bg-slate-900/70 p-4"
+              >
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200" data-i18n="howItWorks.step4.label">
+                  Passo 4
+                </p>
+                <p class="text-sm font-semibold" data-i18n="howItWorks.step4.title">Acompanhe e escale</p>
+                <p class="text-sm text-white/70" data-i18n="howItWorks.step4.desc">
+                  Monitore conversas no CRM Kanban, dispare campanhas e acompanhe
+                  métricas em tempo real.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Conecte a qualquer sistema -->
+        <section
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300">
+                Conecte a qualquer sistema
+              </h2>
+              <p class="mt-3 text-2xl font-semibold tracking-tight">
+                Integrações com ERPs, CRMs, planilhas, automações e muito mais.
+              </p>
+              <p class="mt-3 text-sm text-white/70 sm:text-base">
+                Se tem API ou webhook, a Clerky conecta. Crie fluxos que
+                conversam com suas ferramentas favoritas em tempo real.
+              </p>
+            </div>
+
+            <div
+              class="mt-10 grid gap-3 text-xs text-white/70 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6"
+            >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >Meta (Instagram)</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >WhatsApp</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >OpenAI (GPT-4)</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >Typebot</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >Google Sheets</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >Google Drive</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >n8n</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >Webhook</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >Airtable</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >PostgreSQL</span
+              >
+              <span class="rounded-full bg-white/5 px-3 py-1.5 text-center"
+                >MongoDB</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Planos -->
+        <section
+          id="planos"
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300" data-i18n="plans.label">
+                Planos para todos os tamanhos
+              </h2>
+              <p class="mt-3 text-2xl font-semibold tracking-tight" data-i18n="plans.title">
+                Escolha o plano ideal para o seu negócio.
+              </p>
+              <p class="mt-3 text-sm text-white/70 sm:text-base" data-i18n="plans.description">
+                Todas as assinaturas incluem teste grátis, acesso imediato e
+                cancelamento a qualquer momento.
+              </p>
+            </div>
+
+            <div
+              class="mt-10 grid gap-6 md:grid-cols-2 md:items-stretch lg:gap-7"
+            >
+              <!-- Pro -->
+              <div
+                class="relative flex flex-col rounded-3xl border border-primary-400/60 bg-gradient-to-b from-primary-500/20 via-slate-900 to-slate-900 p-5 shadow-xl shadow-primary-500/40"
+              >
+                <span
+                  class="absolute -top-3 right-4 rounded-full bg-primary-400 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-950"
+                  data-i18n="plans.pro.badge"
+                  >Mais popular</span
+                >
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200"
+                  data-i18n="plans.pro.label"
+                >
+                  Pro
+                </p>
+                <p class="mt-1 text-lg font-semibold" data-i18n="plans.pro.title">
+                  Para empresas que querem escalar vendas
+                </p>
+                <p class="mt-3 text-2xl font-bold" data-i18n="plans.pro.price">R$ 197/mês</p>
+                <ul class="mt-4 space-y-2 text-sm text-white/80">
+                  <li data-i18n="plans.pro.features.1">10.000 mensagens/mês</li>
+                  <li data-i18n="plans.pro.features.2">Agentes ilimitados</li>
+                  <li data-i18n="plans.pro.features.3">CRM Kanban completo</li>
+                  <li data-i18n="plans.pro.features.4">Disparo em massa</li>
+                  <li data-i18n="plans.pro.features.5">API &amp; webhooks avançados</li>
+                  <li data-i18n="plans.pro.features.6">Integrações nativas</li>
+                  <li data-i18n="plans.pro.features.7">Suporte prioritário</li>
+                  <li data-i18n="plans.pro.features.8">Analytics avançado</li>
+                </ul>
+                <button
+                  id="btn-assinar-pro"
+                  class="mt-6 inline-flex items-center justify-center rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-400 disabled:opacity-50 disabled:cursor-not-allowed"
+                  data-i18n="plans.pro.cta"
+                >
+                  <span id="btn-assinar-pro-text">Assinar Pro</span>
+                  <span id="btn-assinar-pro-loading" class="hidden ml-2">
+                    <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  </span>
+                </button>
+              </div>
+
+              <!-- Enterprise -->
+              <div
+                class="flex flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-5"
+              >
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60"
+                  data-i18n="plans.enterprise.label"
+                >
+                  Enterprise
+                </p>
+                <p class="mt-1 text-lg font-semibold" data-i18n="plans.enterprise.title">
+                  Solução personalizada para grandes volumes
+                </p>
+                <p class="mt-3 text-2xl font-bold" data-i18n="plans.enterprise.price">Sob consulta</p>
+                <ul class="mt-4 space-y-2 text-sm text-white/70">
+                  <li data-i18n="plans.enterprise.features.1">Mensagens ilimitadas</li>
+                  <li data-i18n="plans.enterprise.features.2">Agentes ilimitados</li>
+                  <li data-i18n="plans.enterprise.features.3">CRM personalizado</li>
+                  <li data-i18n="plans.enterprise.features.4">Disparo em massa ilimitado</li>
+                  <li data-i18n="plans.enterprise.features.5">API dedicada</li>
+                  <li data-i18n="plans.enterprise.features.6">White label</li>
+                  <li data-i18n="plans.enterprise.features.7">Gerente de contas dedicado</li>
+                  <li data-i18n="plans.enterprise.features.8">SLA garantido</li>
+                  <li data-i18n="plans.enterprise.features.9">Onboarding personalizado</li>
+                </ul>
+                <a
+                  href="#contato"
+                  class="mt-6 inline-flex items-center justify-center rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:border-white/40"
+                  data-i18n="plans.enterprise.cta"
+                  >Falar com vendas</a
+                >
+              </div>
+            </div>
+
+            <p class="mt-6 text-xs text-white/50" data-i18n="plans.note">
+              Todas as assinaturas incluem período de teste grátis. Cancele a
+              qualquer momento.
+            </p>
+          </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section
+          id="depoimentos"
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300" data-i18n="testimonials.label">
+                O que nossos clientes dizem
+              </h2>
+              <p class="mt-3 text-2xl font-semibold tracking-tight" data-i18n="testimonials.title">
+                Empresas de todos os tamanhos confiam na Clerky.
+              </p>
+              <p class="mt-3 text-sm text-white/70 sm:text-base" data-i18n="testimonials.description">
+                Automatize WhatsApp, reduza tempo de resposta e aumente vendas
+                com uma plataforma feita para escala.
+              </p>
+            </div>
+
+            <div
+              class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-7"
+            >
+              <article
+                class="flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-white/80"
+              >
+                <p class="text-sm" data-i18n="testimonials.testimonial1">
+                  “A Clerky revolucionou nosso atendimento. Aumentamos em 40% as
+                  vendas apenas automatizando o primeiro contato com IA.”
+                </p>
+                <div class="mt-4 text-xs text-white/60">
+                  <p class="font-semibold">João Silva</p>
+                  <p>CEO @ Tech Startup</p>
+                </div>
+              </article>
+              <article
+                class="flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-white/80"
+              >
+                <p class="text-sm" data-i18n="testimonials.testimonial2">
+                  “Disparo em massa sem bloqueios e CRM integrado. Substituímos
+                  três ferramentas por uma solução única.”
+                </p>
+                <div class="mt-4 text-xs text-white/60">
+                  <p class="font-semibold">Maria Santos</p>
+                  <p>Head de Marketing @ E-commerce Brasil</p>
+                </div>
+              </article>
+              <article
+                class="flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-white/80"
+              >
+                <p class="text-sm" data-i18n="testimonials.testimonial3">
+                  “Integramos com nosso sistema em menos de 2 horas. A API é
+                  bem documentada e o suporte é excelente.”
+                </p>
+                <div class="mt-4 text-xs text-white/60">
+                  <p class="font-semibold">Pedro Costa</p>
+                  <p>Diretor Comercial @ Agência Digital</p>
+                </div>
+              </article>
+              <article
+                class="flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-white/80"
+              >
+                <p class="text-sm" data-i18n="testimonials.testimonial4">
+                  “Usamos para onboarding de clientes. O agente de IA responde
+                  80% das dúvidas automaticamente. Game changer!”
+                </p>
+                <div class="mt-4 text-xs text-white/60">
+                  <p class="font-semibold">Ana Lima</p>
+                  <p>Founder @ SaaS Company</p>
+                </div>
+              </article>
+              <article
+                class="flex flex-col rounded-2xl border border-white/10 bg-slate-900/70 p-4 text-sm text-white/80"
+              >
+                <p class="text-sm" data-i18n="testimonials.testimonial5">
+                  “Webhooks em tempo real funcionam perfeitamente. A
+                  confiabilidade da entrega é impressionante. 99,9% de uptime.”
+                </p>
+                <div class="mt-4 text-xs text-white/60">
+                  <p class="font-semibold">Carlos Rocha</p>
+                  <p>CTO @ FinTech</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section
+          id="faq"
+          class="border-t border-white/5 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+              <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300" data-i18n="faq.label">
+                Perguntas frequentes
+              </h2>
+              <p class="mt-3 text-2xl font-semibold tracking-tight" data-i18n="faq.title">
+                Tire suas dúvidas sobre a plataforma.
+              </p>
+            </div>
+
+            <div class="mt-8 space-y-3 text-sm text-white/80">
+              <details class="group rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <summary
+                  class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium"
+                >
+                  <span data-i18n="faq.q1">A Clerky está em conformidade com a LGPD?</span>
+                  <span
+                    class="text-xs text-white/40 group-open:rotate-45 group-open:text-primary-200"
+                    >+</span
+                  >
+                </summary>
+                <p class="mt-3 text-sm text-white/70" data-i18n="faq.a1">
+                  Sim. Seguimos as diretrizes da LGPD, tratamos dados com base
+                  em bases legais adequadas e oferecemos transparência sobre uso
+                  e revogação de consentimento.
+                </p>
+              </details>
+              <details class="group rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <summary
+                  class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium"
+                >
+                  <span data-i18n="faq.q2">Existem limites de disparo em massa?</span>
+                  <span
+                    class="text-xs text-white/40 group-open:rotate-45 group-open:text-primary-200"
+                    >+</span
+                  >
+                </summary>
+                <p class="mt-3 text-sm text-white/70" data-i18n="faq.a2">
+                  Cada plano possui limites e controles de velocidade para evitar
+                  bloqueios, mas você pode contratar volumes adicionais
+                  conforme a necessidade.
+                </p>
+              </details>
+              <details class="group rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <summary
+                  class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium"
+                >
+                  <span data-i18n="faq.q3">Posso testar antes de pagar?</span>
+                  <span
+                    class="text-xs text-white/40 group-open:rotate-45 group-open:text-primary-200"
+                    >+</span
+                  >
+                </summary>
+                <p class="mt-3 text-sm text-white/70" data-i18n="faq.a3">
+                  Sim. Oferecemos um período de trial gratuito de 7 dias com recursos
+                  ilimitados para que você valide a solução no seu dia a dia.
+                </p>
+              </details>
+              <details class="group rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <summary
+                  class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium"
+                >
+                  <span data-i18n="faq.q4">Quais integrações são suportadas?</span>
+                  <span
+                    class="text-xs text-white/40 group-open:rotate-45 group-open:text-primary-200"
+                    >+</span
+                  >
+                </summary>
+                <p class="mt-3 text-sm text-white/70" data-i18n="faq.a4">
+                  Trabalhamos com integrações nativas (WhatsApp, Instagram,
+                  OpenAI, Typebot, Google, CRMs, ERPs) e qualquer sistema com
+                  API REST ou webhooks.
+                </p>
+              </details>
+              <details class="group rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <summary
+                  class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium"
+                >
+                  <span>Os dados ficam em servidores no Brasil?</span>
+                  <span
+                    class="text-xs text-white/40 group-open:rotate-45 group-open:text-primary-200"
+                    >+</span
+                  >
+                </summary>
+                <p class="mt-3 text-sm text-white/70">
+                  Sim! Toda a infraestrutura da Clerky está hospedada em servidores no Brasil (AWS São Paulo), garantindo baixa latência e conformidade total com regulamentações locais. Fazemos backups diários criptografados e mantemos redundância em múltiplas zonas de disponibilidade.
+                </p>
+              </details>
+              <details class="group rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+                <summary
+                  class="flex cursor-pointer items-center justify-between gap-4 text-sm font-medium"
+                >
+                  <span>Como funciona o setup do agente de IA?</span>
+                  <span
+                    class="text-xs text-white/40 group-open:rotate-45 group-open:text-primary-200"
+                    >+</span
+                  >
+                </summary>
+                <p class="mt-3 text-sm text-white/70">
+                  É muito simples! Você escolhe uma persona (vendedor, suporte, etc.), personaliza as respostas base, define o tom de voz e pronto. Não precisa programar nada. O agente aprende com as conversas e você pode ajustar as respostas a qualquer momento pelo painel. Também oferecemos templates prontos para começar em minutos.
+                </p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA final -->
+        <section
+          id="contato"
+          class="border-t border-white/5 bg-gradient-to-b from-slate-950/80 via-primary-950/40 to-slate-950 py-16 sm:py-20"
+        >
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-200" data-i18n="cta.label">
+              Pronto para integrar e vender com IA?
+            </h2>
+            <p
+              class="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl"
+              data-i18n="cta.title"
+            >
+              Junte-se a empresas que já automatizam WhatsApp com a Clerky.
+            </p>
+            <p class="mt-4 text-sm text-white/70 sm:text-base" data-i18n="cta.description">
+              Comece seu teste grátis hoje mesmo e veja na prática como
+              automatizar comunicação, atendimento e vendas.
+            </p>
+            <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="#planos"
+                class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/40 hover:bg-primary-400"
+                data-i18n="cta.button"
+                >Começar agora</a
+              >
+              <a
+                href="https://wa.me/5562993557070"
+                class="inline-flex items-center justify-center rounded-full border border-emerald-400/60 bg-emerald-500/10 px-6 py-2.5 text-sm font-semibold text-emerald-200 hover:border-emerald-300 hover:text-emerald-100"
+                data-i18n="cta.whatsapp"
+              >
+                Falar no WhatsApp
+              </a>
+            </div>
+            <p class="mt-4 text-xs text-white/60" data-i18n="cta.note">
+              7 dias grátis • Cancele quando quiser • Conformidade LGPD
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-white/5 bg-slate-950/90 py-8">
+        <div
+          class="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
+        >
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-7 w-auto" />
+              <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-7 w-auto" />
+              <span> • Plataforma de comunicação multicanal</span>
+            </div>
+            <p data-i18n="footer.copyright">© 2026 • Todos os direitos reservados.</p>
+            <p class="text-white/50">
+              <span data-i18n="footer.cnpj">CNPJ: 64.494.403/0001-17</span> • <span data-i18n="footer.phone">Tel: +55 62 99355-7070</span>
+            </p>
+          </div>
+          <div class="flex flex-col items-start gap-2 text-xs sm:items-end">
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="/politica-privacidade"
+                class="hover:text-primary-200"
+                data-i18n="footer.privacy"
+                >Política de Privacidade</a
+              >
+              <a
+                href="/termos"
+                class="hover:text-primary-200"
+                data-i18n="footer.terms"
+                >Termos de Uso</a
+              >
+            </div>
+            <div class="flex flex-wrap gap-3 text-white/70">
+              <a
+                href="https://facebook.com/clerky.hub"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:text-primary-200"
+                >Facebook</a
+              >
+              <a
+                href="https://instagram.com/clerky_hub"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:text-primary-200"
+                >Instagram</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Theme -->
+    <script src="/assets/js/theme.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="/assets/js/smooth-scroll.js"></script>
+    <!-- Language Switcher -->
+    <script src="/assets/js/language.js"></script>
+    <!-- Checkout Script -->
+    <script>
+      (function() {
+        'use strict';
+        
+        const btnAssinarPro = document.getElementById('btn-assinar-pro');
+        const btnText = document.getElementById('btn-assinar-pro-text');
+        const btnLoading = document.getElementById('btn-assinar-pro-loading');
+        
+        if (!btnAssinarPro) return;
+        
+        async function criarCheckout() {
+          // Desabilitar botão e mostrar loading
+          btnAssinarPro.disabled = true;
+          btnText.textContent = 'Processando...';
+          btnLoading.classList.remove('hidden');
+          
+          try {
+            const response = await fetch('/api/checkout', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                billingTypes: ['CREDIT_CARD'],
+                quantity: 1,
+              }),
+            });
+            
+            const data = await response.json();
+            
+            if (!response.ok) {
+              throw new Error(data.error || 'Erro ao criar checkout');
+            }
+            
+            if (data.success && data.link) {
+              // Redirecionar para o checkout
+              window.location.href = data.link;
+            } else {
+              throw new Error('URL do checkout não retornada');
+            }
+          } catch (error) {
+            console.error('Erro ao criar checkout:', error);
+            alert('Erro ao processar checkout. Por favor, tente novamente.');
+            
+            // Restaurar botão
+            btnAssinarPro.disabled = false;
+            btnText.textContent = 'Assinar Pro';
+            btnLoading.classList.add('hidden');
+          }
+        }
+        
+        btnAssinarPro.addEventListener('click', criarCheckout);
+      })();
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Termos de Uso - Clerky</title>
+    <meta
+      name="description"
+      content="Termos de Uso da Clerky, plataforma de automação e gestão de comunicação multicanal."
+    />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="bg-slate-950 text-white antialiased" data-page="terms">
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-950"
+      aria-hidden="true"
+    ></div>
+
+    <div class="min-h-screen flex flex-col">
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/80 backdrop-blur"
+      >
+        <div
+          class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+        >
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2">
+            <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-8 w-auto" />
+            <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-8 w-auto" />
+          </a>
+
+          <!-- Actions -->
+          <div class="flex items-center gap-3">
+            <a
+              href="https://app.clerky.com.br"
+              class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline"
+              data-i18n="nav.enter"
+              >Entrar</a
+            >
+            <a
+              href="https://app.clerky.com.br/signup"
+              class="hidden rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 shadow-sm hover:bg-slate-100 sm:inline"
+              data-i18n="nav.startNow"
+              >Começar agora</a
+            >
+            <!-- Theme toggle -->
+            <button
+              type="button"
+              class="hidden rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/80 hover:border-white/40 hover:text-white sm:inline-flex items-center gap-1"
+              data-theme-toggle
+              aria-label="Alternar tema claro/escuro"
+            >
+              <span class="theme-toggle-label">Tema claro</span>
+            </button>
+            <button
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white hover:border-white/40 md:hidden"
+              aria-label="Abrir menu"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                class="h-5 w-5"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden border-t border-white/5 md:hidden">
+          <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
+            <div class="mt-2 flex flex-wrap gap-2">
+              <a
+                href="https://app.clerky.com.br"
+                class="flex-1 rounded-full border border-white/15 px-4 py-1.5 text-center text-sm font-medium text-white/80"
+                data-i18n="nav.enter"
+                >Entrar</a
+              >
+              <a
+                href="https://app.clerky.com.br/signup"
+                class="flex-1 rounded-full bg-white px-4 py-1.5 text-center text-sm font-semibold text-slate-950"
+                data-i18n="nav.startNow"
+                >Começar agora</a
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Conteúdo -->
+      <main class="flex-1 py-8 sm:py-10">
+        <article
+          class="mx-auto max-w-5xl px-4 text-sm leading-relaxed text-white/80 sm:px-6 lg:px-8"
+        >
+          <header class="mb-8">
+            <h1
+              class="text-2xl font-semibold tracking-tight text-white sm:text-3xl"
+            >
+              TERMOS DE USO – CLERKY
+            </h1>
+            <p class="mt-2 text-xs text-white/60">
+              Última atualização: 28/01/2026
+            </p>
+          </header>
+
+          <section class="space-y-4">
+            <p>
+              Bem-vindo à <span class="font-semibold text-white">Clerky Tecnologia Ltda.</span>. Estes Termos de Uso regulam o acesso e a utilização da plataforma <span class="font-semibold text-white">Clerky</span>, incluindo todos os seus módulos, aplicativos móveis, APIs, integrações, funcionalidades, websites e serviços relacionados (conjuntamente, a "Plataforma"). Ao acessar ou utilizar a Plataforma, você declara ter lido, compreendido e concordado integralmente com estes Termos.
+            </p>
+            <p>
+              Caso não concorde com qualquer disposição, você não deverá utilizar a Plataforma.
+            </p>
+          </section>
+
+          <!-- 1. DEFINIÇÕES -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              1. DEFINIÇÕES
+            </h2>
+            <ul class="list-disc space-y-2 pl-5">
+              <li>
+                <span class="font-semibold text-white">Clerky:</span> Plataforma SaaS de automação, gestão de comunicação e integração multicanal.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Usuário:</span> Pessoa física ou jurídica que acessa ou utiliza a Plataforma.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Conta:</span> Cadastro individual do Usuário na Plataforma.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Conteúdo:</span> Quaisquer dados, mensagens, textos, imagens, vídeos, áudios, fluxos, automações, integrações, códigos ou informações inseridas ou processadas pelo Usuário.
+              </li>
+              <li>
+                <span class="font-semibold text-white">Serviços de Terceiros:</span> Serviços externos integrados à Plataforma, incluindo, mas não se limitando a Apple, Google, Meta (WhatsApp, Instagram, Facebook), OpenAI e outros.
+              </li>
+            </ul>
+          </section>
+
+          <!-- 2. OBJETO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              2. OBJETO
+            </h2>
+            <p>
+              A Clerky disponibiliza uma plataforma tecnológica que permite automação de comunicações, gestão de clientes, integração com canais de mensagens, criação de fluxos automatizados, uso de agentes de inteligência artificial e outras funcionalidades descritas em seu site oficial.
+            </p>
+            <p>
+              A Clerky <span class="font-semibold text-white">não é operadora de telecomunicações</span>, <span class="font-semibold text-white">não fornece serviços financeiros</span>, <span class="font-semibold text-white">não intermedia pagamentos de terceiros</span>, <span class="font-semibold text-white">não atua como agência de marketing</span>, nem <span class="font-semibold text-white">participa do conteúdo ou da comunicação realizada pelos Usuários</span>.
+            </p>
+          </section>
+
+          <!-- 3. ELEGIBILIDADE E CADASTRO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              3. ELEGIBILIDADE E CADASTRO
+            </h2>
+            <p>
+              <span class="font-semibold text-white">3.1.</span> O Usuário declara possuir capacidade legal para celebrar este contrato.
+            </p>
+            <p>
+              <span class="font-semibold text-white">3.2.</span> O Usuário é integralmente responsável pelas informações fornecidas no cadastro, devendo mantê-las atualizadas e verdadeiras.
+            </p>
+            <p>
+              <span class="font-semibold text-white">3.3.</span> Cada Conta é pessoal e intransferível. O compartilhamento de credenciais é expressamente proibido.
+            </p>
+          </section>
+
+          <!-- 4. USO PERMITIDO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              4. USO PERMITIDO DA PLATAFORMA
+            </h2>
+            <p>
+              O Usuário compromete-se a utilizar a Plataforma exclusivamente para fins <span class="font-semibold text-white">lícitos</span>, <span class="font-semibold text-white">éticos</span> e <span class="font-semibold text-white">em conformidade com a legislação vigente</span>, incluindo, mas não se limitando a:
+            </p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Marco Civil da Internet (Lei nº 12.965/2014)</li>
+              <li>Lei Geral de Proteção de Dados – LGPD (Lei nº 13.709/2018)</li>
+              <li>Regulamentos da ANPD</li>
+              <li>Políticas e Termos da Apple, Google e Meta</li>
+            </ul>
+          </section>
+
+          <!-- 5. USO PROIBIDO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              5. USO PROIBIDO
+            </h2>
+            <p>
+              É expressamente proibido utilizar a Plataforma para:
+            </p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Envio de spam, phishing, golpes, esquemas fraudulentos ou mensagens não solicitadas</li>
+              <li>Prática de crimes ou atos ilícitos</li>
+              <li>Violacao de direitos autorais, marcas, segredos comerciais ou propriedade intelectual</li>
+              <li>Conteúdos ilegais, ofensivos, discriminatórios, violentos, pornográficos ou de ódio</li>
+              <li>Tentativas de invasão, engenharia reversa, exploração de vulnerabilidades ou sobrecarga da Plataforma</li>
+              <li>Uso que viole políticas do WhatsApp, Instagram, Facebook, Apple App Store, Google Play ou APIs associadas</li>
+            </ul>
+            <p class="mt-2">
+              A Clerky poderá <span class="font-semibold text-white">suspender ou encerrar imediatamente</span> contas que violem estas regras, sem aviso prévio.
+            </p>
+          </section>
+
+          <!-- 6. CONTEÚDO DO USUÁRIO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              6. CONTEÚDO DO USUÁRIO
+            </h2>
+            <p>
+              <span class="font-semibold text-white">6.1.</span> Todo Conteúdo inserido ou processado é de <span class="font-semibold text-white">responsabilidade exclusiva do Usuário</span>.
+            </p>
+            <p>
+              <span class="font-semibold text-white">6.2.</span> A Clerky <span class="font-semibold text-white">não revisa</span>, <span class="font-semibold text-white">não aprova</span> e <span class="font-semibold text-white">não controla</span> o Conteúdo gerado ou enviado pelos Usuários.
+            </p>
+            <p>
+              <span class="font-semibold text-white">6.3.</span> O Usuário declara possuir todos os direitos necessários sobre o Conteúdo utilizado.
+            </p>
+            <p>
+              <span class="font-semibold text-white">6.4.</span> A Clerky não se responsabiliza por bloqueios, penalidades, banimentos ou restrições impostas por terceiros em decorrência do Conteúdo do Usuário.
+            </p>
+          </section>
+
+          <!-- 7. INTELIGÊNCIA ARTIFICIAL -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              7. INTELIGÊNCIA ARTIFICIAL
+            </h2>
+            <p>
+              <span class="font-semibold text-white">7.1.</span> A Plataforma pode utilizar modelos de inteligência artificial próprios ou de terceiros.
+            </p>
+            <p>
+              <span class="font-semibold text-white">7.2.</span> As respostas geradas por IA são <span class="font-semibold text-white">automatizadas</span>, <span class="font-semibold text-white">estatísticas</span> e <span class="font-semibold text-white">não garantem precisão absoluta</span>.
+            </p>
+            <p>
+              <span class="font-semibold text-white">7.3.</span> O Usuário é o único responsável por revisar, validar e decidir sobre o uso das respostas geradas.
+            </p>
+            <p>
+              <span class="font-semibold text-white">7.4.</span> A Clerky não se responsabiliza por decisões comerciais, jurídicas, financeiras ou operacionais tomadas com base em respostas de IA.
+            </p>
+          </section>
+
+          <!-- 8. INTEGRAÇÕES COM TERCEIROS -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              8. INTEGRAÇÕES COM TERCEIROS (APPLE, GOOGLE E META)
+            </h2>
+            <p>
+              <span class="font-semibold text-white">8.1.</span> A Plataforma permite integrações com serviços de terceiros, incluindo, mas não se limitando a Apple, Google e Meta Platforms (WhatsApp, Instagram e Facebook).
+            </p>
+            <p>
+              <span class="font-semibold text-white">8.2.</span> O Usuário declara estar ciente de que o uso dessas integrações está sujeito, cumulativamente, aos presentes Termos e aos termos, políticas e diretrizes dos respectivos terceiros, incluindo:
+            </p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Apple App Store Review Guidelines e Apple Developer Program License Agreement</li>
+              <li>Google Play Developer Distribution Agreement, Google API Services User Data Policy</li>
+              <li>Meta Platform Terms, WhatsApp Business Messaging Policy, Instagram Platform Policy</li>
+            </ul>
+            <p>
+              <span class="font-semibold text-white">8.3.</span> A Clerky atua exclusivamente como <span class="font-semibold text-white">provedora de tecnologia</span>, não possuindo qualquer controle sobre decisões, suspensões, limitações, auditorias, revisões manuais ou automáticas realizadas por terceiros.
+            </p>
+            <p>
+              <span class="font-semibold text-white">8.4.</span> O Usuário reconhece que <span class="font-semibold text-white">bloqueios, banimentos, limitações de envio, quedas de qualidade, suspensões de contas, perda de números, WABA, BM ou perfis</span> decorrentes de uso indevido, violação de políticas ou decisões unilaterais da Meta, Google ou Apple <span class="font-semibold text-white">não geram direito a reembolso, indenização ou responsabilização da Clerky</span>.
+            </p>
+            <p>
+              <span class="font-semibold text-white">8.5.</span> A Clerky não garante taxas de entrega, leitura, resposta, engajamento ou aprovação de contas em plataformas de terceiros.
+            </p>
+          </section>
+
+          <!-- 9. PLANOS, PAGAMENTOS E CANCELAMENTO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              9. PLANOS, PAGAMENTOS E CANCELAMENTO
+            </h2>
+            <p>
+              <span class="font-semibold text-white">9.1.</span> O acesso a determinadas funcionalidades pode depender de planos pagos.
+            </p>
+            <p>
+              <span class="font-semibold text-white">9.2.</span> Os valores, condições e limites estão descritos no site ou contrato específico.
+            </p>
+            <p>
+              <span class="font-semibold text-white">9.3.</span> A falta de pagamento poderá resultar na suspensão ou cancelamento da Conta.
+            </p>
+            <p>
+              <span class="font-semibold text-white">9.4.</span> Não há garantia de reembolso, salvo quando exigido por lei.
+            </p>
+          </section>
+
+          <!-- 10. PROPRIEDADE INTELECTUAL -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              10. PROPRIEDADE INTELECTUAL
+            </h2>
+            <p>
+              <span class="font-semibold text-white">10.1.</span> A Plataforma, marca, logotipos, códigos, layout, fluxos, documentação e tecnologia pertencem exclusivamente à Clerky.
+            </p>
+            <p>
+              <span class="font-semibold text-white">10.2.</span> Nenhuma licença é concedida além do uso limitado e não exclusivo da Plataforma.
+            </p>
+          </section>
+
+          <!-- 11. LIMITAÇÃO DE RESPONSABILIDADE -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              11. LIMITAÇÃO DE RESPONSABILIDADE
+            </h2>
+            <p>
+              Na máxima extensão permitida por lei, a Clerky não será responsável por:
+            </p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Perdas de lucros, receitas ou oportunidades</li>
+              <li>Danos indiretos, incidentais ou consequenciais</li>
+              <li>Falhas de terceiros, operadoras ou provedores</li>
+              <li>Suspensão de contas em plataformas externas</li>
+              <li>Mau uso da Plataforma pelo Usuário</li>
+            </ul>
+          </section>
+
+          <!-- 12. SUSPENSÃO E ENCERRAMENTO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              12. SUSPENSÃO E ENCERRAMENTO
+            </h2>
+            <p>
+              A Clerky poderá suspender ou encerrar o acesso do Usuário a qualquer momento, especialmente em caso de:
+            </p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>Violacao destes Termos</li>
+              <li>Uso ilícito da Plataforma</li>
+              <li>Exigência legal ou regulatória</li>
+            </ul>
+          </section>
+
+          <!-- 13. ALTERAÇÕES DOS TERMOS -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              13. ALTERAÇÕES DOS TERMOS
+            </h2>
+            <p>
+              A Clerky poderá alterar estes Termos a qualquer momento. A continuidade do uso após alterações implica aceitação automática.
+            </p>
+          </section>
+
+          <!-- 14. LEGISLAÇÃO E FORO -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              14. LEGISLAÇÃO E FORO
+            </h2>
+            <p>
+              Estes Termos são regidos pelas leis da República Federativa do Brasil.
+            </p>
+            <p>
+              Fica eleito o foro da comarca do domicílio da Clerky, com renúncia a qualquer outro, por mais privilegiado que seja.
+            </p>
+          </section>
+
+          <!-- 15. POLÍTICA DE PRIVACIDADE -->
+          <section class="mt-8 space-y-4">
+            <h2 class="text-lg font-semibold text-white">
+              15. POLÍTICA DE PRIVACIDADE E PROTEÇÃO DE DADOS
+            </h2>
+            <p>
+              <span class="font-semibold text-white">15.1.</span> O tratamento de dados pessoais realizado pela Clerky está descrito de forma detalhada em sua <span class="font-semibold text-white">Política de Privacidade</span>, disponível em <a href="/politica-privacidade" class="text-primary-200 underline-offset-2 hover:underline">/politica-privacidade</a>.
+            </p>
+            <p>
+              <span class="font-semibold text-white">15.2.</span> Estes Termos devem ser lidos e interpretados em conjunto com a Política de Privacidade, que é parte integrante e inseparável deste instrumento.
+            </p>
+            <p>
+              <span class="font-semibold text-white">15.3.</span> O Usuário declara estar ciente de que é o <span class="font-semibold text-white">controlador dos dados</span> inseridos na Plataforma, sendo responsável por obter consentimentos, bases legais e cumprir obrigações legais junto a seus clientes, leads ou contatos.
+            </p>
+            <p>
+              <span class="font-semibold text-white">15.4.</span> A Clerky atua, quando aplicável, como <span class="font-semibold text-white">operadora de dados</span>, nos termos da LGPD.
+            </p>
+          </section>
+
+          <!-- 16. CONTATO -->
+          <section class="mt-8 mb-10 space-y-4">
+            <h2 class="text-lg font-semibold text-white">16. CONTATO</h2>
+            <p>Clerky Tecnologia Ltda.</p>
+            <ul class="list-disc space-y-1 pl-5">
+              <li>CNPJ: 64.494.403/0001-17</li>
+              <li>
+                E-mail:
+                <span class="font-semibold text-white">contato@clerky.com.br</span>
+              </li>
+              <li>
+                Site:
+                <a
+                  href="https://www.clerky.com.br"
+                  class="text-primary-200 underline-offset-2 hover:underline"
+                  target="_blank"
+                  rel="noreferrer"
+                  >https://www.clerky.com.br</a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+      <!-- Footer -->
+      <footer class="border-t border-white/5 bg-slate-950/90 py-8">
+        <div
+          class="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8"
+        >
+          <div class="space-y-1">
+            <div class="flex items-center gap-2">
+              <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-7 w-auto" />
+              <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-7 w-auto" />
+              <span> • Plataforma de comunicação multicanal</span>
+            </div>
+            <p data-i18n="footer.copyright">© 2026 • Todos os direitos reservados.</p>
+            <p class="text-white/50">
+              <span data-i18n="footer.cnpj">CNPJ: 64.494.403/0001-17</span> • <span data-i18n="footer.phone">Tel: +55 62 99355-7070</span>
+            </p>
+          </div>
+          <div class="flex flex-col items-start gap-2 text-xs sm:items-end">
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="/politica-privacidade"
+                class="hover:text-primary-200"
+                data-i18n="footer.privacy"
+                >Política de Privacidade</a
+              >
+              <a
+                href="/termos"
+                class="hover:text-primary-200"
+                data-i18n="footer.terms"
+                >Termos de Uso</a
+              >
+            </div>
+            <div class="flex flex-wrap gap-3 text-white/70">
+              <a
+                href="https://facebook.com/clerky.hub"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:text-primary-200"
+                >Facebook</a
+              >
+              <a
+                href="https://instagram.com/clerky_hub"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:text-primary-200"
+                >Instagram</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Theme -->
+    <script src="/assets/js/theme.js"></script>
+    <!-- Smooth Scroll -->
+    <script src="/assets/js/smooth-scroll.js"></script>
+    <!-- Language Switcher -->
+    <script src="/assets/js/language.js"></script>
+  </body>
+</html>

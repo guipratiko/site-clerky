@@ -1,0 +1,564 @@
+{
+  "pt": {
+    "site": {
+      "title": "Clerky - Plataforma de Automação e Gestão de Comunicação Multicanal",
+      "statusTitle": "Status da Plataforma - Clerky",
+      "privacyTitle": "Política de Privacidade - Clerky",
+      "termsTitle": "Termos de Uso - Clerky",
+      "docsTitle": "Documentação da API - Clerky"
+    },
+    "nav": {
+      "about": "Sobre",
+      "integrations": "Integrações",
+      "howItWorks": "Como funciona",
+      "plans": "Planos",
+      "testimonials": "Clientes",
+      "faq": "FAQ",
+      "status": "Status",
+      "enter": "Entrar",
+      "startNow": "Começar agora",
+      "goToPanel": "Ir para o painel"
+    },
+    "hero": {
+      "badge": "Plataforma completa de comunicação com IA",
+      "title": "Plataforma de automação e gestão de comunicação",
+      "titleHighlight": "multicanal",
+      "description": "O Clerky é uma plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram e outros canais em um único ambiente. Automatize atendimentos, gerencie relacionamento com clientes e execute campanhas em escala.",
+      "ctaStart": "Começar agora",
+      "ctaIntegrations": "Ver integrações",
+      "ctaWhatsApp": "Falar no WhatsApp",
+      "featureAI": "IA sem código",
+      "featureWhatsApp": "WhatsApp & Instagram",
+      "featureWorkflows": "Workflows visuais",
+      "featureCRM": "CRM Kanban",
+      "featureBulk": "Disparo em massa",
+      "featureApps": "Apps iOS & Android",
+      "trustedBy": "Empresas que confiam na Clerky"
+    },
+    "about": {
+      "label": "Sobre o aplicativo",
+      "title": "Tudo que você precisa para centralizar suas conversas em um único lugar.",
+      "description1": "O Clerky é uma plataforma criada para empresas que precisam automatizar atendimento, gerencie relacionamento com clientes e executar campanhas de comunicação em escala. Conecte múltiplas contas WhatsApp, Instagram e outros canais, crie agentes de IA, construa workflows visuais e organize tudo no CRM Kanban.",
+      "description2": "Disponível também em apps nativos para iOS e Android, com autenticação biométrica e sincronização em tempo real.",
+      "integrationsTitle": "Integrações e permissões",
+      "integrationsDesc": "O Clerky se conecta a diversos serviços para oferecer uma solução completa. Todas as permissões são usadas exclusivamente para as funcionalidades descritas abaixo.",
+      "google": "Google (Sheets e Drive): sincronização de leads com planilhas e armazenamento de arquivos.",
+      "meta": "Meta (Instagram): automações em DMs, comentários e sequências de mensagens.",
+      "openai": "OpenAI: agentes de IA, respostas com contexto e transcrição de áudio.",
+      "typebot": "Typebot: chatbots externos conectados ao MindClerky.",
+      "whatsapp": "WhatsApp: múltiplas instâncias, grupos e histórico de conversas.",
+      "privacyNote": "Não vendemos nem compartilhamos seus dados com terceiros sem consentimento. Veja",
+      "privacyLink": "Política de Privacidade",
+      "termsLink": "Termos de Uso"
+    },
+    "features": {
+      "label": "Tudo que você precisa",
+      "title": "Do primeiro contato à conversão, em uma única plataforma.",
+      "description": "Gerencie toda a jornada do cliente com inteligência artificial: captação, atendimento, nutrição e fechamento de vendas.",
+      "aiAgents": {
+        "title": "Agentes de IA sem código",
+        "desc": "Crie agentes com OpenAI (GPT-4, GPT-3.5) para responder com contexto, manter memória das conversas e qualificar leads."
+      },
+      "whatsapp": {
+        "title": "Múltiplas instâncias WhatsApp",
+        "desc": "Conecte várias contas, gere QR Codes, acompanhe status em tempo real e configure webhooks."
+      },
+      "instagram": {
+        "title": "Automações para Instagram",
+        "desc": "Conecte via OAuth Meta, automatize DMs, comentários, sequências de mensagens e relatórios."
+      },
+      "crm": {
+        "title": "CRM Kanban integrado",
+        "desc": "Organize contatos em colunas personalizáveis, veja histórico, envie mensagens e filtre rapidamente."
+      },
+      "bulk": {
+        "title": "Disparo em massa",
+        "desc": "Crie campanhas segmentadas com agendamento, controle de velocidade, validação de contatos e relatórios."
+      },
+      "workflows": {
+        "title": "Workflows visuais",
+        "desc": "Monte fluxos no MindClerky com nós condicionais, Typebot, Google Sheets, OpenAI e webhooks."
+      }
+    },
+    "howItWorks": {
+      "label": "Como funciona",
+      "title": "Configure sua automação em minutos.",
+      "description": "Em poucos passos você conecta seus canais, cria agentes de IA, integra com seus sistemas e começa a escalar resultados.",
+      "step1": {
+        "label": "Passo 1",
+        "title": "Conecte seu WhatsApp",
+        "desc": "Escaneie o QR Code e vincule sua conta em segundos. Conexão segura e criptografada."
+      },
+      "step2": {
+        "label": "Passo 2",
+        "title": "Escolha ou crie seu agente de IA",
+        "desc": "Use personas prontas (vendedor, suporte, secretária) ou configure o comportamento do zero."
+      },
+      "step3": {
+        "label": "Passo 3",
+        "title": "Integre com seu sistema",
+        "desc": "Configure APIs e webhooks para conectar CRM, ERP, planilhas e qualquer ferramenta com API."
+      },
+      "step4": {
+        "label": "Passo 4",
+        "title": "Acompanhe e escale",
+        "desc": "Monitore conversas no CRM Kanban, dispare campanhas e acompanhe métricas em tempo real."
+      }
+    },
+    "integrations": {
+      "label": "Conecte a qualquer sistema",
+      "title": "Integrações com ERPs, CRMs, planilhas, automações e muito mais.",
+      "description": "Se tem API ou webhook, a Clerky conecta. Crie fluxos que conversam com suas ferramentas favoritas em tempo real."
+    },
+    "plans": {
+      "label": "Planos para todos os tamanhos",
+      "title": "Escolha o plano ideal para o seu negócio.",
+      "description": "Todas as assinaturas incluem teste grátis, acesso imediato e cancelamento a qualquer momento.",
+      "trial": {
+        "label": "Trial",
+        "title": "Teste gratuito com recursos limitados",
+        "price": "Grátis",
+        "period": "por 7 dias",
+        "features": {
+          "1": "1 conexão WhatsApp",
+          "2": "CRM Kanban",
+          "3": "1 integração via webhook",
+          "4": "Sem disparo em massa",
+          "5": "Sem workflow de IA",
+          "6": "Suporte por e-mail"
+        },
+        "cta": "Começar trial"
+      },
+      "pro": {
+        "label": "Pro",
+        "badge": "Mais popular",
+        "title": "Para empresas que querem escalar vendas",
+        "price": "R$ 197/mês",
+        "features": {
+          "1": "10.000 mensagens/mês",
+          "2": "Agentes ilimitados",
+          "3": "CRM Kanban completo",
+          "4": "Disparo em massa",
+          "5": "API & webhooks avançados",
+          "6": "Integrações nativas",
+          "7": "Suporte prioritário",
+          "8": "Analytics avançado"
+        },
+        "cta": "Assinar Pro"
+      },
+      "enterprise": {
+        "label": "Enterprise",
+        "title": "Solução personalizada para grandes volumes",
+        "price": "Sob consulta",
+        "features": {
+          "1": "Mensagens ilimitadas",
+          "2": "Agentes ilimitados",
+          "3": "CRM personalizado",
+          "4": "Disparo em massa ilimitado",
+          "5": "API dedicada",
+          "6": "White label",
+          "7": "Gerente de contas dedicado",
+          "8": "SLA garantido",
+          "9": "Onboarding personalizado"
+        },
+        "cta": "Falar com vendas"
+      },
+      "note": "Todas as assinaturas incluem período de teste grátis. Cancele a qualquer momento."
+    },
+    "testimonials": {
+      "label": "O que nossos clientes dizem",
+      "title": "Empresas de todos os tamanhos confiam na Clerky.",
+      "description": "Automatize WhatsApp, reduza tempo de resposta e aumente vendas com uma plataforma feita para escala.",
+      "testimonial1": "A Clerky revolucionou nosso atendimento. Aumentamos em 40% as vendas apenas automatizando o primeiro contato com IA.",
+      "testimonial2": "Disparo em massa sem bloqueios e CRM integrado. Substituímos três ferramentas por uma solução única.",
+      "testimonial3": "Integramos com nosso sistema em menos de 2 horas. A API é bem documentada e o suporte é excelente.",
+      "testimonial4": "Usamos para onboarding de clientes. O agente de IA responde 80% das dúvidas automaticamente. Game changer!",
+      "testimonial5": "Webhooks em tempo real funcionam perfeitamente. A confiabilidade da entrega é impressionante. 99,9% de uptime."
+    },
+    "faq": {
+      "label": "Perguntas frequentes",
+      "title": "Tire suas dúvidas sobre a plataforma.",
+      "q1": "A Clerky está em conformidade com a LGPD?",
+      "a1": "Sim. Seguimos as diretrizes da LGPD, tratamos dados com base em bases legais adequadas e oferecemos transparência sobre uso e revogação de consentimento.",
+      "q2": "Existem limites de disparo em massa?",
+      "a2": "Cada plano possui limites e controles de velocidade para evitar bloqueios, mas você pode contratar volumes adicionais conforme a necessidade.",
+      "q3": "Posso testar antes de pagar?",
+      "a3": "Sim. Oferecemos um período de trial gratuito de 7 dias com recursos ilimitados para que você valide a solução no seu dia a dia.",
+      "q4": "Quais integrações são suportadas?",
+      "a4": "Trabalhamos com integrações nativas (WhatsApp, Instagram, OpenAI, Typebot, Google, CRMs, ERPs) e qualquer sistema com API REST ou webhooks."
+    },
+    "cta": {
+      "label": "Pronto para integrar e vender com IA?",
+      "title": "Junte-se a empresas que já automatizam WhatsApp com a Clerky.",
+      "description": "Comece seu teste grátis hoje mesmo e veja na prática como automatizar comunicação, atendimento e vendas.",
+      "button": "Começar agora",
+      "whatsapp": "Falar no WhatsApp",
+      "note": "7 dias grátis • Cancele quando quiser • Conformidade LGPD"
+    },
+    "docs": {
+      "title": "Documentação da API",
+      "description": "Webhooks, envio de mensagens, CRM e gerenciamento de grupos.",
+      "authTitle": "Autenticação",
+      "authIntro": "Todas as requisições devem incluir o token de autenticação no header Authorization.",
+      "authTokenNote": "O token é único para cada instância e pode ser encontrado no card da instância na página de Gerenciador de Conexões.",
+      "baseUrlTitle": "URL Base",
+      "sendMessagesTitle": "Envio de Mensagens",
+      "sendTextTitle": "Enviar Mensagem de Texto — POST /send-text",
+      "sendTextDesc": "Envia uma mensagem de texto para um contato.",
+      "sendImageTitle": "Enviar Imagem — POST /send-image",
+      "sendImageDesc": "Envia uma imagem com legenda opcional.",
+      "sendVideoTitle": "Enviar Vídeo — POST /send-video",
+      "sendVideoDesc": "Envia um vídeo com legenda opcional.",
+      "sendFileTitle": "Enviar Arquivo — POST /send-file",
+      "sendFileDesc": "Envia um arquivo (PDF, DOC, etc.).",
+      "sendAudioTitle": "Enviar Áudio — POST /send-audio",
+      "sendAudioDesc": "Envia um áudio para um contato.",
+      "params": "Parâmetros:",
+      "crmTitle": "Gerenciamento de CRM",
+      "moveContactTitle": "Mover Contato entre Colunas — POST /move-contact",
+      "moveContactDesc": "Move um contato de uma coluna para outra no Kanban.",
+      "useShortId": "Use o short_id (1, 2, 3, 4, 5) para facilitar. Veja as colunas em GET /columns",
+      "listContactsTitle": "Listar Contatos — GET /contacts",
+      "listContactsDesc": "Retorna todos os contatos da instância.",
+      "listContactsResponse": "Resposta: status, count, contacts (id, phone, name, profilePicture, columnId, unreadCount, lastMessage, lastMessageAt)",
+      "listColumnsTitle": "Listar Colunas do Kanban — GET /columns",
+      "listColumnsDesc": "Retorna todas as colunas com id, shortId (1-5), name, order, color.",
+      "listLabelsTitle": "Listar Labels — GET /labels",
+      "listLabelsDesc": "Retorna todas as labels (etiquetas) disponíveis.",
+      "addLabelTitle": "Adicionar Label — POST /add-label",
+      "addLabelDesc": "Parâmetros: phone, labelId (short_id ou UUID).",
+      "removeLabelTitle": "Remover Label — POST /remove-label",
+      "removeLabelDesc": "Parâmetros: phone, labelId.",
+      "responsesTitle": "Respostas da API",
+      "success": "Sucesso",
+      "error": "Erro",
+      "codesNote": "Códigos HTTP: 200 (sucesso), 400 (validação), 401 (token inválido), 404 (não encontrado), 500 (erro interno).",
+      "groupsTitle": "Gerenciamento de Grupos",
+      "groupsIntro": "Gerencie grupos do WhatsApp: listar, criar, atualizar nome/descrição/foto, configurações, código de convite, mencionar todos, sair do grupo.",
+      "exampleTitle": "Exemplo em JavaScript",
+      "importantTitle": "Informações importantes",
+      "importantPhone": "Formato do telefone: Apenas números, com código do país (ex: 5511999999999).",
+      "importantUrls": "URLs de mídia: Devem ser públicas e acessíveis.",
+      "importantShortIdCols": "Short ID colunas: Use 1, 2, 3, 4, 5 em vez de UUIDs.",
+      "importantShortIdLabels": "Short ID labels: Idem.",
+      "importantToken": "Token: Único por instância, permanente até a instância ser deletada.",
+      "importantRealtime": "Atualizações: Mudanças via API refletem no frontend via WebSocket."
+    },
+    "status": {
+      "title": "Status da Plataforma",
+      "description": "Acompanhe em tempo real o status dos principais serviços da Clerky.",
+      "lastUpdate": "Última atualização:",
+      "refresh": "Atualizar agora",
+      "error": "Não foi possível carregar o status da plataforma. Tente novamente em alguns instantes.",
+      "dataSource": "Fonte dos dados:",
+      "apiLink": "API pública de status da Clerky",
+      "loading": "Carregando status da plataforma...",
+      "allOnline": "Todos os serviços principais estão online.",
+      "someIssues": "Alguns serviços podem estar com instabilidade. Verifique os detalhes abaixo.",
+      "noServices": "Nenhum serviço retornado pela API de status.",
+      "responseTime": "Tempo de resposta",
+      "lastCheck": "Último check",
+      "environment": "Ambiente",
+      "services": {
+        "frontend": "Página Principal",
+        "backend": "API",
+        "dispatchClerky": "Serviço de Disparo",
+        "mindClerky": "Ferramenta MindClerky",
+        "instaClerky": "Gerenciador de Instagram",
+        "grupoClerky": "Gerenciador de Grupos"
+      }
+    },
+    "footer": {
+      "copyright": "© 2026 • Todos os direitos reservados.",
+      "cnpj": "CNPJ: 64.494.403/0001-17",
+      "phone": "Tel: +55 62 99355-7070",
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Uso"
+    },
+    "lang": {
+      "switchTo": "EN",
+      "current": "PT"
+    }
+  },
+  "en": {
+    "site": {
+      "title": "Clerky - Multi-Channel Communication Automation and Management Platform",
+      "statusTitle": "Platform Status - Clerky",
+      "privacyTitle": "Privacy Policy - Clerky",
+      "termsTitle": "Terms of Use - Clerky",
+      "docsTitle": "API Documentation - Clerky"
+    },
+    "nav": {
+      "about": "About",
+      "integrations": "Integrations",
+      "howItWorks": "How it works",
+      "plans": "Plans",
+      "testimonials": "Clients",
+      "faq": "FAQ",
+      "status": "Status",
+      "enter": "Sign in",
+      "startNow": "Get started",
+      "goToPanel": "Go to panel"
+    },
+    "hero": {
+      "badge": "Complete AI-powered communication platform",
+      "title": "Multi-channel communication automation and management",
+      "titleHighlight": "platform",
+      "description": "Clerky is an automation and communication management platform that centralizes WhatsApp, Instagram and other channels in a single environment. Automate customer service, manage customer relationships and run campaigns at scale.",
+      "ctaStart": "Get started",
+      "ctaIntegrations": "View integrations",
+      "ctaWhatsApp": "Talk on WhatsApp",
+      "featureAI": "No-code AI",
+      "featureWhatsApp": "WhatsApp & Instagram",
+      "featureWorkflows": "Visual workflows",
+      "featureCRM": "Kanban CRM",
+      "featureBulk": "Bulk messaging",
+      "featureApps": "iOS & Android apps",
+      "trustedBy": "Companies that trust Clerky"
+    },
+    "about": {
+      "label": "About the application",
+      "title": "Everything you need to centralize your conversations in one place.",
+      "description1": "Clerky is a platform created for companies that need to automate customer service, manage customer relationships and run communication campaigns at scale. Connect multiple WhatsApp, Instagram and other channel accounts, create AI agents, build visual workflows and organize everything in the Kanban CRM.",
+      "description2": "Also available in native apps for iOS and Android, with biometric authentication and real-time synchronization.",
+      "integrationsTitle": "Integrations and permissions",
+      "integrationsDesc": "Clerky connects to various services to offer a complete solution. All permissions are used exclusively for the functionalities described below.",
+      "google": "Google (Sheets and Drive): lead synchronization with spreadsheets and file storage.",
+      "meta": "Meta (Instagram): automations in DMs, comments and message sequences.",
+      "openai": "OpenAI: AI agents, contextual responses and audio transcription.",
+      "typebot": "Typebot: external chatbots connected to MindClerky.",
+      "whatsapp": "WhatsApp: multiple instances, groups and conversation history.",
+      "privacyNote": "We do not sell or share your data with third parties without consent. See",
+      "privacyLink": "Privacy Policy",
+      "termsLink": "Terms of Use"
+    },
+    "features": {
+      "label": "Everything you need",
+      "title": "From first contact to conversion, in a single platform.",
+      "description": "Manage the entire customer journey with artificial intelligence: acquisition, service, nurturing and sales closing.",
+      "aiAgents": {
+        "title": "No-code AI agents",
+        "desc": "Create agents with OpenAI (GPT-4, GPT-3.5) to respond with context, maintain conversation memory and qualify leads."
+      },
+      "whatsapp": {
+        "title": "Multiple WhatsApp instances",
+        "desc": "Connect multiple accounts, generate QR Codes, monitor status in real time and configure webhooks."
+      },
+      "instagram": {
+        "title": "Instagram automations",
+        "desc": "Connect via Meta OAuth, automate DMs, comments, message sequences and reports."
+      },
+      "crm": {
+        "title": "Integrated Kanban CRM",
+        "desc": "Organize contacts in customizable columns, view history, send messages and filter quickly."
+      },
+      "bulk": {
+        "title": "Bulk messaging",
+        "desc": "Create segmented campaigns with scheduling, speed control, contact validation and reports."
+      },
+      "workflows": {
+        "title": "Visual workflows",
+        "desc": "Build flows in MindClerky with conditional nodes, Typebot, Google Sheets, OpenAI and webhooks."
+      }
+    },
+    "howItWorks": {
+      "label": "How it works",
+      "title": "Set up your automation in minutes.",
+      "description": "In just a few steps you connect your channels, create AI agents, integrate with your systems and start scaling results.",
+      "step1": {
+        "label": "Step 1",
+        "title": "Connect your WhatsApp",
+        "desc": "Scan the QR Code and link your account in seconds. Secure and encrypted connection."
+      },
+      "step2": {
+        "label": "Step 2",
+        "title": "Choose or create your AI agent",
+        "desc": "Use ready-made personas (salesperson, support, secretary) or configure behavior from scratch."
+      },
+      "step3": {
+        "label": "Step 3",
+        "title": "Integrate with your system",
+        "desc": "Configure APIs and webhooks to connect CRM, ERP, spreadsheets and any tool with API."
+      },
+      "step4": {
+        "label": "Step 4",
+        "title": "Monitor and scale",
+        "desc": "Monitor conversations in Kanban CRM, run campaigns and track metrics in real time."
+      }
+    },
+    "integrations": {
+      "label": "Connect to any system",
+      "title": "Integrations with ERPs, CRMs, spreadsheets, automations and much more.",
+      "description": "If it has an API or webhook, Clerky connects. Create flows that communicate with your favorite tools in real time."
+    },
+    "plans": {
+      "label": "Plans for all sizes",
+      "title": "Choose the ideal plan for your business.",
+      "description": "All subscriptions include a free trial, immediate access and cancellation at any time.",
+      "trial": {
+        "label": "Trial",
+        "title": "Free trial with limited resources",
+        "price": "Free",
+        "period": "for 7 days",
+        "features": {
+          "1": "1 WhatsApp connection",
+          "2": "Kanban CRM",
+          "3": "1 webhook integration",
+          "4": "No bulk messaging",
+          "5": "No AI workflow",
+          "6": "Email support"
+        },
+        "cta": "Start trial"
+      },
+      "pro": {
+        "label": "Pro",
+        "badge": "Most popular",
+        "title": "For companies that want to scale sales",
+        "price": "R$ 197/month",
+        "features": {
+          "1": "10,000 messages/month",
+          "2": "Unlimited agents",
+          "3": "Complete Kanban CRM",
+          "4": "Bulk messaging",
+          "5": "Advanced API & webhooks",
+          "6": "Native integrations",
+          "7": "Priority support",
+          "8": "Advanced analytics"
+        },
+        "cta": "Subscribe Pro"
+      },
+      "enterprise": {
+        "label": "Enterprise",
+        "title": "Custom solution for large volumes",
+        "price": "On request",
+        "features": {
+          "1": "Unlimited messages",
+          "2": "Unlimited agents",
+          "3": "Custom CRM",
+          "4": "Unlimited bulk messaging",
+          "5": "Dedicated API",
+          "6": "White label",
+          "7": "Dedicated account manager",
+          "8": "Guaranteed SLA",
+          "9": "Custom onboarding"
+        },
+        "cta": "Talk to sales"
+      },
+      "note": "All subscriptions include a free trial period. Cancel at any time."
+    },
+    "testimonials": {
+      "label": "What our clients say",
+      "title": "Companies of all sizes trust Clerky.",
+      "description": "Automate WhatsApp, reduce response time and increase sales with a platform built for scale.",
+      "testimonial1": "Clerky revolutionized our customer service. We increased sales by 40% just by automating the first contact with AI.",
+      "testimonial2": "Bulk messaging without blocks and integrated CRM. We replaced three tools with a single solution.",
+      "testimonial3": "We integrated with our system in less than 2 hours. The API is well documented and support is excellent.",
+      "testimonial4": "We use it for customer onboarding. The AI agent answers 80% of questions automatically. Game changer!",
+      "testimonial5": "Real-time webhooks work perfectly. The delivery reliability is impressive. 99.9% uptime."
+    },
+    "faq": {
+      "label": "Frequently asked questions",
+      "title": "Get your questions about the platform answered.",
+      "q1": "Is Clerky compliant with LGPD?",
+      "a1": "Yes. We follow LGPD guidelines, process data based on appropriate legal bases and offer transparency about use and consent revocation.",
+      "q2": "Are there bulk messaging limits?",
+      "a2": "Each plan has limits and speed controls to prevent blocks, but you can purchase additional volumes as needed.",
+      "q3": "Can I test before paying?",
+      "a3": "Yes. We offer a 7-day free trial with unlimited resources so you can validate the solution in your daily routine.",
+      "q4": "What integrations are supported?",
+      "a4": "We work with native integrations (WhatsApp, Instagram, OpenAI, Typebot, Google, CRMs, ERPs) and any system with REST API or webhooks."
+    },
+    "cta": {
+      "label": "Ready to integrate and sell with AI?",
+      "title": "Join companies that already automate WhatsApp with Clerky.",
+      "description": "Start your free trial today and see in practice how to automate communication, customer service and sales.",
+      "button": "Get started",
+      "whatsapp": "Talk on WhatsApp",
+      "note": "7 days free • Cancel anytime • LGPD compliant"
+    },
+    "docs": {
+      "title": "API Documentation",
+      "description": "Webhooks, message sending, CRM and group management.",
+      "authTitle": "Authentication",
+      "authIntro": "All requests must include the authentication token in the Authorization header.",
+      "authTokenNote": "The token is unique per instance and can be found on the instance card on the Connections Manager page.",
+      "baseUrlTitle": "Base URL",
+      "sendMessagesTitle": "Sending Messages",
+      "sendTextTitle": "Send Text Message — POST /send-text",
+      "sendTextDesc": "Sends a text message to a contact.",
+      "sendImageTitle": "Send Image — POST /send-image",
+      "sendImageDesc": "Sends an image with optional caption.",
+      "sendVideoTitle": "Send Video — POST /send-video",
+      "sendVideoDesc": "Sends a video with optional caption.",
+      "sendFileTitle": "Send File — POST /send-file",
+      "sendFileDesc": "Sends a file (PDF, DOC, etc.).",
+      "sendAudioTitle": "Send Audio — POST /send-audio",
+      "sendAudioDesc": "Sends an audio to a contact.",
+      "params": "Parameters:",
+      "crmTitle": "CRM Management",
+      "moveContactTitle": "Move Contact Between Columns — POST /move-contact",
+      "moveContactDesc": "Moves a contact from one column to another in the Kanban.",
+      "useShortId": "Use short_id (1, 2, 3, 4, 5) for convenience. See columns in GET /columns",
+      "listContactsTitle": "List Contacts — GET /contacts",
+      "listContactsDesc": "Returns all contacts for the instance.",
+      "listContactsResponse": "Response: status, count, contacts (id, phone, name, profilePicture, columnId, unreadCount, lastMessage, lastMessageAt)",
+      "listColumnsTitle": "List Kanban Columns — GET /columns",
+      "listColumnsDesc": "Returns all columns with id, shortId (1-5), name, order, color.",
+      "listLabelsTitle": "List Labels — GET /labels",
+      "listLabelsDesc": "Returns all available labels (tags).",
+      "addLabelTitle": "Add Label — POST /add-label",
+      "addLabelDesc": "Parameters: phone, labelId (short_id or UUID).",
+      "removeLabelTitle": "Remove Label — POST /remove-label",
+      "removeLabelDesc": "Parameters: phone, labelId.",
+      "responsesTitle": "API Responses",
+      "success": "Success",
+      "error": "Error",
+      "codesNote": "HTTP codes: 200 (success), 400 (validation), 401 (invalid token), 404 (not found), 500 (internal error).",
+      "groupsTitle": "Group Management",
+      "groupsIntro": "Manage WhatsApp groups: list, create, update name/description/picture, settings, invite code, mention everyone, leave group.",
+      "exampleTitle": "JavaScript Example",
+      "importantTitle": "Important information",
+      "importantPhone": "Phone format: Numbers only, with country code (e.g. 5511999999999).",
+      "importantUrls": "Media URLs: Must be public and accessible.",
+      "importantShortIdCols": "Short ID columns: Use 1, 2, 3, 4, 5 instead of UUIDs.",
+      "importantShortIdLabels": "Short ID labels: Same.",
+      "importantToken": "Token: Unique per instance, permanent until the instance is deleted.",
+      "importantRealtime": "Updates: Changes via API are reflected on the frontend via WebSocket."
+    },
+    "status": {
+      "title": "Platform Status",
+      "description": "Track in real time the status of Clerky's main services.",
+      "lastUpdate": "Last update:",
+      "refresh": "Refresh now",
+      "error": "Could not load platform status. Please try again in a few moments.",
+      "dataSource": "Data source:",
+      "apiLink": "Clerky public status API",
+      "loading": "Loading platform status...",
+      "allOnline": "All main services are online.",
+      "someIssues": "Some services may be experiencing instability. Check details below.",
+      "noServices": "No services returned by status API.",
+      "responseTime": "Response time",
+      "lastCheck": "Last check",
+      "environment": "Environment",
+      "services": {
+        "frontend": "Main Page",
+        "backend": "API",
+        "dispatchClerky": "Dispatch Service",
+        "mindClerky": "MindClerky Tool",
+        "instaClerky": "Instagram Manager",
+        "grupoClerky": "Groups Manager"
+      }
+    },
+    "footer": {
+      "copyright": "© 2026 • All rights reserved.",
+      "cnpj": "CNPJ: 64.494.403/0001-17",
+      "phone": "Phone: +55 62 99355-7070",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    },
+    "lang": {
+      "switchTo": "PT",
+      "current": "EN"
+    }
+  }
+}
