@@ -1,8 +1,8 @@
-// Language switcher for Clerky website
+// Language switcher for OnlyFlow website
 (function() {
   'use strict';
 
-  const STORAGE_KEY = 'clerky_language';
+  const STORAGE_KEY = 'onlyflow_language';
   const DEFAULT_LANG = 'pt';
   let currentLang = localStorage.getItem(STORAGE_KEY) || DEFAULT_LANG;
 
@@ -112,7 +112,7 @@
   }
 
   // Export for external use
-  window.ClerkyLanguage = {
+  window.OnlyFlowLanguage = {
     setLanguage: applyLanguage,
     getLanguage: () => currentLang,
     t: t

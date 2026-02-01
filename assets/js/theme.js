@@ -1,8 +1,8 @@
-// Theme toggle (dark / light) for Clerky website
+// Theme toggle (dark / light) for OnlyFlow website
 (function () {
   'use strict';
 
-  const STORAGE_KEY = 'clerky_theme';
+  const STORAGE_KEY = 'onlyflow_theme';
   const DEFAULT_THEME = 'dark';
 
   function applyTheme(theme) {
@@ -50,7 +50,7 @@
     init();
   }
 
-  window.ClerkyTheme = {
+  window.OnlyFlowTheme = {
     getTheme: () => document.documentElement.getAttribute('data-theme') || DEFAULT_THEME,
     setTheme: (t) => {
       applyTheme(t);

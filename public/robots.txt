@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://clerky.com.br/sitemap.xml
+Sitemap: https://onlyflow.com.br/sitemap.xml

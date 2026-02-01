@@ -1,11 +1,11 @@
 {
   "pt": {
     "site": {
-      "title": "Clerky - Plataforma de Automação e Gestão de Comunicação Multicanal",
-      "statusTitle": "Status da Plataforma - Clerky",
-      "privacyTitle": "Política de Privacidade - Clerky",
-      "termsTitle": "Termos de Uso - Clerky",
-      "docsTitle": "Documentação da API - Clerky"
+      "title": "OnlyFlow - Plataforma de Automação e Gestão de Comunicação Multicanal",
+      "statusTitle": "Status da Plataforma - OnlyFlow",
+      "privacyTitle": "Política de Privacidade - OnlyFlow",
+      "termsTitle": "Termos de Uso - OnlyFlow",
+      "docsTitle": "Documentação da API - OnlyFlow"
     },
     "nav": {
       "about": "Sobre",
@@ -23,7 +23,7 @@
       "badge": "Plataforma completa de comunicação com IA",
       "title": "Plataforma de automação e gestão de comunicação",
       "titleHighlight": "multicanal",
-      "description": "O Clerky é uma plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram e outros canais em um único ambiente. Automatize atendimentos, gerencie relacionamento com clientes e execute campanhas em escala.",
+      "description": "O OnlyFlow é uma plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram e outros canais em um único ambiente. Automatize atendimentos, gerencie relacionamento com clientes e execute campanhas em escala.",
       "ctaStart": "Começar agora",
       "ctaIntegrations": "Ver integrações",
       "ctaWhatsApp": "Falar no WhatsApp",
@@ -33,19 +33,19 @@
       "featureCRM": "CRM Kanban",
       "featureBulk": "Disparo em massa",
       "featureApps": "Apps iOS & Android",
-      "trustedBy": "Empresas que confiam na Clerky"
+      "trustedBy": "Empresas que confiam na OnlyFlow"
     },
     "about": {
       "label": "Sobre o aplicativo",
       "title": "Tudo que você precisa para centralizar suas conversas em um único lugar.",
-      "description1": "O Clerky é uma plataforma criada para empresas que precisam automatizar atendimento, gerencie relacionamento com clientes e executar campanhas de comunicação em escala. Conecte múltiplas contas WhatsApp, Instagram e outros canais, crie agentes de IA, construa workflows visuais e organize tudo no CRM Kanban.",
+      "description1": "O OnlyFlow é uma plataforma criada para empresas que precisam automatizar atendimento, gerencie relacionamento com clientes e executar campanhas de comunicação em escala. Conecte múltiplas contas WhatsApp, Instagram e outros canais, crie agentes de IA, construa workflows visuais e organize tudo no CRM Kanban.",
       "description2": "Disponível também em apps nativos para iOS e Android, com autenticação biométrica e sincronização em tempo real.",
       "integrationsTitle": "Integrações e permissões",
-      "integrationsDesc": "O Clerky se conecta a diversos serviços para oferecer uma solução completa. Todas as permissões são usadas exclusivamente para as funcionalidades descritas abaixo.",
+      "integrationsDesc": "O OnlyFlow se conecta a diversos serviços para oferecer uma solução completa. Todas as permissões são usadas exclusivamente para as funcionalidades descritas abaixo.",
       "google": "Google (Sheets e Drive): sincronização de leads com planilhas e armazenamento de arquivos.",
       "meta": "Meta (Instagram): automações em DMs, comentários e sequências de mensagens.",
       "openai": "OpenAI: agentes de IA, respostas com contexto e transcrição de áudio.",
-      "typebot": "Typebot: chatbots externos conectados ao MindClerky.",
+      "typebot": "Typebot: chatbots externos conectados ao MindOnlyFlow.",
       "whatsapp": "WhatsApp: múltiplas instâncias, grupos e histórico de conversas.",
       "privacyNote": "Não vendemos nem compartilhamos seus dados com terceiros sem consentimento. Veja",
       "privacyLink": "Política de Privacidade",
@@ -77,7 +77,7 @@
       },
       "workflows": {
         "title": "Workflows visuais",
-        "desc": "Monte fluxos no MindClerky com nós condicionais, Typebot, Google Sheets, OpenAI e webhooks."
+        "desc": "Monte fluxos no MindOnlyFlow com nós condicionais, Typebot, Google Sheets, OpenAI e webhooks."
       }
     },
     "howItWorks": {
@@ -108,7 +108,7 @@
     "integrations": {
       "label": "Conecte a qualquer sistema",
       "title": "Integrações com ERPs, CRMs, planilhas, automações e muito mais.",
-      "description": "Se tem API ou webhook, a Clerky conecta. Crie fluxos que conversam com suas ferramentas favoritas em tempo real."
+      "description": "Se tem API ou webhook, a OnlyFlow conecta. Crie fluxos que conversam com suas ferramentas favoritas em tempo real."
     },
     "plans": {
       "label": "Planos para todos os tamanhos",
@@ -167,9 +167,9 @@
     },
     "testimonials": {
       "label": "O que nossos clientes dizem",
-      "title": "Empresas de todos os tamanhos confiam na Clerky.",
+      "title": "Empresas de todos os tamanhos confiam na OnlyFlow.",
       "description": "Automatize WhatsApp, reduza tempo de resposta e aumente vendas com uma plataforma feita para escala.",
-      "testimonial1": "A Clerky revolucionou nosso atendimento. Aumentamos em 40% as vendas apenas automatizando o primeiro contato com IA.",
+      "testimonial1": "A OnlyFlow revolucionou nosso atendimento. Aumentamos em 40% as vendas apenas automatizando o primeiro contato com IA.",
       "testimonial2": "Disparo em massa sem bloqueios e CRM integrado. Substituímos três ferramentas por uma solução única.",
       "testimonial3": "Integramos com nosso sistema em menos de 2 horas. A API é bem documentada e o suporte é excelente.",
       "testimonial4": "Usamos para onboarding de clientes. O agente de IA responde 80% das dúvidas automaticamente. Game changer!",
@@ -178,7 +178,7 @@
     "faq": {
       "label": "Perguntas frequentes",
       "title": "Tire suas dúvidas sobre a plataforma.",
-      "q1": "A Clerky está em conformidade com a LGPD?",
+      "q1": "A OnlyFlow está em conformidade com a LGPD?",
       "a1": "Sim. Seguimos as diretrizes da LGPD, tratamos dados com base em bases legais adequadas e oferecemos transparência sobre uso e revogação de consentimento.",
       "q2": "Existem limites de disparo em massa?",
       "a2": "Cada plano possui limites e controles de velocidade para evitar bloqueios, mas você pode contratar volumes adicionais conforme a necessidade.",
@@ -189,7 +189,7 @@
     },
     "cta": {
       "label": "Pronto para integrar e vender com IA?",
-      "title": "Junte-se a empresas que já automatizam WhatsApp com a Clerky.",
+      "title": "Junte-se a empresas que já automatizam WhatsApp com a OnlyFlow.",
       "description": "Comece seu teste grátis hoje mesmo e veja na prática como automatizar comunicação, atendimento e vendas.",
       "button": "Começar agora",
       "whatsapp": "Falar no WhatsApp",
@@ -246,12 +246,12 @@
     },
     "status": {
       "title": "Status da Plataforma",
-      "description": "Acompanhe em tempo real o status dos principais serviços da Clerky.",
+      "description": "Acompanhe em tempo real o status dos principais serviços da OnlyFlow.",
       "lastUpdate": "Última atualização:",
       "refresh": "Atualizar agora",
       "error": "Não foi possível carregar o status da plataforma. Tente novamente em alguns instantes.",
       "dataSource": "Fonte dos dados:",
-      "apiLink": "API pública de status da Clerky",
+      "apiLink": "API pública de status da OnlyFlow",
       "loading": "Carregando status da plataforma...",
       "allOnline": "Todos os serviços principais estão online.",
       "someIssues": "Alguns serviços podem estar com instabilidade. Verifique os detalhes abaixo.",
@@ -262,10 +262,10 @@
       "services": {
         "frontend": "Página Principal",
         "backend": "API",
-        "dispatchClerky": "Serviço de Disparo",
-        "mindClerky": "Ferramenta MindClerky",
-        "instaClerky": "Gerenciador de Instagram",
-        "grupoClerky": "Gerenciador de Grupos"
+        "dispatchOnlyFlow": "Serviço de Disparo",
+        "mindOnlyFlow": "Ferramenta MindOnlyFlow",
+        "instaOnlyFlow": "Gerenciador de Instagram",
+        "grupoOnlyFlow": "Gerenciador de Grupos"
       }
     },
     "footer": {
@@ -283,11 +283,11 @@
   },
   "en": {
     "site": {
-      "title": "Clerky - Multi-Channel Communication Automation and Management Platform",
-      "statusTitle": "Platform Status - Clerky",
-      "privacyTitle": "Privacy Policy - Clerky",
-      "termsTitle": "Terms of Use - Clerky",
-      "docsTitle": "API Documentation - Clerky"
+      "title": "OnlyFlow - Multi-Channel Communication Automation and Management Platform",
+      "statusTitle": "Platform Status - OnlyFlow",
+      "privacyTitle": "Privacy Policy - OnlyFlow",
+      "termsTitle": "Terms of Use - OnlyFlow",
+      "docsTitle": "API Documentation - OnlyFlow"
     },
     "nav": {
       "about": "About",
@@ -305,7 +305,7 @@
       "badge": "Complete AI-powered communication platform",
       "title": "Multi-channel communication automation and management",
       "titleHighlight": "platform",
-      "description": "Clerky is an automation and communication management platform that centralizes WhatsApp, Instagram and other channels in a single environment. Automate customer service, manage customer relationships and run campaigns at scale.",
+      "description": "OnlyFlow is an automation and communication management platform that centralizes WhatsApp, Instagram and other channels in a single environment. Automate customer service, manage customer relationships and run campaigns at scale.",
       "ctaStart": "Get started",
       "ctaIntegrations": "View integrations",
       "ctaWhatsApp": "Talk on WhatsApp",
@@ -315,19 +315,19 @@
       "featureCRM": "Kanban CRM",
       "featureBulk": "Bulk messaging",
       "featureApps": "iOS & Android apps",
-      "trustedBy": "Companies that trust Clerky"
+      "trustedBy": "Companies that trust OnlyFlow"
     },
     "about": {
       "label": "About the application",
       "title": "Everything you need to centralize your conversations in one place.",
-      "description1": "Clerky is a platform created for companies that need to automate customer service, manage customer relationships and run communication campaigns at scale. Connect multiple WhatsApp, Instagram and other channel accounts, create AI agents, build visual workflows and organize everything in the Kanban CRM.",
+      "description1": "OnlyFlow is a platform created for companies that need to automate customer service, manage customer relationships and run communication campaigns at scale. Connect multiple WhatsApp, Instagram and other channel accounts, create AI agents, build visual workflows and organize everything in the Kanban CRM.",
       "description2": "Also available in native apps for iOS and Android, with biometric authentication and real-time synchronization.",
       "integrationsTitle": "Integrations and permissions",
-      "integrationsDesc": "Clerky connects to various services to offer a complete solution. All permissions are used exclusively for the functionalities described below.",
+      "integrationsDesc": "OnlyFlow connects to various services to offer a complete solution. All permissions are used exclusively for the functionalities described below.",
       "google": "Google (Sheets and Drive): lead synchronization with spreadsheets and file storage.",
       "meta": "Meta (Instagram): automations in DMs, comments and message sequences.",
       "openai": "OpenAI: AI agents, contextual responses and audio transcription.",
-      "typebot": "Typebot: external chatbots connected to MindClerky.",
+      "typebot": "Typebot: external chatbots connected to MindOnlyFlow.",
       "whatsapp": "WhatsApp: multiple instances, groups and conversation history.",
       "privacyNote": "We do not sell or share your data with third parties without consent. See",
       "privacyLink": "Privacy Policy",
@@ -359,7 +359,7 @@
       },
       "workflows": {
         "title": "Visual workflows",
-        "desc": "Build flows in MindClerky with conditional nodes, Typebot, Google Sheets, OpenAI and webhooks."
+        "desc": "Build flows in MindOnlyFlow with conditional nodes, Typebot, Google Sheets, OpenAI and webhooks."
       }
     },
     "howItWorks": {
@@ -390,7 +390,7 @@
     "integrations": {
       "label": "Connect to any system",
       "title": "Integrations with ERPs, CRMs, spreadsheets, automations and much more.",
-      "description": "If it has an API or webhook, Clerky connects. Create flows that communicate with your favorite tools in real time."
+      "description": "If it has an API or webhook, OnlyFlow connects. Create flows that communicate with your favorite tools in real time."
     },
     "plans": {
       "label": "Plans for all sizes",
@@ -449,9 +449,9 @@
     },
     "testimonials": {
       "label": "What our clients say",
-      "title": "Companies of all sizes trust Clerky.",
+      "title": "Companies of all sizes trust OnlyFlow.",
       "description": "Automate WhatsApp, reduce response time and increase sales with a platform built for scale.",
-      "testimonial1": "Clerky revolutionized our customer service. We increased sales by 40% just by automating the first contact with AI.",
+      "testimonial1": "OnlyFlow revolutionized our customer service. We increased sales by 40% just by automating the first contact with AI.",
       "testimonial2": "Bulk messaging without blocks and integrated CRM. We replaced three tools with a single solution.",
       "testimonial3": "We integrated with our system in less than 2 hours. The API is well documented and support is excellent.",
       "testimonial4": "We use it for customer onboarding. The AI agent answers 80% of questions automatically. Game changer!",
@@ -460,7 +460,7 @@
     "faq": {
       "label": "Frequently asked questions",
       "title": "Get your questions about the platform answered.",
-      "q1": "Is Clerky compliant with LGPD?",
+      "q1": "Is OnlyFlow compliant with LGPD?",
       "a1": "Yes. We follow LGPD guidelines, process data based on appropriate legal bases and offer transparency about use and consent revocation.",
       "q2": "Are there bulk messaging limits?",
       "a2": "Each plan has limits and speed controls to prevent blocks, but you can purchase additional volumes as needed.",
@@ -471,7 +471,7 @@
     },
     "cta": {
       "label": "Ready to integrate and sell with AI?",
-      "title": "Join companies that already automate WhatsApp with Clerky.",
+      "title": "Join companies that already automate WhatsApp with OnlyFlow.",
       "description": "Start your free trial today and see in practice how to automate communication, customer service and sales.",
       "button": "Get started",
       "whatsapp": "Talk on WhatsApp",
@@ -528,12 +528,12 @@
     },
     "status": {
       "title": "Platform Status",
-      "description": "Track in real time the status of Clerky's main services.",
+      "description": "Track in real time the status of OnlyFlow's main services.",
       "lastUpdate": "Last update:",
       "refresh": "Refresh now",
       "error": "Could not load platform status. Please try again in a few moments.",
       "dataSource": "Data source:",
-      "apiLink": "Clerky public status API",
+      "apiLink": "OnlyFlow public status API",
       "loading": "Loading platform status...",
       "allOnline": "All main services are online.",
       "someIssues": "Some services may be experiencing instability. Check details below.",
@@ -544,10 +544,10 @@
       "services": {
         "frontend": "Main Page",
         "backend": "API",
-        "dispatchClerky": "Dispatch Service",
-        "mindClerky": "MindClerky Tool",
-        "instaClerky": "Instagram Manager",
-        "grupoClerky": "Groups Manager"
+        "dispatchOnlyFlow": "Dispatch Service",
+        "mindOnlyFlow": "MindOnlyFlow Tool",
+        "instaOnlyFlow": "Instagram Manager",
+        "grupoOnlyFlow": "Groups Manager"
       }
     },
     "footer": {

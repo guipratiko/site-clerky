@@ -1,4 +1,4 @@
-/* Clerky - Global Styles */
+/* OnlyFlow - Global Styles */
 
 :root {
   --primary-50: #eef9ff;
@@ -215,7 +215,7 @@ html[data-theme='light'] a[data-i18n='hero.ctaIntegrations']:hover {
   background-color: rgba(219, 234, 254, 0.5);
 }
 
-/* Hero: \"Empresas que confiam na Clerky\" */
+/* Hero: \"Empresas que confiam na OnlyFlow\" */
 html[data-theme='light'] [data-i18n='hero.trustedBy'] {
   color: rgba(15, 23, 42, 0.7);
 }

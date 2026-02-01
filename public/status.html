@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Status da Plataforma - Clerky</title>
+    <title>Status da Plataforma - OnlyFlow</title>
     <link rel="icon" href="/img/favicon.png" type="image/png" />
     <meta
       name="description"
-      content="Status em tempo real dos serviços da plataforma Clerky, incluindo API, disparo, MindClerky, gerenciador de Instagram e grupos."
+      content="Status em tempo real dos serviços da plataforma OnlyFlow, incluindo API, disparo, MindOnlyFlow, gerenciador de Instagram e grupos."
     />
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -36,20 +36,20 @@
         >
           <!-- Logo -->
           <a href="/" class="flex items-center gap-2">
-            <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-8 w-auto" />
-            <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-8 w-auto" />
+            <img src="/img/OnlyFlow-logo.png" alt="OnlyFlow" class="logo-dark h-8 w-auto" />
+            <img src="/img/OnlyFlow-logo-claro.png" alt="OnlyFlow" class="logo-light h-8 w-auto" />
           </a>
 
           <!-- Actions -->
           <div class="flex items-center gap-3">
             <a
-              href="https://app.clerky.com.br"
+              href="https://app.onlyflow.com.br"
               class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline"
               data-i18n="nav.enter"
               >Entrar</a
             >
             <a
-              href="https://app.clerky.com.br/signup"
+              href="https://app.onlyflow.com.br/signup"
               class="hidden rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 shadow-sm hover:bg-slate-100 sm:inline"
               data-i18n="nav.startNow"
               >Começar agora</a
@@ -92,13 +92,13 @@
           <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
             <div class="mt-2 flex flex-wrap gap-2">
               <a
-                href="https://app.clerky.com.br"
+                href="https://app.onlyflow.com.br"
                 class="flex-1 rounded-full border border-white/15 px-4 py-1.5 text-center text-sm font-medium text-white/80"
                 data-i18n="nav.enter"
                 >Entrar</a
               >
               <a
-                href="https://app.clerky.com.br/signup"
+                href="https://app.onlyflow.com.br/signup"
                 class="flex-1 rounded-full bg-white px-4 py-1.5 text-center text-sm font-semibold text-slate-950"
                 data-i18n="nav.startNow"
                 >Começar agora</a
@@ -120,7 +120,7 @@
                 Status da Plataforma
               </h1>
               <p class="mt-1 text-sm text-white/70" data-i18n="status.description">
-                Acompanhe em tempo real o status dos principais serviços da Clerky.
+                Acompanhe em tempo real o status dos principais serviços da OnlyFlow.
               </p>
             </div>
             <div class="space-y-1 text-right text-xs text-white/60">
@@ -171,12 +171,12 @@
           <p class="mt-10 text-xs text-white/50">
             <span data-i18n="status.dataSource">Fonte dos dados:</span>
             <a
-              href="https://back.clerky.com.br/api/public/status"
+              href="https://back.onlyflow.com.br/api/public/status"
               class="text-primary-200 underline-offset-2 hover:underline"
               target="_blank"
               rel="noreferrer"
               data-i18n="status.apiLink"
-              >API pública de status da Clerky</a
+              >API pública de status da OnlyFlow</a
             >.
           </p>
         </section>
@@ -189,8 +189,8 @@
         >
           <div class="space-y-1">
             <div class="flex items-center gap-2">
-              <img src="/img/Clerky-logo.png" alt="Clerky" class="logo-dark h-7 w-auto" />
-              <img src="/img/Clerky-logo-claro.png" alt="Clerky" class="logo-light h-7 w-auto" />
+              <img src="/img/OnlyFlow-logo.png" alt="OnlyFlow" class="logo-dark h-7 w-auto" />
+              <img src="/img/OnlyFlow-logo-claro.png" alt="OnlyFlow" class="logo-light h-7 w-auto" />
               <span> • Plataforma de comunicação multicanal</span>
             </div>
             <p data-i18n="footer.copyright">© 2026 • Todos os direitos reservados.</p>
@@ -221,14 +221,14 @@
             </div>
             <div class="flex flex-wrap gap-3 text-white/70">
               <a
-                href="https://facebook.com/clerky.hub"
+                href="https://facebook.com/onlyflow.hub"
                 target="_blank"
                 rel="noreferrer"
                 class="hover:text-primary-200"
                 >Facebook</a
               >
               <a
-                href="https://instagram.com/clerky_hub"
+                href="https://instagram.com/onlyflow_hub"
                 target="_blank"
                 rel="noreferrer"
                 class="hover:text-primary-200"
@@ -241,7 +241,7 @@
     </div>
 
     <script>
-      const ENDPOINT = 'https://back.clerky.com.br/api/public/status';
+      const ENDPOINT = 'https://back.onlyflow.com.br/api/public/status';
 
       // Services labels will be loaded from translations
       let servicesLabels = {};
@@ -251,7 +251,7 @@
         try {
           const response = await fetch('/assets/translations/translations.json');
           const translations = await response.json();
-          const lang = localStorage.getItem('clerky_language') || 'pt';
+          const lang = localStorage.getItem('onlyflow_language') || 'pt';
           if (translations[lang] && translations[lang].status && translations[lang].status.services) {
             servicesLabels = translations[lang].status.services;
           } else {
@@ -259,10 +259,10 @@
             servicesLabels = {
               frontend: 'Página Principal',
               backend: 'API',
-              dispatchClerky: 'Serviço de Disparo',
-              mindClerky: 'Ferramenta MindClerky',
-              instaClerky: 'Gerenciador de Instagram',
-              grupoClerky: 'Gerenciador de Grupos'
+              dispatchOnlyFlow: 'Serviço de Disparo',
+              mindOnlyFlow: 'Ferramenta MindOnlyFlow',
+              instaOnlyFlow: 'Gerenciador de Instagram',
+              grupoOnlyFlow: 'Gerenciador de Grupos'
             };
           }
         } catch (error) {
@@ -271,10 +271,10 @@
           servicesLabels = {
             frontend: 'Página Principal',
             backend: 'API',
-            dispatchClerky: 'Serviço de Disparo',
-            mindClerky: 'Ferramenta MindClerky',
-            instaClerky: 'Gerenciador de Instagram',
-            grupoClerky: 'Gerenciador de Grupos'
+            dispatchOnlyFlow: 'Serviço de Disparo',
+            mindOnlyFlow: 'Ferramenta MindOnlyFlow',
+            instaOnlyFlow: 'Gerenciador de Instagram',
+            grupoOnlyFlow: 'Gerenciador de Grupos'
           };
         }
       }
@@ -286,7 +286,7 @@
         if (!iso) return '—';
         try {
           const d = new Date(iso);
-          const lang = localStorage.getItem('clerky_language') || 'pt';
+          const lang = localStorage.getItem('onlyflow_language') || 'pt';
           const locale = lang === 'pt' ? 'pt-BR' : 'en-US';
           return d.toLocaleString(locale, {
             day: '2-digit',
@@ -314,7 +314,7 @@
 
         // Get translated service name
         const serviceName = servicesLabels[key] || service.name || key;
-        const lang = localStorage.getItem('clerky_language') || 'pt';
+        const lang = localStorage.getItem('onlyflow_language') || 'pt';
         const onlineText = lang === 'pt' ? 'Online' : 'Online';
         const offlineText = lang === 'pt' ? 'Offline' : 'Offline';
 
@@ -366,8 +366,8 @@
         const refreshButton = document.getElementById('refresh-button');
 
         // Get language once at the beginning
-        const lang = localStorage.getItem('clerky_language') || 'pt';
-        const t = window.ClerkyLanguage?.t || ((key) => key);
+        const lang = localStorage.getItem('onlyflow_language') || 'pt';
+        const t = window.OnlyFlowLanguage?.t || ((key) => key);
 
         errorBox.classList.add('hidden');
         globalStatus.innerHTML = '';
@@ -413,10 +413,10 @@
           const order = [
             'frontend',
             'backend',
-            'dispatchClerky',
-            'mindClerky',
-            'instaClerky',
-            'grupoClerky'
+            'dispatchOnlyFlow',
+            'mindOnlyFlow',
+            'instaOnlyFlow',
+            'grupoOnlyFlow'
           ];
           for (const key of order) {
             if (services[key]) {

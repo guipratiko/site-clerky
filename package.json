@@ -1,14 +1,14 @@
 {
-  "name": "clerky-website",
-  "version": "1.0.0",
-  "description": "Clerky website with multi-language support",
+  "name": "onlyflow-website",
+  "version": "6.2.0",
+  "description": "OnlyFlow website with multi-language support",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "keywords": [
-    "clerky",
+    "onlyflow",
     "website",
     "multilanguage"
   ],

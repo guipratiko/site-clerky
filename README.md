@@ -1,11 +1,11 @@
-# Clerky Website
+# OnlyFlow Website
 
-Site institucional da Clerky com suporte a múltiplos idiomas (Português e Inglês).
+Site institucional da OnlyFlow com suporte a múltiplos idiomas (Português e Inglês).
 
 ## 📁 Estrutura do Projeto
 
 ```
-SiteClerky/
+SiteOnlyFlow/
 ├── public/                    # Páginas HTML
 │   ├── index.html
 │   ├── status.html

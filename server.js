@@ -224,14 +224,14 @@ app.post('/api/checkout', async (req, res) => {
         nextDueDate: nextDueDateStr, // 7 dias após hoje
       },
       callback: {
-        successUrl: 'https://clerky.com.br/sucesso',
-        cancelUrl: 'https://clerky.com.br/cancelado',
-        expiredUrl: 'https://clerky.com.br/expirado',
+        successUrl: 'https://onlyflow.com.br/sucesso',
+        cancelUrl: 'https://onlyflow.com.br/cancelado',
+        expiredUrl: 'https://onlyflow.com.br/expirado',
       },
       items: [
         {
           imageBase64: imageBase64 || ' ',
-          name: 'Clerky PRO',
+          name: 'OnlyFlow PRO',
           quantity: req.body.quantity || 1,
           value: subscriptionValue,
           description: req.body.description || 'Assinatura mensal',
@@ -321,7 +321,7 @@ app.post('/api/checkout', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Clerky website server running on http://localhost:${PORT}`);
+  console.log(`OnlyFlow website server running on http://localhost:${PORT}`);
   console.log(`Available languages: ${Object.keys(translations).join(', ')}`);
   console.log(`Serving files from: ${__dirname}`);
 });
