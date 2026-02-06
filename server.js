@@ -201,10 +201,10 @@ app.post('/api/checkout', async (req, res) => {
         ? [req.body.billingTypes] 
         : ['CREDIT_CARD']; // padrão
 
-    // Valor da assinatura: req.body.value > env > 197
+    // Valor da assinatura: req.body.value > env > 219.90
     const defaultSubscriptionValue = envSubscriptionValue 
       ? parseFloat(envSubscriptionValue) 
-      : 197;
+      : 219.90;
     const subscriptionValue = req.body.value || defaultSubscriptionValue;
     
     // Próxima cobrança: 7 dias após hoje
