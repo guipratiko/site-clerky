@@ -97,7 +97,12 @@
     `;
     
     switcher.addEventListener('click', toggleLanguage);
-    document.body.appendChild(switcher);
+    var container = document.getElementById('lang-switcher-container');
+    if (container) {
+      container.appendChild(switcher);
+    } else {
+      document.body.appendChild(switcher);
+    }
   }
 
   // Initialize when DOM is ready

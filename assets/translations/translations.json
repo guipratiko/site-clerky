@@ -11,6 +11,8 @@
       "about": "Sobre",
       "integrations": "Integrações",
       "howItWorks": "Como funciona",
+      "customDev": "Sites e Apps",
+      "products": "Produtos",
       "plans": "Planos",
       "testimonials": "Clientes",
       "faq": "FAQ",
@@ -109,6 +111,36 @@
       "label": "Conecte a qualquer sistema",
       "title": "Integrações com ERPs, CRMs, planilhas, automações e muito mais.",
       "description": "Se tem API ou webhook, a OnlyFlow conecta. Crie fluxos que conversam com suas ferramentas favoritas em tempo real."
+    },
+    "customDev": {
+      "label": "Além da plataforma",
+      "title": "Landing pages, sites e apps sob medida.",
+      "description": "A OnlyFlow também desenvolve landing pages, sites institucionais e aplicativos iOS e Android sob medida para o seu negócio.",
+      "landing": {
+        "title": "Landing pages",
+        "desc": "Páginas de conversão sob medida para campanhas, lançamentos e captação de leads."
+      },
+      "sites": {
+        "title": "Sites",
+        "desc": "Sites institucionais e corporativos desenvolvidos sob medida para sua marca."
+      },
+      "apps": {
+        "title": "Apps iOS e Android",
+        "desc": "Aplicativos nativos sob medida para iOS e Android, alinhados à sua necessidade."
+      },
+      "cta": "Solicitar orçamento"
+    },
+    "products": {
+      "label": "Nossos produtos",
+      "title": "Soluções OnlyFlow para diferentes necessidades.",
+      "description": "Conheça outros produtos desenvolvidos pela OnlyFlow para potencializar sua comunicação e operação.",
+      "onlyHelper": {
+        "name": "OnlyHelper",
+        "desc": "Assistente e ferramentas para otimizar seu dia a dia na OnlyFlow. Automações, atalhos e suporte integrado.",
+        "cta": "Conhecer no WhatsApp"
+      },
+      "moreComing": "Mais produtos em breve",
+      "moreComingDesc": "Soluções OnlyFlow para sua operação."
     },
     "plans": {
       "label": "Planos para todos os tamanhos",
@@ -293,6 +325,8 @@
       "about": "About",
       "integrations": "Integrations",
       "howItWorks": "How it works",
+      "customDev": "Sites & Apps",
+      "products": "Products",
       "plans": "Plans",
       "testimonials": "Clients",
       "faq": "FAQ",
@@ -391,6 +425,36 @@
       "label": "Connect to any system",
       "title": "Integrations with ERPs, CRMs, spreadsheets, automations and much more.",
       "description": "If it has an API or webhook, OnlyFlow connects. Create flows that communicate with your favorite tools in real time."
+    },
+    "customDev": {
+      "label": "Beyond the platform",
+      "title": "Landing pages, websites and apps made to order.",
+      "description": "OnlyFlow also builds landing pages, corporate websites and custom iOS and Android apps for your business.",
+      "landing": {
+        "title": "Landing pages",
+        "desc": "Custom conversion pages for campaigns, launches and lead generation."
+      },
+      "sites": {
+        "title": "Websites",
+        "desc": "Corporate and institutional websites built to order for your brand."
+      },
+      "apps": {
+        "title": "iOS & Android apps",
+        "desc": "Custom native apps for iOS and Android, tailored to your needs."
+      },
+      "cta": "Request a quote"
+    },
+    "products": {
+      "label": "Our products",
+      "title": "OnlyFlow solutions for different needs.",
+      "description": "Discover other products developed by OnlyFlow to boost your communication and operations.",
+      "onlyHelper": {
+        "name": "OnlyHelper",
+        "desc": "Assistant and tools to optimize your daily workflow on OnlyFlow. Automations, shortcuts and integrated support.",
+        "cta": "Learn more on WhatsApp"
+      },
+      "moreComing": "More products coming soon",
+      "moreComingDesc": "OnlyFlow solutions for your operations."
     },
     "plans": {
       "label": "Plans for all sizes",
