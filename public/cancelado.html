@@ -32,8 +32,8 @@
             <img src="/img/OnlyFlow-logo-claro.png" alt="OnlyFlow" class="logo-light h-8 w-auto" />
           </a>
           <div class="flex items-center gap-3">
-            <a href="https://app.onlyflow.com.br" class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline">Entrar</a>
-            <a href="https://app.onlyflow.com.br/signup" class="hidden rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 shadow-sm hover:bg-slate-100 sm:inline">Começar agora</a>
+            <a href="https://app.onlyflow.com.br" class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline" data-i18n="nav.enter">Entrar</a>
+            <a href="https://app.onlyflow.com.br/signup" class="hidden rounded-full bg-white px-4 py-1.5 text-sm font-semibold text-slate-950 shadow-sm hover:bg-slate-100 sm:inline" data-i18n="nav.startNow">Começar agora</a>
             <button type="button" class="hidden rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/80 hover:border-white/40 hover:text-white sm:inline-flex items-center gap-1" data-theme-toggle aria-label="Alternar tema claro/escuro">
               <span class="theme-toggle-label">Tema claro</span>
             </button>
@@ -46,8 +46,8 @@
         </div>
         <div id="mobile-menu" class="hidden border-t border-white/5 md:hidden">
           <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3">
-            <a href="https://app.onlyflow.com.br" class="flex-1 rounded-full border border-white/15 px-4 py-1.5 text-center text-sm font-medium text-white/80">Entrar</a>
-            <a href="https://app.onlyflow.com.br/signup" class="flex-1 rounded-full bg-white px-4 py-1.5 text-center text-sm font-semibold text-slate-950">Começar agora</a>
+            <a href="https://app.onlyflow.com.br" class="flex-1 rounded-full border border-white/15 px-4 py-1.5 text-center text-sm font-medium text-white/80" data-i18n="nav.enter">Entrar</a>
+            <a href="https://app.onlyflow.com.br/signup" class="flex-1 rounded-full bg-white px-4 py-1.5 text-center text-sm font-semibold text-slate-950" data-i18n="nav.startNow">Começar agora</a>
           </div>
         </div>
       </header>
@@ -59,17 +59,13 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </div>
-          <h1 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl">Pagamento cancelado</h1>
-          <p class="mt-3 text-white/70">
+          <h1 class="text-2xl font-semibold tracking-tight text-white sm:text-3xl" data-i18n="cancelado.heading">Pagamento cancelado</h1>
+          <p class="mt-3 text-white/70" data-i18n="cancelado.message">
             O pagamento foi cancelado e nenhuma cobrança foi realizada. Se mudar de ideia, você pode assinar novamente a qualquer momento.
           </p>
           <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
-            <a href="/#planos" class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 hover:bg-primary-400">
-              Ver planos novamente
-            </a>
-            <a href="/" class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/90 hover:border-white/40">
-              Voltar ao site
-            </a>
+            <a href="/#planos" class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 hover:bg-primary-400" data-i18n="cancelado.ctaPlans">Ver planos novamente</a>
+            <a href="/" class="inline-flex items-center justify-center rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-white/90 hover:border-white/40" data-i18n="cancelado.ctaHome">Voltar ao site</a>
           </div>
         </div>
       </main>
@@ -80,16 +76,16 @@
             <div class="flex items-center gap-2">
               <img src="/img/OnlyFlow-logo.png" alt="OnlyFlow" class="logo-dark h-7 w-auto" />
               <img src="/img/OnlyFlow-logo-claro.png" alt="OnlyFlow" class="logo-light h-7 w-auto" />
-              <span> • Plataforma de comunicação multicanal</span>
+              <span> • </span><span data-i18n="footer.tagline">Plataforma de comunicação multicanal</span>
             </div>
-            <p>© 2026 • Todos os direitos reservados.</p>
+            <p data-i18n="footer.copyright">© 2026 • Todos os direitos reservados.</p>
             <p class="text-white/50">CNPJ: 64.494.403/0001-17 • Tel: +55 62 99355-7070</p>
           </div>
           <div class="flex flex-col items-start gap-2 text-xs sm:items-end">
             <div class="flex flex-wrap gap-4">
-              <a href="/politica-privacidade" class="hover:text-primary-200">Política de Privacidade</a>
-              <a href="/termos" class="hover:text-primary-200">Termos de Uso</a>
-              <a href="/documentacao" class="hover:text-primary-200">Documentação</a>
+              <a href="/politica-privacidade" class="hover:text-primary-200" data-i18n="footer.privacy">Política de Privacidade</a>
+              <a href="/termos" class="hover:text-primary-200" data-i18n="footer.terms">Termos de Uso</a>
+              <a href="/documentacao" class="hover:text-primary-200" data-i18n="footer.docs">Documentação</a>
             </div>
             <div class="flex flex-wrap gap-3 text-white/70">
               <a href="https://facebook.com/onlyflow.hub" target="_blank" rel="noreferrer" class="hover:text-primary-200">Facebook</a>
