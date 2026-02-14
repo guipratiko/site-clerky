@@ -1,0 +1,6 @@
+# Nixpacks: build OnlyFlow site
+# .npmrc no root já define timeout/retries para evitar ETIMEDOUT no npm ci
+
+[variables]
+# Evita warning "UndefinedVar: $NIXPACKS_PATH" no Dockerfile gerado
+NIXPACKS_PATH = "/app/node_modules/.bin"
