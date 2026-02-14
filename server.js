@@ -74,20 +74,12 @@ app.get('/politica-privacidade', (req, res) => {
   serveHTML(path.join(publicPath, 'politica-privacidade.html'), res);
 });
 
-// Privacy Policy page (English)
-app.get('/privacy', (req, res) => {
-  serveHTML(path.join(publicPath, 'privacy.html'), res);
-});
 
 // Terms page (Portuguese)
 app.get('/termos', (req, res) => {
   serveHTML(path.join(publicPath, 'termos.html'), res);
 });
 
-// Terms page (English)
-app.get('/terms', (req, res) => {
-  serveHTML(path.join(publicPath, 'terms.html'), res);
-});
 
 // Documentation page
 app.get('/documentacao', (req, res) => {

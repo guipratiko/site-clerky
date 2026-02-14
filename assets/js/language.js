@@ -47,6 +47,8 @@
           el.value = text;
         } else if (el.hasAttribute('placeholder')) {
           el.placeholder = text;
+        } else if (text.indexOf('<') !== -1) {
+          el.innerHTML = text;
         } else {
           el.textContent = text;
         }
