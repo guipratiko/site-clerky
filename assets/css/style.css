@@ -225,11 +225,11 @@ html[data-theme='light'] .text-primary-100 {
   color: #1d4ed8;
 }
 
-/* Language Switcher Button */
+/* Language Switcher Button (flutuante: fica à esquerda do botão WhatsApp) */
 .lang-switcher {
   position: fixed;
   bottom: 24px;
-  right: 24px;
+  right: 100px; /* espaço para não sobrepor o botão WhatsApp (56px + 24px + gap) */
   z-index: 50;
   display: inline-flex;
   align-items: center;
@@ -448,7 +448,7 @@ html[data-theme='light'] .plans-pro-features .text-primary-300 {
 @media (max-width: 640px) {
   .lang-switcher {
     bottom: 16px;
-    right: 16px;
+    right: 84px; /* à esquerda do botão WhatsApp no mobile */
     padding: 8px 12px;
     font-size: 12px;
   }
