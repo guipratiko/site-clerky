@@ -427,6 +427,23 @@ html[data-theme='light'] .bg-gradient-to-b.from-primary-500\/20.via-slate-900.to
   );
 }
 
+/* Lista de benefícios do Pro: destaque e tema claro */
+.plans-pro-features li {
+  text-shadow: 0 0 20px rgba(28, 134, 255, 0.15);
+}
+html[data-theme='light'] .plans-pro-features li {
+  text-shadow: none;
+}
+html[data-theme='light'] .plans-pro-features .font-medium.text-white {
+  color: #0f172a;
+}
+html[data-theme='light'] .plans-pro-features .bg-primary-500\/30 {
+  background-color: rgba(28, 134, 255, 0.2);
+}
+html[data-theme='light'] .plans-pro-features .text-primary-300 {
+  color: #1d4ed8;
+}
+
 /* Responsive adjustments */
 @media (max-width: 640px) {
   .lang-switcher {

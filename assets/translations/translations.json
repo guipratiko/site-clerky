@@ -222,7 +222,7 @@
       "agentTitle": "Agente de IA - Vendedor",
       "agentLine1": "\"Olá! Como posso ajudar você hoje?\"",
       "agentLine2": "\"Quero saber mais sobre o plano Pro\"",
-      "agentLine3": "\"O Plano Pro inclui 10.000 mensagens/mês, agentes ilimitados e CRM Kanban. Posso te enviar uma demonstração?\""
+      "agentLine3": "\"O Plano Pro inclui mensagens ilimitadas, agentes ilimitados, CRM Kanban, automação de Instagram e gestão de grupos. Posso te enviar uma demonstração?\""
     },
     "testimonials": {
       "label": "O que nossos clientes dizem",
@@ -282,14 +282,16 @@
         "title": "Para empresas que querem escalar vendas",
         "price": "R$ 219,90/mês",
         "features": {
-          "1": "10.000 mensagens/mês",
+          "1": "Mensagens ilimitadas",
           "2": "Agentes ilimitados",
           "3": "CRM Kanban completo",
           "4": "Disparo em massa",
-          "5": "API & webhooks avançados",
-          "6": "Integrações nativas",
-          "7": "Suporte prioritário",
-          "8": "Analytics avançado"
+          "5": "Automação de Instagram",
+          "6": "Gestão de grupos",
+          "7": "Crie fluxos ligando nós",
+          "8": "API & webhooks avançados",
+          "9": "Integrações nativas",
+          "10": "Analytics avançado"
         },
         "cta": "Assinar Pro"
       },
@@ -298,16 +300,21 @@
         "title": "Solução personalizada para grandes volumes",
         "price": "Sob consulta",
         "features": {
-          "1": "Mensagens ilimitadas",
-          "2": "Agentes ilimitados",
-          "3": "CRM personalizado",
-          "4": "Disparo em massa ilimitado",
-          "5": "API dedicada",
-          "6": "White label",
-          "7": "Gerente de contas dedicado",
-          "8": "SLA garantido",
-          "9": "Onboarding personalizado"
+          "1": "Criação de sites, sistemas e apps (iOS e Android)",
+          "2": "Agentes de IA personalizados",
+          "3": "Mensagens ilimitadas",
+          "4": "Agentes ilimitados",
+          "5": "CRM Kanban completo",
+          "6": "Disparo em massa multicanal",
+          "7": "Automação de Instagram",
+          "8": "Gestão de grupos",
+          "9": "Criação de fluxos conectando nós",
+          "10": "API & Webhooks avançados",
+          "11": "Integrações nativas",
+          "12": "Analytics avançado",
+          "13": "Suporte prioritário"
         },
+        "description": "Infraestrutura completa para operações de alta performance.",
         "cta": "Falar com vendas"
       },
       "note": "Todas as assinaturas incluem período de teste grátis. Cancele a qualquer momento."
@@ -854,7 +861,7 @@
       "agentTitle": "AI Agent - Sales",
       "agentLine1": "\"Hello! How can I help you today?\"",
       "agentLine2": "\"I want to know more about the Pro plan\"",
-      "agentLine3": "\"The Pro plan includes 10,000 messages/month, unlimited agents and Kanban CRM. Can I send you a demo?\""
+      "agentLine3": "\"The Pro plan includes unlimited messages, unlimited agents, Kanban CRM, Instagram automation and group management. Can I send you a demo?\""
     },
     "testimonials": {
       "label": "What our clients say",
@@ -914,14 +921,16 @@
         "title": "For companies that want to scale sales",
         "price": "R$ 219,90/month",
         "features": {
-          "1": "10,000 messages/month",
+          "1": "Unlimited messages",
           "2": "Unlimited agents",
           "3": "Complete Kanban CRM",
           "4": "Bulk messaging",
-          "5": "Advanced API & webhooks",
-          "6": "Native integrations",
-          "7": "Priority support",
-          "8": "Advanced analytics"
+          "5": "Instagram automation",
+          "6": "Group management",
+          "7": "Create flows connecting nodes",
+          "8": "Advanced API & webhooks",
+          "9": "Native integrations",
+          "10": "Advanced analytics"
         },
         "cta": "Subscribe Pro"
       },
@@ -930,16 +939,21 @@
         "title": "Custom solution for large volumes",
         "price": "On request",
         "features": {
-          "1": "Unlimited messages",
-          "2": "Unlimited agents",
-          "3": "Custom CRM",
-          "4": "Unlimited bulk messaging",
-          "5": "Dedicated API",
-          "6": "White label",
-          "7": "Dedicated account manager",
-          "8": "Guaranteed SLA",
-          "9": "Custom onboarding"
+          "1": "Creation of sites, systems and apps (iOS and Android)",
+          "2": "Custom AI agents",
+          "3": "Unlimited messages",
+          "4": "Unlimited agents",
+          "5": "Complete Kanban CRM",
+          "6": "Multichannel bulk messaging",
+          "7": "Instagram automation",
+          "8": "Group management",
+          "9": "Create flows connecting nodes",
+          "10": "Advanced API & Webhooks",
+          "11": "Native integrations",
+          "12": "Advanced analytics",
+          "13": "Priority support"
         },
+        "description": "Complete infrastructure for high-performance operations.",
         "cta": "Talk to sales"
       },
       "note": "All subscriptions include a free trial period. Cancel at any time."
