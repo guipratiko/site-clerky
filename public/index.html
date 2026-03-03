@@ -56,7 +56,7 @@
               <a href="#como-funciona" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.howItWorks">Como funciona</a>
               <a href="#desenvolvimento" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.customDev">Sites e Apps</a>
               <a href="#produtos" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.products">Produtos</a>
-              <a href="#planos" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.plans">Planos</a>
+              <a href="#precos-cards" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.plans">Preços</a>
               <a href="#depoimentos" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.testimonials">Clientes</a>
               <a href="#faq" class="whitespace-nowrap text-white/80 hover:text-white" data-i18n="nav.faq">FAQ</a>
               <a
@@ -126,7 +126,7 @@
             <a href="#como-funciona" class="py-1 text-sm text-white/80" data-i18n="nav.howItWorks">Como funciona</a>
             <a href="#desenvolvimento" class="py-1 text-sm text-white/80" data-i18n="nav.customDev">Sites e Apps</a>
             <a href="#produtos" class="py-1 text-sm text-white/80" data-i18n="nav.products">Produtos</a>
-            <a href="#planos" class="py-1 text-sm text-white/80" data-i18n="nav.plans">Planos</a>
+            <a href="#precos-cards" class="py-1 text-sm text-white/80" data-i18n="nav.plans">Preços</a>
             <a href="#depoimentos" class="py-1 text-sm text-white/80" data-i18n="nav.testimonials">Clientes</a>
             <a href="#faq" class="py-1 text-sm text-white/80" data-i18n="nav.faq">FAQ</a>
             <a href="/status" class="py-1 text-sm font-semibold text-emerald-300 hover:text-emerald-200" data-i18n="nav.status">Status</a>
@@ -808,15 +808,15 @@
           </div>
         </section>
 
-        <!-- Planos -->
+        <!-- Planos e Preços -->
         <section
-          id="planos"
+          id="precos"
           class="border-t border-white/5 py-16 sm:py-20"
         >
           <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
             <div class="max-w-2xl">
               <h2 class="text-sm font-semibold uppercase tracking-[0.2em] text-primary-300" data-i18n="plans.label">
-                Planos para todos os tamanhos
+                Planos e Preços
               </h2>
               <p class="mt-3 text-2xl font-semibold tracking-tight" data-i18n="plans.title">
                 Escolha o plano ideal para o seu negócio.
@@ -827,143 +827,122 @@
               </p>
             </div>
 
-            <div
-              class="mt-10 grid gap-6 md:grid-cols-2 md:items-stretch lg:gap-7"
-            >
-              <!-- Pro -->
-              <div
-                class="relative flex flex-col rounded-3xl border border-primary-400/60 bg-gradient-to-b from-primary-500/20 via-slate-900 to-slate-900 p-5 shadow-xl shadow-primary-500/40"
-              >
-                <span
-                  class="absolute -top-3 right-4 rounded-full bg-primary-400 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-950"
-                  data-i18n="plans.pro.badge"
-                  >Mais popular</span
-                >
-                <p
-                  class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200"
-                  data-i18n="plans.pro.label"
-                >
-                  Pro
-                </p>
-                <p class="mt-1 text-lg font-semibold" data-i18n="plans.pro.title">
-                  Para empresas que querem escalar vendas
-                </p>
-                <p class="mt-3 text-2xl font-bold" data-i18n="plans.pro.price">R$ 219,90/mês</p>
-                <ul class="plans-pro-features mt-4 space-y-2.5 text-sm">
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.1">Mensagens ilimitadas</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.2">Agentes ilimitados</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.3">CRM Kanban completo</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.4">Disparo em massa</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.5">Automação de Instagram</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.6">Gestão de grupos</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.7">Crie fluxos ligando nós</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.8">API &amp; webhooks avançados</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.9">Integrações nativas</span>
-                  </li>
-                  <li class="flex items-center gap-2.5 font-medium text-white">
-                    <span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300">
-                      <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                    </span>
-                    <span data-i18n="plans.pro.features.10">Analytics avançado</span>
-                  </li>
+            <div id="precos-cards" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
+              <!-- Started -->
+              <div class="flex flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60" data-i18n="plans.started.label">Started</p>
+                <p class="mt-1 text-lg font-semibold" data-i18n="plans.started.title">Para começar com o essencial</p>
+                <p class="mt-3 text-2xl font-bold" data-i18n="plans.started.price">R$ 59,00/mês</p>
+                <ul class="plans-card-features mt-4 flex-1 min-h-0 space-y-2 text-sm">
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.1"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.2"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.3"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.4"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.5"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.6"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.7"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.8"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.9"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.10"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.started.features.11"></span></li>
                 </ul>
-                <button
-                  id="btn-assinar-pro"
-                  class="mt-6 inline-flex items-center justify-center rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-400 disabled:opacity-50 disabled:cursor-not-allowed"
-                  data-i18n="plans.pro.cta"
-                >
-                  <span id="btn-assinar-pro-text">Assinar Pro</span>
-                  <span id="btn-assinar-pro-loading" class="hidden ml-2">
-                    <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                  </span>
+                <button type="button" class="btn-checkout plan-started mt-auto inline-flex items-center justify-center rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-400 disabled:opacity-50 disabled:cursor-not-allowed" data-plan="started" data-i18n="plans.started.cta">
+                  <span class="btn-checkout-text">Assinar Started</span>
+                  <span class="btn-checkout-loading hidden ml-2"><svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></span>
                 </button>
               </div>
 
-              <!-- Enterprise -->
-              <div
-                class="flex flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-5"
-              >
-                <p
-                  class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60"
-                  data-i18n="plans.enterprise.label"
-                >
-                  Enterprise
-                </p>
-                <p class="mt-1 text-lg font-semibold" data-i18n="plans.enterprise.title">
-                  Solução personalizada para grandes volumes
-                </p>
-                <p class="mt-3 text-2xl font-bold" data-i18n="plans.enterprise.price">Sob consulta</p>
-                <ul class="mt-4 space-y-2 text-sm text-white/70">
-                  <li data-i18n="plans.enterprise.features.1">Criação de sites, sistemas e apps (iOS e Android)</li>
-                  <li data-i18n="plans.enterprise.features.2">Agentes de IA personalizados</li>
-                  <li data-i18n="plans.enterprise.features.3">Mensagens ilimitadas</li>
-                  <li data-i18n="plans.enterprise.features.4">Agentes ilimitados</li>
-                  <li data-i18n="plans.enterprise.features.5">CRM Kanban completo</li>
-                  <li data-i18n="plans.enterprise.features.6">Disparo em massa multicanal</li>
-                  <li data-i18n="plans.enterprise.features.7">Automação de Instagram</li>
-                  <li data-i18n="plans.enterprise.features.8">Gestão de grupos</li>
-                  <li data-i18n="plans.enterprise.features.9">Criação de fluxos conectando nós</li>
-                  <li data-i18n="plans.enterprise.features.10">API &amp; Webhooks avançados</li>
-                  <li data-i18n="plans.enterprise.features.11">Integrações nativas</li>
-                  <li data-i18n="plans.enterprise.features.12">Analytics avançado</li>
-                  <li data-i18n="plans.enterprise.features.13">Suporte prioritário</li>
+              <!-- Advanced -->
+              <div class="flex flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-5">
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60" data-i18n="plans.advanced.label">Advanced</p>
+                <p class="mt-1 text-lg font-semibold" data-i18n="plans.advanced.title">Para crescer com mais canais</p>
+                <p class="mt-3 text-2xl font-bold" data-i18n="plans.advanced.price">R$ 219,00/mês</p>
+                <ul class="plans-card-features mt-4 flex-1 min-h-0 space-y-2 text-sm">
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.1"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.2"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.3"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.4"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.5"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.6"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.7"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.8"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.9"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.10"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.11"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.12"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.13"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.14"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.15"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.16"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.17"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white/90"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.advanced.features.18"></span></li>
                 </ul>
-                <p class="mt-4 text-sm font-medium text-white/90" data-i18n="plans.enterprise.description">Infraestrutura completa para operações de alta performance.</p>
-                <a
-                  href="https://wa.me/5562993557070"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="mt-6 inline-flex items-center justify-center rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white hover:border-white/40"
-                  data-i18n="plans.enterprise.cta"
-                  >Falar com vendas</a
-                >
+                <button type="button" class="btn-checkout plan-advanced mt-auto inline-flex items-center justify-center rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-400 disabled:opacity-50 disabled:cursor-not-allowed" data-plan="advanced" data-i18n="plans.advanced.cta">
+                  <span class="btn-checkout-text">Assinar Advanced</span>
+                  <span class="btn-checkout-loading hidden ml-2"><svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></span>
+                </button>
+              </div>
+
+              <!-- Pro -->
+              <div class="relative flex flex-col rounded-3xl border border-primary-400/60 bg-gradient-to-b from-primary-500/20 via-slate-900 to-slate-900 p-5 shadow-xl shadow-primary-500/40">
+                <span class="absolute -top-3 right-4 rounded-full bg-primary-400 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-950" data-i18n="plans.pro.badge">Mais popular</span>
+                <p class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-200" data-i18n="plans.pro.label">Pro</p>
+                <p class="mt-1 text-lg font-semibold" data-i18n="plans.pro.title">Para empresas que querem escalar vendas</p>
+                <p class="mt-3 text-2xl font-bold" data-i18n="plans.pro.price">R$ 489,00/mês</p>
+                <ul class="plans-card-features plans-pro-features mt-4 flex-1 min-h-0 space-y-2 text-sm">
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.1"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.2"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.3"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.4"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.5"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.6"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.7"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.8"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.9"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.10"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.11"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.12"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.13"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.14"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.15"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.16"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.17"></span></li>
+                  <li class="flex items-center gap-2.5 font-medium text-white"><span class="flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-primary-500/30 text-primary-300"><svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></span><span data-i18n="plans.pro.features.18"></span></li>
+                </ul>
+                <button type="button" class="btn-checkout plan-pro mt-auto inline-flex items-center justify-center rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white hover:bg-primary-400 disabled:opacity-50 disabled:cursor-not-allowed" data-plan="pro" data-i18n="plans.pro.cta">
+                  <span class="btn-checkout-text">Assinar Pro</span>
+                  <span class="btn-checkout-loading hidden ml-2"><svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Enterprise (card em linha separada abaixo) -->
+            <div class="mt-8">
+              <div class="flex flex-col rounded-3xl border border-white/10 bg-slate-900/70 p-6 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+                <div class="flex-1">
+                  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-white/60" data-i18n="plans.enterprise.label">Enterprise</p>
+                  <p class="mt-1 text-lg font-semibold" data-i18n="plans.enterprise.title">Solução personalizada para grandes volumes</p>
+                  <p class="mt-2 text-2xl font-bold" data-i18n="plans.enterprise.price">Sob consulta</p>
+                  <p class="mt-3 text-sm font-medium text-white/90" data-i18n="plans.enterprise.description">Infraestrutura completa para operações de alta performance.</p>
+                  <ul class="mt-4 grid gap-x-8 gap-y-1 text-sm text-white/70 sm:grid-cols-2 lg:grid-cols-3">
+                    <li data-i18n="plans.enterprise.features.1">Criação de sites, sistemas e apps (iOS e Android)</li>
+                    <li data-i18n="plans.enterprise.features.2">Agentes de IA personalizados</li>
+                    <li data-i18n="plans.enterprise.features.3">Mensagens ilimitadas</li>
+                    <li data-i18n="plans.enterprise.features.4">Agentes ilimitados</li>
+                    <li data-i18n="plans.enterprise.features.5">CRM Kanban completo</li>
+                    <li data-i18n="plans.enterprise.features.6">Disparo em massa multicanal</li>
+                    <li data-i18n="plans.enterprise.features.7">Automação de Instagram</li>
+                    <li data-i18n="plans.enterprise.features.8">Gestão de grupos</li>
+                    <li data-i18n="plans.enterprise.features.9">Criação de fluxos conectando nós</li>
+                    <li data-i18n="plans.enterprise.features.10">API &amp; Webhooks avançados</li>
+                    <li data-i18n="plans.enterprise.features.11">Integrações nativas</li>
+                    <li data-i18n="plans.enterprise.features.12">Analytics avançado</li>
+                    <li data-i18n="plans.enterprise.features.13">Suporte prioritário</li>
+                  </ul>
+                </div>
+                <div class="mt-6 flex-shrink-0 sm:mt-0">
+                  <a href="https://wa.me/5562993557070" target="_blank" rel="noopener noreferrer" class="btn-plan-enterprise inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-2.5 text-sm font-semibold text-white hover:border-white/40" data-i18n="plans.enterprise.cta">Falar com vendas</a>
+                </div>
               </div>
             </div>
 
@@ -1192,7 +1171,7 @@
             </p>
             <div class="mt-6 flex flex-wrap items-center justify-center gap-4">
               <a
-                href="#planos"
+                href="#precos-cards"
                 class="inline-flex items-center justify-center rounded-full bg-primary-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary-500/40 hover:bg-primary-400"
                 data-i18n="cta.button"
                 >Começar agora</a
@@ -1293,54 +1272,46 @@
       (function() {
         'use strict';
         
-        const btnAssinarPro = document.getElementById('btn-assinar-pro');
-        const btnText = document.getElementById('btn-assinar-pro-text');
-        const btnLoading = document.getElementById('btn-assinar-pro-loading');
-        
-        if (!btnAssinarPro) return;
-        
-        async function criarCheckout() {
-          // Desabilitar botão e mostrar loading
-          btnAssinarPro.disabled = true;
-          btnText.textContent = 'Processando...';
-          btnLoading.classList.remove('hidden');
-          
-          try {
-            const response = await fetch('/api/checkout', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                billingTypes: ['CREDIT_CARD'],
-                quantity: 1,
-              }),
-            });
-            
-            const data = await response.json();
-            
-            if (!response.ok) {
-              throw new Error(data.error || 'Erro ao criar checkout');
-            }
-            
-            if (data.success && data.link) {
-              // Redirecionar para o checkout
-              window.location.href = data.link;
-            } else {
-              throw new Error('URL do checkout não retornada');
-            }
-          } catch (error) {
-            console.error('Erro ao criar checkout:', error);
-            alert('Erro ao processar checkout. Por favor, tente novamente.');
-            
-            // Restaurar botão
-            btnAssinarPro.disabled = false;
-            btnText.textContent = 'Assinar Pro';
-            btnLoading.classList.add('hidden');
-          }
+        const planCtaText = { started: 'Assinar Started', advanced: 'Assinar Advanced', pro: 'Assinar Pro' };
+        if (window.OnlyFlowLanguage && window.OnlyFlowLanguage.t) {
+          planCtaText.started = window.OnlyFlowLanguage.t('plans.started.cta');
+          planCtaText.advanced = window.OnlyFlowLanguage.t('plans.advanced.cta');
+          planCtaText.pro = window.OnlyFlowLanguage.t('plans.pro.cta');
         }
         
-        btnAssinarPro.addEventListener('click', criarCheckout);
+        document.querySelectorAll('.btn-checkout').forEach(function(btn) {
+          var plan = btn.getAttribute('data-plan');
+          if (!plan) return;
+          var textEl = btn.querySelector('.btn-checkout-text');
+          var loadingEl = btn.querySelector('.btn-checkout-loading');
+          
+          btn.addEventListener('click', async function() {
+            btn.disabled = true;
+            if (textEl) textEl.textContent = 'Processando...';
+            if (loadingEl) loadingEl.classList.remove('hidden');
+            
+            try {
+              var response = await fetch('/api/checkout', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ billingTypes: ['CREDIT_CARD'], quantity: 1, plan: plan }),
+              });
+              var data = await response.json();
+              if (!response.ok) throw new Error(data.error || 'Erro ao criar checkout');
+              if (data.success && data.link) {
+                window.location.href = data.link;
+              } else {
+                throw new Error('URL do checkout não retornada');
+              }
+            } catch (err) {
+              console.error('Erro ao criar checkout:', err);
+              alert('Erro ao processar checkout. Por favor, tente novamente.');
+              btn.disabled = false;
+              if (textEl) textEl.textContent = planCtaText[plan] || btn.getAttribute('data-i18n') || 'Assinar';
+              if (loadingEl) loadingEl.classList.add('hidden');
+            }
+          });
+        });
       })();
     </script>
   </body>

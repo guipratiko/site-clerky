@@ -412,6 +412,72 @@ section[id] {
   scroll-margin-top: 80px;
 }
 
+/* Preços: ao clicar no menu, centralizar os 3 cards com botões visíveis */
+#precos-cards {
+  scroll-margin-top: 18vh;
+}
+@media (max-width: 640px) {
+  #precos-cards {
+    scroll-margin-top: 12vh;
+  }
+}
+
+/* Botões dos planos (Assinar Started / Advanced / Pro) */
+.btn-checkout {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  min-width: 10rem;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(28, 134, 255, 0.25);
+}
+.btn-checkout .btn-checkout-text {
+  line-height: 1.25;
+  vertical-align: middle;
+}
+.btn-checkout .btn-checkout-loading {
+  display: inline-flex;
+  align-items: center;
+}
+.btn-checkout .btn-checkout-loading.hidden {
+  display: none;
+}
+.btn-checkout:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(28, 134, 255, 0.35);
+}
+.btn-checkout:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(28, 134, 255, 0.25);
+}
+/* Botão Enterprise (Falar com vendas) */
+.btn-plan-enterprise {
+  min-height: 44px;
+  padding: 0.625rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.06);
+}
+.btn-plan-enterprise:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.btn-plan-enterprise:active {
+  transform: translateY(0);
+}
+html[data-theme='light'] .btn-checkout {
+  box-shadow: 0 2px 8px rgba(28, 134, 255, 0.3);
+}
+html[data-theme='light'] .btn-checkout:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(28, 134, 255, 0.4);
+}
+
 /* Section "Conecte a qualquer sistema" (gradiente) em tema claro */
 html[data-theme='light'] .bg-gradient-to-b.from-slate-950\/80.to-slate-950 {
   background-image: linear-gradient(to bottom, #ffffff, #f3f4f6, #e5e7eb);
@@ -427,19 +493,24 @@ html[data-theme='light'] .bg-gradient-to-b.from-primary-500\/20.via-slate-900.to
   );
 }
 
-/* Lista de benefícios do Pro: destaque e tema claro */
+/* Lista de benefícios dos planos: destaque e tema claro */
 .plans-pro-features li {
   text-shadow: 0 0 20px rgba(28, 134, 255, 0.15);
 }
+html[data-theme='light'] .plans-card-features li,
 html[data-theme='light'] .plans-pro-features li {
   text-shadow: none;
 }
+html[data-theme='light'] .plans-card-features .font-medium.text-white\/90,
+html[data-theme='light'] .plans-card-features .font-medium.text-white,
 html[data-theme='light'] .plans-pro-features .font-medium.text-white {
   color: #0f172a;
 }
+html[data-theme='light'] .plans-card-features .bg-primary-500\/30,
 html[data-theme='light'] .plans-pro-features .bg-primary-500\/30 {
   background-color: rgba(28, 134, 255, 0.2);
 }
+html[data-theme='light'] .plans-card-features .text-primary-300,
 html[data-theme='light'] .plans-pro-features .text-primary-300 {
   color: #1d4ed8;
 }

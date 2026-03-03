@@ -161,13 +161,20 @@ async function getImageBase64(imageDocId) {
   }
 }
 
+// Preços por plano (variáveis de ambiente). Ex.: CHECKOUT_PRICE_STARTED=59.00
+const PLAN_ENV_KEYS = {
+  started: 'CHECKOUT_PRICE_STARTED',
+  advanced: 'CHECKOUT_PRICE_ADVANCED',
+  pro: 'CHECKOUT_PRICE_PRO',
+};
+const PLAN_NAMES = { started: 'OnlyFlow Started', advanced: 'OnlyFlow Advanced', pro: 'OnlyFlow PRO' };
+
 // API endpoint para criar checkout
 app.post('/api/checkout', async (req, res) => {
   try {
     const {
       ASAAS_API_URL,
       ASAAS_ACCESS_TOKEN: rawToken,
-      SUBSCRIPTION_VALUE: envSubscriptionValue,
     } = process.env;
 
     if (!ASAAS_API_URL || !rawToken) {
@@ -181,6 +188,24 @@ app.post('/api/checkout', async (req, res) => {
       });
     }
 
+    const plan = (req.body.plan || '').toLowerCase();
+    if (!plan || !PLAN_ENV_KEYS[plan]) {
+      return res.status(400).json({
+        success: false,
+        error: 'Plano inválido. Use started, advanced ou pro.',
+      });
+    }
+
+    const priceEnv = process.env[PLAN_ENV_KEYS[plan]];
+    const subscriptionValue = priceEnv ? parseFloat(priceEnv) : null;
+    if (subscriptionValue == null || isNaN(subscriptionValue) || subscriptionValue <= 0) {
+      console.error('[CHECKOUT] Preço não configurado para o plano:', plan, 'Variável:', PLAN_ENV_KEYS[plan]);
+      return res.status(500).json({
+        success: false,
+        error: 'Preço do plano não configurado. Configure ' + PLAN_ENV_KEYS[plan] + ' no .env',
+      });
+    }
+
     // Remover aspas do token se existirem
     const ASAAS_ACCESS_TOKEN = rawToken.replace(/^["']|["']$/g, '');
 
@@ -188,7 +213,6 @@ app.post('/api/checkout', async (req, res) => {
     const externalReference = randomUUID();
     
     // Buscar imagem base64 do MongoDB
-    // ID do documento: 6972cf0ba5a0dda7d59692cc
     const imageDocId = '6972cf0ba5a0dda7d59692cc';
     const imageBase64 = await getImageBase64(imageDocId);
     
@@ -201,13 +225,7 @@ app.post('/api/checkout', async (req, res) => {
       ? req.body.billingTypes 
       : req.body.billingTypes 
         ? [req.body.billingTypes] 
-        : ['CREDIT_CARD']; // padrão
-
-    // Valor da assinatura: req.body.value > env > 219.90
-    const defaultSubscriptionValue = envSubscriptionValue 
-      ? parseFloat(envSubscriptionValue) 
-      : 219.90;
-    const subscriptionValue = req.body.value || defaultSubscriptionValue;
+        : ['CREDIT_CARD'];
     
     // Próxima cobrança: 7 dias após hoje
     const today = new Date();
@@ -233,7 +251,7 @@ app.post('/api/checkout', async (req, res) => {
       items: [
         {
           imageBase64: imageBase64 || ' ',
-          name: 'OnlyFlow PRO',
+          name: PLAN_NAMES[plan],
           quantity: req.body.quantity || 1,
           value: subscriptionValue,
           description: req.body.description || 'Assinatura mensal',
