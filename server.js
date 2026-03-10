@@ -74,6 +74,15 @@ app.get('/politica-privacidade', (req, res) => {
   serveHTML(path.join(publicPath, 'politica-privacidade.html'), res);
 });
 
+// Anti-Spam Policy
+app.get('/politica-anti-spam', (req, res) => {
+  serveHTML(path.join(publicPath, 'politica-anti-spam.html'), res);
+});
+
+// Acceptable Use Policy
+app.get('/politica-de-uso-aceitavel', (req, res) => {
+  serveHTML(path.join(publicPath, 'politica-de-uso-aceitavel.html'), res);
+});
 
 // Terms page (Portuguese)
 app.get('/termos', (req, res) => {
