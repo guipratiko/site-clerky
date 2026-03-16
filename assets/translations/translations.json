@@ -313,7 +313,7 @@
           "9": "Mensagens ilimitadas",
           "10": "1 Agente de IA",
           "11": "Automação de Instagram",
-          "12": "Crie até 2 fluxos ligando nós (MindFlow)",
+          "12": "Crie até 2 fluxos ligando nós (ManyFlow)",
           "13": "Scraping de leads",
           "14": "Integrações nativas",
           "15": "Analytics avançado",
@@ -341,7 +341,7 @@
           "9": "Mensagens ilimitadas",
           "10": "4 Agentes de IA",
           "11": "Automação de Instagram",
-          "12": "Crie até 4 fluxos ligando nós (MindFlow)",
+          "12": "Crie até 4 fluxos ligando nós (ManyFlow)",
           "13": "Scraping de leads",
           "14": "Integrações nativas",
           "15": "Analytics avançado",
@@ -478,9 +478,9 @@
         "frontend": "Página Principal",
         "backend": "API",
         "dispatchOnlyFlow": "Serviço de Disparo",
-        "mindOnlyFlow": "Ferramenta MindOnlyFlow",
-        "instaOnlyFlow": "Gerenciador de Instagram",
-        "grupoOnlyFlow": "Gerenciador de Grupos"
+        "mindOnlyFlow": "ManyFlow",
+        "instaOnlyFlow": "Insta-Flow",
+        "grupoOnlyFlow": "Grupo-Flow"
       }
     },
     "terms": {
@@ -1111,7 +1111,7 @@
           "9": "Unlimited messages",
           "10": "1 AI Agent",
           "11": "Instagram automation",
-          "12": "Create up to 2 flows connecting nodes (MindFlow)",
+          "12": "Create up to 2 flows connecting nodes (ManyFlow)",
           "13": "Lead scraping",
           "14": "Native integrations",
           "15": "Advanced analytics",
@@ -1139,7 +1139,7 @@
           "9": "Unlimited messages",
           "10": "4 AI Agents",
           "11": "Instagram automation",
-          "12": "Create up to 4 flows connecting nodes (MindFlow)",
+          "12": "Create up to 4 flows connecting nodes (ManyFlow)",
           "13": "Lead scraping",
           "14": "Native integrations",
           "15": "Advanced analytics",
@@ -1276,9 +1276,9 @@
         "frontend": "Main Page",
         "backend": "API",
         "dispatchOnlyFlow": "Dispatch Service",
-        "mindOnlyFlow": "MindOnlyFlow Tool",
-        "instaOnlyFlow": "Instagram Manager",
-        "grupoOnlyFlow": "Groups Manager"
+        "mindOnlyFlow": "ManyFlow",
+        "instaOnlyFlow": "Insta-Flow",
+        "grupoOnlyFlow": "Grupo-Flow"
       }
     },
     "terms": {
