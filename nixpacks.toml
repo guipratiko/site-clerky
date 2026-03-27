@@ -1,6 +1,15 @@
 # Nixpacks: build OnlyFlow site
-# .npmrc no root já define timeout/retries para evitar ETIMEDOUT no npm ci
+# .npmrc + install com retentativas para mitigar ETIMEDOUT no npm ci (rede do builder)
 
 [variables]
 # Evita warning "UndefinedVar: $NIXPACKS_PATH" no Dockerfile gerado
 NIXPACKS_PATH = "/app/node_modules/.bin"
+# IPv4 primeiro costuma reduzir timeouts em alguns ambientes Docker/hosting
+NODE_OPTIONS = "--dns-result-order=ipv4first"
+
+[phases.install]
+dependsOn = ["setup"]
+# Até 5 tentativas de npm ci (rede do builder costuma falhar com ETIMEDOUT intermitente)
+cmds = [
+  "sh -c 'i=1; while [ \"$i\" -le 5 ]; do npm ci --no-audit --no-fund && exit 0; echo \"[install] npm ci falhou (tentativa $i/5), aguardando...\"; sleep $((i * 25)); i=$((i + 1)); done; exit 1'"
+]
