@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>CRM Kanban para Instagram — OnlyFlow</title>
+    <link rel="icon" href="/img/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://onlyflow.com.br/crm-insta" />
+    <meta
+      name="description"
+      content="Organize os directs do Instagram em um CRM Kanban. Ganhe tempo, responda todo mundo e automatize para converter mais com a OnlyFlow."
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17651638692"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17651638692");
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <style>
+      /* Mobile: sem scroll horizontal; safe areas (notch / home indicator) */
+      .page-crm-insta {
+        overflow-x: clip;
+      }
+      .crm-kanban-demo {
+        --kanban-card: rgba(30, 41, 59, 0.85);
+        --kanban-col: rgba(15, 23, 42, 0.65);
+      }
+      .crm-kanban-demo .kanban-board {
+        display: flex;
+        gap: 0.65rem;
+        align-items: stretch;
+        min-height: 260px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 0.125rem 0.5rem;
+        margin: 0 -0.125rem;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scroll-padding-inline: 0.5rem;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(99, 102, 241, 0.4) transparent;
+      }
+      @media (min-width: 640px) {
+        .crm-kanban-demo .kanban-board {
+          gap: 0.75rem;
+          min-height: 320px;
+          scroll-snap-type: none;
+          padding: 0 0 0.25rem;
+          margin: 0;
+        }
+      }
+      .crm-kanban-demo .kanban-col {
+        flex: 1 1 0;
+        min-width: min(11.25rem, 78vw);
+        max-width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--kanban-col);
+        backdrop-filter: blur(8px);
+        transition: border-color 0.2s, box-shadow 0.2s;
+      }
+      @media (min-width: 640px) {
+        .crm-kanban-demo .kanban-col {
+          min-width: 8.5rem;
+          border-radius: 1rem;
+          scroll-snap-align: unset;
+        }
+      }
+      .crm-kanban-demo .kanban-col.kanban-drag-over {
+        border-color: rgba(129, 140, 248, 0.55);
+        box-shadow: 0 0 0 1px rgba(129, 140, 248, 0.25), 0 8px 32px rgba(99, 102, 241, 0.12);
+      }
+      .crm-kanban-demo .kanban-col-header {
+        padding: 0.55rem 0.65rem;
+        font-size: 0.68rem;
+        line-height: 1.25;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: rgba(255, 255, 255, 0.55);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        flex-shrink: 0;
+      }
+      @media (min-width: 640px) {
+        .crm-kanban-demo .kanban-col-header {
+          padding: 0.6rem 0.75rem;
+          font-size: 0.7rem;
+        }
+      }
+      .crm-kanban-demo .kanban-dropzone {
+        flex: 1;
+        padding: 0.45rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        min-height: 5rem;
+      }
+      @media (min-width: 640px) {
+        .crm-kanban-demo .kanban-dropzone {
+          padding: 0.55rem;
+          gap: 0.5rem;
+        }
+      }
+      .crm-kanban-demo .kanban-card {
+        border-radius: 0.65rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: var(--kanban-card);
+        padding: 0.55rem 0.6rem;
+        min-height: 3.25rem;
+        cursor: grab;
+        touch-action: manipulation;
+        transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      @media (min-width: 640px) {
+        .crm-kanban-demo .kanban-card {
+          padding: 0.55rem 0.65rem;
+          border-radius: 0.75rem;
+        }
+      }
+      .crm-kanban-demo .kanban-card:hover {
+        border-color: rgba(255, 255, 255, 0.16);
+      }
+      .crm-kanban-demo .kanban-card:active {
+        cursor: grabbing;
+      }
+      .crm-kanban-demo .kanban-card.dragging {
+        opacity: 0.55;
+        transform: scale(0.98);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+      }
+      .crm-kanban-demo .kanban-card.kanban-selected {
+        border-color: rgba(129, 140, 248, 0.7);
+        box-shadow: 0 0 0 2px rgba(129, 140, 248, 0.25);
+      }
+      .crm-kanban-demo .kanban-card-row {
+        display: flex;
+        align-items: center;
+        gap: 0.45rem;
+      }
+      .crm-kanban-demo .kanban-avatar {
+        width: 1.85rem;
+        height: 1.85rem;
+        border-radius: 9999px;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.55rem;
+        font-weight: 700;
+        color: white;
+      }
+      .crm-kanban-demo .kanban-card-name {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.92);
+        line-height: 1.2;
+      }
+      .crm-kanban-demo .kanban-card-msg {
+        margin-top: 0.3rem;
+        font-size: 0.68rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.35;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      @media (min-width: 640px) {
+        .crm-kanban-demo .kanban-card-name {
+          font-size: 0.75rem;
+        }
+        .crm-kanban-demo .kanban-card-msg {
+          font-size: 0.65rem;
+        }
+      }
+      html[data-theme="light"] .crm-kanban-demo {
+        --kanban-card: rgba(255, 255, 255, 0.92);
+        --kanban-col: rgba(241, 245, 249, 0.85);
+      }
+      html[data-theme="light"] .crm-kanban-demo .kanban-col {
+        border-color: rgba(15, 23, 42, 0.1);
+      }
+      html[data-theme="light"] .crm-kanban-demo .kanban-col-header {
+        color: rgba(15, 23, 42, 0.5);
+        border-bottom-color: rgba(15, 23, 42, 0.08);
+      }
+      html[data-theme="light"] .crm-kanban-demo .kanban-card {
+        border-color: rgba(15, 23, 42, 0.1);
+        background: var(--kanban-card);
+      }
+      html[data-theme="light"] .crm-kanban-demo .kanban-card-name {
+        color: rgba(15, 23, 42, 0.9);
+      }
+      html[data-theme="light"] .crm-kanban-demo .kanban-card-msg {
+        color: rgba(15, 23, 42, 0.5);
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-white antialiased overflow-x-hidden" data-page="crmInstagram">
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-gradient-to-b from-primary-950/40 via-slate-950 to-slate-950"
+      aria-hidden="true"
+    ></div>
+
+    <div class="page-crm-insta min-h-screen flex min-h-[100dvh] flex-col">
+      <header class="sticky top-0 z-30 border-b border-white/5 bg-slate-950/90 pt-[max(0px,env(safe-area-inset-top))] backdrop-blur">
+        <div class="mx-auto flex max-w-6xl items-center justify-between gap-2 px-4 py-2.5 sm:px-6 sm:py-3 lg:px-8">
+          <a href="/" class="flex min-w-0 flex-shrink-0 items-center gap-2" aria-label="OnlyFlow — início">
+            <img src="/img/OnlyFlow-logo.png" alt="" class="logo-dark h-7 w-auto sm:h-8" />
+            <img src="/img/OnlyFlow-logo-claro.png" alt="" class="logo-light h-7 w-auto sm:h-8" />
+          </a>
+          <div class="flex min-w-0 flex-shrink-0 items-center gap-1.5 sm:gap-3">
+            <a
+              href="https://app.onlyflow.com.br"
+              class="hidden text-sm font-medium text-white/80 hover:text-white sm:inline"
+              >Entrar</a
+            >
+            <button
+              type="button"
+              class="btn-checkout inline-flex min-h-[44px] min-w-0 max-w-[11rem] items-center justify-center rounded-full bg-gradient-to-r from-primary-500 to-primary-400 px-3 py-2 text-xs font-semibold leading-tight text-white shadow-lg shadow-primary-500/25 transition hover:from-primary-400 hover:to-primary-300 disabled:opacity-60 sm:max-w-none sm:px-4 sm:text-sm"
+              data-plan="advanced"
+            >
+              <span class="btn-checkout-text text-center sm:whitespace-nowrap"
+                ><span class="sm:hidden">Ativar CRM</span><span class="hidden sm:inline">Ativar meu CRM</span></span
+              >
+              <span class="btn-checkout-loading ml-2 hidden inline-flex"
+                ><svg class="h-4 w-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  ><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle
+                  ><path
+                    class="opacity-75"
+                    fill="currentColor"
+                    d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                  ></path></svg
+              ></span>
+            </button>
+            <button
+              type="button"
+              class="hidden rounded-full border border-white/15 px-3 py-1 text-xs font-medium text-white/80 hover:border-white/40 hover:text-white sm:inline-flex items-center gap-1"
+              data-theme-toggle
+              aria-label="Alternar tema claro/escuro"
+            >
+              <span class="theme-toggle-label">Tema claro</span>
+            </button>
+            <button
+              type="button"
+              class="inline-flex h-11 w-11 min-h-[44px] min-w-[44px] items-center justify-center rounded-full border border-white/10 text-white hover:border-white/40 sm:hidden"
+              aria-label="Abrir menu"
+              onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="hidden border-t border-white/5 sm:hidden">
+          <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+            <a
+              href="https://app.onlyflow.com.br"
+              class="flex min-h-[48px] items-center justify-center rounded-full border border-white/15 px-4 text-sm font-medium text-white/80 active:bg-white/5"
+              >Entrar</a
+            >
+            <button
+              type="button"
+              class="btn-checkout flex min-h-[48px] w-full items-center justify-center rounded-full bg-primary-500 px-4 text-sm font-semibold text-white disabled:opacity-60"
+              data-plan="advanced"
+            >
+              <span class="btn-checkout-text">Ativar meu CRM</span>
+              <span class="btn-checkout-loading ml-2 hidden inline-flex align-middle"
+                ><svg class="h-4 w-4 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  ><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle
+                  ><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg
+              ></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1">
+        <!-- Hero -->
+        <section class="mx-auto max-w-6xl px-4 pb-10 pt-6 sm:px-6 sm:pb-16 sm:pt-14 lg:px-8">
+          <div class="grid items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-12">
+            <div class="min-w-0">
+              <p class="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary-300 sm:text-xs sm:tracking-[0.2em]">
+                Campanha Meta · Instagram
+              </p>
+              <h1 class="mt-2 text-[1.6875rem] font-semibold leading-[1.2] tracking-tight text-white sm:mt-3 sm:text-4xl lg:text-[2.5rem] lg:leading-tight">
+                CRM Kanban para Instagram: cada direct vira oportunidade — sem perder o
+                <span class="text-primary-300">tempo</span>.
+              </h1>
+              <p class="mt-3 text-[15px] leading-relaxed text-white/75 sm:mt-4 sm:text-base sm:text-lg">
+                O CRM alimenta-se automaticamente com os directs recebidos na instância do Instagram conectada à OnlyFlow.
+                Você visualiza tudo em colunas Kanban, responde no ritmo certo e ainda cria automações que elevam as conversões de forma exponencial.
+              </p>
+              <div class="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:items-center">
+                <button
+                  type="button"
+                  class="btn-checkout inline-flex w-full min-h-[52px] items-center justify-center rounded-full bg-white px-4 py-3.5 text-sm font-semibold leading-snug text-slate-950 shadow-sm transition hover:bg-slate-100 disabled:opacity-60 sm:w-auto sm:px-6 sm:py-3"
+                  data-plan="advanced"
+                >
+                  <span class="btn-checkout-text text-center"
+                    ><span class="sm:hidden">Começar agora — plano Advanced</span
+                    ><span class="hidden sm:inline">Começar agora — CRM Kanban Instagram</span></span
+                  >
+                  <span class="btn-checkout-loading ml-2 hidden inline-flex"
+                    ><svg class="h-4 w-4 animate-spin text-slate-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      ><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle
+                      ><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg
+                  ></span>
+                </button>
+                <a
+                  href="#como-funciona"
+                  class="flex min-h-[44px] items-center justify-center text-center text-sm font-medium text-primary-300 hover:text-primary-200 active:text-primary-100 sm:min-h-0 sm:justify-start sm:text-left"
+                  >Ver como funciona</a
+                >
+              </div>
+              <p class="mt-3 text-[11px] leading-snug text-white/45 sm:mt-4 sm:text-xs">
+                Teste gratuito na plataforma · Cancele quando quiser
+              </p>
+            </div>
+            <div class="relative min-w-0">
+              <div class="absolute -inset-2 rounded-3xl bg-primary-500/10 blur-2xl sm:-inset-4" aria-hidden="true"></div>
+              <div
+                class="crm-kanban-demo relative overflow-hidden rounded-xl border border-white/10 bg-slate-900/90 p-2.5 shadow-xl shadow-black/40 sm:rounded-2xl sm:p-4"
+                id="crm-kanban-demo"
+                role="region"
+                aria-label="Demonstração interativa de CRM Kanban"
+              >
+                <p class="mb-2 px-0.5 text-center text-[11px] leading-snug text-white/50 sm:mb-3 sm:text-xs sm:text-white/45">
+                  <span class="hidden sm:inline">Arraste os cards entre as colunas — como no CRM real.</span>
+                  <span class="sm:hidden"
+                    >Deslize o quadro · Toque num card e depois na coluna vazia ou no título da coluna para mover.</span
+                  >
+                </p>
+                <div class="kanban-board" id="kanban-board">
+                  <div class="kanban-col" data-col-id="novos">
+                    <div class="kanban-col-header text-primary-200/90">Novos directs</div>
+                    <div class="kanban-dropzone" data-dropzone>
+                      <div class="kanban-card" draggable="true" data-card-id="c1" tabindex="0">
+                        <div class="kanban-card-row">
+                          <div class="kanban-avatar" aria-hidden="true">MS</div>
+                          <div class="min-w-0 flex-1">
+                            <div class="kanban-card-name">@marina.style</div>
+                            <div class="kanban-card-msg">Tem disponível na cor preta?</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="kanban-card" draggable="true" data-card-id="c2" tabindex="0">
+                        <div class="kanban-card-row">
+                          <div class="kanban-avatar" aria-hidden="true">LP</div>
+                          <div class="min-w-0 flex-1">
+                            <div class="kanban-card-name">@lucas.p</div>
+                            <div class="kanban-card-msg">Oi! Vi o story — como faço o pedido?</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="kanban-col" data-col-id="conversa">
+                    <div class="kanban-col-header text-amber-200/80">Em conversa</div>
+                    <div class="kanban-dropzone" data-dropzone>
+                      <div class="kanban-card" draggable="true" data-card-id="c3" tabindex="0">
+                        <div class="kanban-card-row">
+                          <div class="kanban-avatar" aria-hidden="true">AF</div>
+                          <div class="min-w-0 flex-1">
+                            <div class="kanban-card-name">@ana.fitness</div>
+                            <div class="kanban-card-msg">Quero fechar o pacote trimestral 💪</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="kanban-col" data-col-id="fechamento">
+                    <div class="kanban-col-header text-emerald-200/80">Fechamento</div>
+                    <div class="kanban-dropzone" data-dropzone>
+                      <div class="kanban-card" draggable="true" data-card-id="c4" tabindex="0">
+                        <div class="kanban-card-row">
+                          <div class="kanban-avatar" aria-hidden="true">RC</div>
+                          <div class="min-w-0 flex-1">
+                            <div class="kanban-card-name">@rico.corp</div>
+                            <div class="kanban-card-msg">Manda o link de pagamento, por favor.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="mt-3 border-t border-white/10 pt-3 text-center text-[11px] leading-snug text-white/50 sm:text-xs">
+                  Simulação OnlyFlow · Directs viram oportunidades no Kanban
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Benefícios -->
+        <section class="border-y border-white/5 bg-slate-900/40 py-10 sm:py-16">
+          <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-[1.375rem] font-semibold leading-snug text-white sm:text-3xl">
+              Por que o TIME não pode escapar
+            </h2>
+            <p class="mx-auto mt-3 max-w-2xl text-center text-[15px] leading-relaxed text-white/65 sm:text-base">
+              Cada minuto sem resposta é venda a menos. O Kanban coloca o direct no lugar certo para você ou sua equipe agir na hora.
+            </p>
+            <ul class="mx-auto mt-8 grid max-w-4xl gap-4 sm:mt-10 sm:grid-cols-3 sm:gap-6">
+              <li class="rounded-2xl border border-white/10 bg-slate-950/60 p-4 text-center sm:p-5">
+                <span class="text-2xl" aria-hidden="true">⏱</span>
+                <h3 class="mt-2 text-[15px] font-semibold text-white sm:text-base">Menos tempo perdido</h3>
+                <p class="mt-2 text-sm leading-relaxed text-white/65">Priorize por estágio: novo contato, em negociação, fechamento — sem caixa de entrada caótica.</p>
+              </li>
+              <li class="rounded-2xl border border-white/10 bg-slate-950/60 p-4 text-center sm:p-5">
+                <span class="text-2xl" aria-hidden="true">💬</span>
+                <h3 class="mt-2 text-[15px] font-semibold text-white sm:text-base">Zero cliente sem resposta</h3>
+                <p class="mt-2 text-sm leading-relaxed text-white/65">Directs da instância conectada viram cards rastreáveis; nada some no fundo do Instagram.</p>
+              </li>
+              <li class="rounded-2xl border border-white/10 bg-slate-950/60 p-4 text-center sm:p-5">
+                <span class="text-2xl" aria-hidden="true">📈</span>
+                <h3 class="mt-2 text-[15px] font-semibold text-white sm:text-base">Automações que escalam</h3>
+                <p class="mt-2 text-sm leading-relaxed text-white/65">Fluxos e gatilhos que acompanham o lead e multiplicam conversões de forma exponencial.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Imagens CRM Kanban -->
+        <section id="como-funciona" class="mx-auto max-w-6xl scroll-mt-20 px-4 py-10 sm:scroll-mt-24 sm:px-6 sm:py-16 lg:px-8">
+          <div class="max-w-3xl">
+            <h2 class="text-[1.375rem] font-semibold leading-snug text-white sm:text-3xl">Direct do Instagram → colunas do CRM</h2>
+            <p class="mt-3 text-[15px] leading-relaxed text-white/70 sm:text-base">
+              Conecte sua conta na OnlyFlow. Os directs passam a alimentar o Kanban: arraste cards entre etapas, atribua responsáveis e acompanhe métricas no mesmo painel em que você dispara mensagens e automações.
+            </p>
+          </div>
+          <div class="mt-8 grid gap-4 sm:mt-10 sm:gap-6 lg:grid-cols-2">
+            <figure class="overflow-hidden rounded-xl border border-white/10 bg-slate-900/60 sm:rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80"
+                alt="Interface de projeto com colunas Kanban para organização de tarefas e leads"
+                width="600"
+                height="400"
+                class="aspect-[4/3] h-auto w-full object-cover sm:aspect-auto sm:h-56"
+                loading="lazy"
+              />
+              <figcaption class="border-t border-white/10 px-3 py-2.5 text-[11px] text-white/55 sm:px-4 sm:py-3 sm:text-xs">
+                Organize conversas como em um quadro Kanban profissional.
+              </figcaption>
+            </figure>
+            <figure class="overflow-hidden rounded-xl border border-white/10 bg-slate-900/60 sm:rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+                alt="Equipe colaborando em gestão de relacionamento e acompanhamento de clientes"
+                width="600"
+                height="400"
+                class="aspect-[4/3] h-auto w-full object-cover sm:aspect-auto sm:h-56"
+                loading="lazy"
+              />
+              <figcaption class="border-t border-white/10 px-3 py-2.5 text-[11px] text-white/55 sm:px-4 sm:py-3 sm:text-xs">
+                Time alinhado: quem responde, em qual etapa e o que falta para fechar.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- CTA final -->
+        <section class="border-t border-white/5 bg-gradient-to-b from-primary-900/20 to-slate-950 py-12 sm:py-20">
+          <div class="mx-auto max-w-3xl px-4 text-center sm:px-6">
+            <h2 class="text-[1.375rem] font-semibold leading-snug text-white sm:text-3xl">Pronto para não perder mais vendas no Direct?</h2>
+            <p class="mt-3 text-[15px] leading-relaxed text-white/70 sm:text-base">
+              Ative o CRM Kanban para Instagram na OnlyFlow e combine organização com automação para converter mais.
+            </p>
+            <button
+              type="button"
+              class="btn-checkout mx-auto mt-6 flex w-full max-w-md min-h-[52px] items-center justify-center rounded-full bg-primary-500 px-5 py-3.5 text-sm font-semibold leading-snug text-white shadow-lg shadow-primary-500/30 transition hover:bg-primary-400 disabled:opacity-60 sm:mt-8 sm:px-8 sm:text-base"
+              data-plan="advanced"
+            >
+              <span class="btn-checkout-text px-1 text-center"
+                ><span class="sm:hidden">Quero o CRM Kanban no Instagram</span
+                ><span class="hidden sm:inline">Quero o CRM Kanban para Instagram</span></span
+              >
+              <span class="btn-checkout-loading ml-2 hidden inline-flex"
+                ><svg class="h-5 w-5 animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  ><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle
+                  ><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg
+              ></span>
+            </button>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-white/5 bg-slate-950/90 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:py-6">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-xs text-white/50 sm:flex-row sm:gap-3 sm:px-6 lg:px-8">
+          <a href="/" class="flex items-center gap-2 hover:text-white/70">
+            <img src="/img/OnlyFlow-logo.png" alt="" class="logo-dark h-6 w-auto" />
+            <img src="/img/OnlyFlow-logo-claro.png" alt="" class="logo-light h-6 w-auto" />
+            <span>OnlyFlow</span>
+          </a>
+          <div class="flex flex-wrap justify-center gap-4">
+            <a href="/politica-privacidade" class="hover:text-primary-200">Privacidade</a>
+            <a href="/" class="hover:text-primary-200">Site principal</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="/assets/js/theme.js"></script>
+    <script>
+      (function () {
+        "use strict";
+        document.querySelectorAll(".btn-checkout").forEach(function (btn) {
+          var plan = btn.getAttribute("data-plan");
+          if (!plan) return;
+          var textEl = btn.querySelector(".btn-checkout-text");
+          var loadingEl = btn.querySelector(".btn-checkout-loading");
+          var originalHtml = textEl ? textEl.innerHTML : "";
+          btn.addEventListener("click", async function () {
+            btn.disabled = true;
+            if (textEl) textEl.textContent = "Processando...";
+            if (loadingEl) loadingEl.classList.remove("hidden");
+            try {
+              var response = await fetch("/api/checkout", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ billingTypes: ["CREDIT_CARD"], quantity: 1, plan: plan }),
+              });
+              var data = await response.json();
+              if (!response.ok) throw new Error(data.error || "Erro ao criar checkout");
+              if (data.success && data.link) {
+                window.location.href = data.link;
+              } else {
+                throw new Error("URL do checkout não retornada");
+              }
+            } catch (err) {
+              console.error("Erro ao criar checkout:", err);
+              alert("Erro ao processar checkout. Por favor, tente novamente.");
+              btn.disabled = false;
+              if (textEl) textEl.innerHTML = originalHtml;
+              if (loadingEl) loadingEl.classList.add("hidden");
+            }
+          });
+        });
+      })();
+    </script>
+    <script>
+      (function () {
+        "use strict";
+        var root = document.getElementById("crm-kanban-demo");
+        if (!root) return;
+        var board = document.getElementById("kanban-board");
+        var cols = root.querySelectorAll(".kanban-col");
+        var cards = root.querySelectorAll(".kanban-card");
+        var selected = null;
+        var draggingEl = null;
+
+        function clearOver() {
+          cols.forEach(function (c) {
+            c.classList.remove("kanban-drag-over");
+          });
+        }
+        function clearSelect() {
+          if (selected) {
+            selected.classList.remove("kanban-selected");
+            selected = null;
+          }
+        }
+
+        cards.forEach(function (card) {
+          card.addEventListener("dragstart", function (e) {
+            draggingEl = card;
+            card.classList.add("dragging");
+            e.dataTransfer.setData("text/plain", card.getAttribute("data-card-id") || "");
+            e.dataTransfer.effectAllowed = "move";
+          });
+          card.addEventListener("dragend", function () {
+            card.classList.remove("dragging");
+            draggingEl = null;
+            clearOver();
+          });
+          card.addEventListener("click", function (e) {
+            if (window.matchMedia("(pointer: coarse)").matches) {
+              e.preventDefault();
+              if (selected === card) {
+                clearSelect();
+              } else {
+                clearSelect();
+                selected = card;
+                card.classList.add("kanban-selected");
+              }
+            }
+          });
+        });
+
+        cols.forEach(function (col) {
+          var zone = col.querySelector("[data-dropzone]");
+          if (!zone) return;
+          zone.addEventListener("dragover", function (e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = "move";
+          });
+          zone.addEventListener("dragenter", function (e) {
+            e.preventDefault();
+            col.classList.add("kanban-drag-over");
+          });
+          zone.addEventListener("dragleave", function (e) {
+            if (!col.contains(e.relatedTarget)) col.classList.remove("kanban-drag-over");
+          });
+          zone.addEventListener("drop", function (e) {
+            e.preventDefault();
+            clearOver();
+            var id = e.dataTransfer.getData("text/plain");
+            var el = draggingEl || root.querySelector('[data-card-id="' + id + '"]');
+            if (el && zone !== el.closest("[data-dropzone]")) {
+              zone.appendChild(el);
+            }
+          });
+          col.addEventListener("click", function (e) {
+            if (!window.matchMedia("(pointer: coarse)").matches) return;
+            if (!selected) return;
+            if (cardFromEvent(e)) return;
+            zone.appendChild(selected);
+            clearSelect();
+          });
+        });
+
+        function cardFromEvent(e) {
+          var t = e.target;
+          while (t && t !== board) {
+            if (t.classList && t.classList.contains("kanban-card")) return t;
+            t = t.parentNode;
+          }
+          return null;
+        }
+      })();
+    </script>
+  </body>
+</html>

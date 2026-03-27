@@ -95,6 +95,11 @@ app.get('/documentacao', (req, res) => {
   serveHTML(path.join(publicPath, 'documentacao.html'), res);
 });
 
+// Landing campanha Meta — CRM Kanban Instagram (sem link no menu)
+app.get('/crm-insta', (req, res) => {
+  serveHTML(path.join(publicPath, 'instagram-crm-kanban.html'), res);
+});
+
 // Checkout result pages
 app.get('/sucesso', (req, res) => {
   serveHTML(path.join(publicPath, 'sucesso.html'), res);
