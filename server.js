@@ -154,21 +154,109 @@ async function getMongoClient() {
   return mongoClient;
 }
 
-// Função para buscar imagem base64 do MongoDB
-async function getImageBase64(imageDocId) {
+// Remove prefixos tipo data URL / "image/png;base64," — a API Asaas espera só o base64 puro
+function stripBase64DataPrefixes(raw) {
+  if (!raw || typeof raw !== 'string') return null;
+  let s = raw.trim();
+  if (!s) return null;
+  const dataUrl = /^data:image\/[^;]+;base64,/i;
+  if (dataUrl.test(s)) return s.replace(dataUrl, '');
+  const mimeOnly = /^image\/[^;]+;base64,/i;
+  if (mimeOnly.test(s)) return s.replace(mimeOnly, '');
+  return s;
+}
+
+// Converte valor do Mongo (string, Buffer, Binary) para string UTF-8 quando possível
+function mongoFieldToImageString(raw) {
+  if (raw == null) return null;
+  if (typeof raw === 'string') return raw;
+  if (Buffer.isBuffer(raw)) return raw.toString('utf8');
+  if (raw.buffer && Buffer.isBuffer(raw.buffer)) return raw.buffer.toString('utf8');
+  if (typeof raw.toString === 'function') {
+    try {
+      const s = raw.toString('utf8');
+      if (s && s.length > 0) return s;
+    } catch (_) {
+      try {
+        const s = raw.toString();
+        if (s && s.length > 0) return s;
+      } catch (_) { /* ignore */ }
+    }
+  }
+  return null;
+}
+
+function pickImagePayloadFromDoc(doc) {
+  if (!doc || typeof doc !== 'object') return null;
+  // Compass/JSON às vezes grava a data URL inteira como *nome* do campo (chave), não como valor.
+  const dataUrlKey = /^data:image\/[^;]+;base64,/i;
+  for (const key of Object.keys(doc)) {
+    if (key === '_id' || !dataUrlKey.test(key)) continue;
+    const extra = mongoFieldToImageString(doc[key]);
+    const blob = extra && String(extra).trim() ? key + String(extra).trim() : key;
+    const s = mongoFieldToImageString(blob) || blob;
+    if (s && String(s).trim()) return String(s).trim();
+  }
+  const preferred = ['base64', 'data', 'imageBase64', 'image'];
+  for (const key of preferred) {
+    if (doc[key] != null) {
+      const s = mongoFieldToImageString(doc[key]);
+      if (s && s.trim()) return s;
+    }
+  }
+  for (const key of Object.keys(doc)) {
+    if (key === '_id') continue;
+    const lower = key.toLowerCase();
+    if (['base64', 'data', 'imagebase64', 'image'].includes(lower)) {
+      const s = mongoFieldToImageString(doc[key]);
+      if (s && s.trim()) return s;
+    }
+  }
+  return null;
+}
+
+// Busca imagem em landing.img (ou COLLECTION do .env). Aceita `_id` ObjectId ou string hex 24.
+async function getImageBase64(imageDocIdRaw) {
+  const imageDocId = String(imageDocIdRaw || '').replace(/^\uFEFF/, '').trim();
+  if (!imageDocId) {
+    console.warn('[CHECKOUT] CHECKOUT_IMAGE_DOC_ID vazio');
+    return null;
+  }
   try {
     const client = await getMongoClient();
     const { MONGODB_DB_NAME, COLLECTION } = process.env;
     const db = client.db(MONGODB_DB_NAME || 'landing');
     const collection = db.collection(COLLECTION || 'img');
-    
-    const doc = await collection.findOne({ _id: new ObjectId(imageDocId) });
-    
-    if (doc && doc.base64) {
-      return doc.base64;
+
+    let doc = null;
+    if (/^[a-f0-9]{24}$/i.test(imageDocId)) {
+      doc = await collection.findOne({ _id: new ObjectId(imageDocId) });
+      if (!doc) {
+        doc = await collection.findOne({ _id: imageDocId });
+      }
+    } else {
+      doc = await collection.findOne({ _id: imageDocId });
     }
-    
-    return null;
+
+    if (!doc) {
+      console.warn(
+        '[CHECKOUT] MongoDB: documento não encontrado em',
+        `${MONGODB_DB_NAME || 'landing'}.${COLLECTION || 'img'}`,
+        '_id=',
+        imageDocId,
+        '(confira se este _id existe no mesmo host da MONGODB_URI)',
+      );
+      return null;
+    }
+
+    const raw = pickImagePayloadFromDoc(doc);
+    if (!raw) {
+      console.warn('[CHECKOUT] MongoDB: documento encontrado mas sem campo de imagem útil. Campos:', Object.keys(doc));
+      return null;
+    }
+
+    const cleaned = stripBase64DataPrefixes(raw);
+    return cleaned && cleaned.length > 0 ? cleaned : null;
   } catch (error) {
     console.error('[MONGODB] Erro ao buscar imagem:', error);
     return null;
@@ -226,12 +314,14 @@ app.post('/api/checkout', async (req, res) => {
     // Gerar externalReference único
     const externalReference = randomUUID();
     
-    // Buscar imagem base64 do MongoDB
-    const imageDocId = '6972cf0ba5a0dda7d59692cc';
+    // Buscar imagem base64 do MongoDB (CHECKOUT_IMAGE_DOC_ID no .env; fallback = doc do landing.img)
+    const imageDocId = (process.env.CHECKOUT_IMAGE_DOC_ID || '69d4fb622dc66fee4d3de820')
+      .replace(/^\uFEFF/, '')
+      .trim();
     const imageBase64 = await getImageBase64(imageDocId);
-    
+
     if (!imageBase64) {
-      console.warn('[CHECKOUT] Imagem não encontrada no MongoDB, usando string vazia');
+      console.warn('[CHECKOUT] Imagem não carregada do MongoDB; checkout segue sem imageBase64 no item');
     }
 
     // billingTypes: obrigatório, array
@@ -250,6 +340,19 @@ app.post('/api/checkout', async (req, res) => {
     // externalReference único para o item
     const itemExternalReference = randomUUID();
     
+    // Item do checkout: não enviar imageBase64 vazio/placeholder — a Asaas valida e retorna
+    // "Extensão não suportada" se receber string inválida (ex.: um espaço).
+    const checkoutItem = {
+      name: PLAN_NAMES[plan],
+      quantity: req.body.quantity || 1,
+      value: subscriptionValue,
+      description: req.body.description || 'Assinatura mensal',
+      externalReference: itemExternalReference,
+    };
+    if (imageBase64 && String(imageBase64).trim() !== '') {
+      checkoutItem.imageBase64 = imageBase64;
+    }
+
     const checkoutData = {
       billingTypes: billingTypes,
       chargeTypes: ['RECURRENT'], // obrigatório
@@ -262,19 +365,15 @@ app.post('/api/checkout', async (req, res) => {
         cancelUrl: 'https://onlyflow.com.br/cancelado',
         expiredUrl: 'https://onlyflow.com.br/expirado',
       },
-      items: [
-        {
-          imageBase64: imageBase64 || ' ',
-          name: PLAN_NAMES[plan],
-          quantity: req.body.quantity || 1,
-          value: subscriptionValue,
-          description: req.body.description || 'Assinatura mensal',
-          externalReference: itemExternalReference,
-        },
-      ],
+      items: [checkoutItem],
       minutesToExpire: req.body.minutesToExpire || 10,
       externalReference: externalReference,
     };
+
+    // Garantia explícita: não enviar endDate para a Asaas
+    if (checkoutData.subscription && 'endDate' in checkoutData.subscription) {
+      delete checkoutData.subscription.endDate;
+    }
 
     console.log('[CHECKOUT] Criando checkout na Asaas:', {
       billingTypes: checkoutData.billingTypes,
@@ -284,7 +383,7 @@ app.post('/api/checkout', async (req, res) => {
         name: item.name,
         quantity: item.quantity,
         value: item.value,
-        hasImage: !!item.imageBase64 && item.imageBase64 !== ' ',
+        hasImage: !!(item.imageBase64 && String(item.imageBase64).trim()),
       })),
       externalReference: checkoutData.externalReference,
     });
