@@ -10,7 +10,8 @@
       "docsTitle": "Documentação da API - OnlyFlow",
       "sucessoTitle": "Pagamento confirmado - OnlyFlow",
       "canceladoTitle": "Pagamento cancelado - OnlyFlow",
-      "expiradoTitle": "Link expirado - OnlyFlow"
+      "expiradoTitle": "Link expirado - OnlyFlow",
+      "homeMetaDescription": "Plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram Direct (DM) e outros canais em um único ambiente, com CRM Kanban para vários números, IA e disparo em massa."
     },
     "sucesso": {
       "heading": "Pagamento confirmado",
@@ -48,14 +49,14 @@
       "badge": "Plataforma completa de comunicação com IA",
       "title": "Plataforma de automação e gestão de comunicação",
       "titleHighlight": "multicanal",
-      "description": "O OnlyFlow é uma plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram e outros canais em um único ambiente. Automatize atendimentos, gerencie relacionamento com clientes e execute campanhas em escala.",
+      "description": "O OnlyFlow é uma plataforma de automação e gestão de comunicação que centraliza WhatsApp, Instagram e outros canais em um único ambiente. No CRM Kanban, una vários números de WhatsApp e o Instagram por Direct (DM) na mesma operação. Automatize atendimentos, gerencie relacionamento com clientes e execute campanhas em escala.",
       "ctaStart": "Começar agora",
       "ctaIntegrations": "Ver integrações",
       "ctaWhatsApp": "Falar no WhatsApp",
       "featureAI": "IA sem código",
-      "featureWhatsApp": "WhatsApp & Instagram",
+      "featureWhatsApp": "WhatsApp & Instagram Direct",
       "featureWorkflows": "Workflows visuais",
-      "featureCRM": "CRM Kanban",
+      "featureCRM": "CRM · vários números",
       "featureBulk": "Disparo em massa",
       "featureApps": "Apps iOS & Android",
       "trustedBy": "Empresas que confiam na OnlyFlow"
@@ -63,12 +64,12 @@
     "about": {
       "label": "Sobre o aplicativo",
       "title": "Tudo que você precisa para centralizar suas conversas em um único lugar.",
-      "description1": "O OnlyFlow é uma plataforma criada para empresas que precisam automatizar atendimento, gerencie relacionamento com clientes e executar campanhas de comunicação em escala. Conecte múltiplas contas WhatsApp, Instagram e outros canais, crie agentes de IA, construa workflows visuais e organize tudo no CRM Kanban.",
+      "description1": "O OnlyFlow é uma plataforma criada para empresas que precisam automatizar atendimento, gerenciar relacionamento com clientes e executar campanhas de comunicação em escala. Conecte múltiplas contas WhatsApp, Instagram (Direct/DM) e outros canais; o CRM agrega vários números e conversas do Instagram no mesmo painel. Crie agentes de IA, construa workflows visuais e organize tudo no CRM Kanban.",
       "description2": "Disponível também em apps nativos para iOS e Android, com autenticação biométrica e sincronização em tempo real.",
       "integrationsTitle": "Integrações e permissões",
       "integrationsDesc": "O OnlyFlow se conecta a diversos serviços para oferecer uma solução completa. Todas as permissões são usadas exclusivamente para as funcionalidades descritas abaixo.",
       "google": "Google (Sheets e Drive): sincronização de leads com planilhas e armazenamento de arquivos.",
-      "meta": "Meta (Instagram): automações em DMs, comentários e sequências de mensagens.",
+      "meta": "Meta (Instagram): conexão por Direct (DM), automações em comentários e sequências de mensagens.",
       "openai": "OpenAI: agentes de IA, respostas com contexto e transcrição de áudio.",
       "typebot": "Typebot: chatbots externos conectados ao MindOnlyFlow.",
       "whatsapp": "WhatsApp: múltiplas instâncias, grupos e histórico de conversas.",
@@ -95,7 +96,7 @@
       },
       "crm": {
         "title": "CRM Kanban integrado",
-        "desc": "Organize contatos em colunas personalizáveis, veja histórico, envie mensagens e filtre rapidamente."
+        "desc": "Vários números de WhatsApp e Instagram Direct no mesmo CRM: colunas personalizáveis, histórico unificado, envio de mensagens e filtros rápidos."
       },
       "bulk": {
         "title": "Disparo em massa",
@@ -128,7 +129,7 @@
       "step4": {
         "label": "Passo 4",
         "title": "Acompanhe e escale",
-        "desc": "Monitore conversas no CRM Kanban, dispare campanhas e acompanhe métricas em tempo real."
+        "desc": "Monitore conversas no CRM Kanban — vários números e Direct do Instagram juntos —, dispare campanhas e acompanhe métricas em tempo real."
       }
     },
     "integrations": {
@@ -202,29 +203,39 @@
     },
     "heroMockup": {
       "crmLabel": "CRM Kanban",
-      "today": "Hoje",
-      "novosLeads": "Novos Leads",
-      "emNegociacao": "Em negociação",
-      "fechados": "Fechados",
-      "lead1Name": "João Silva",
-      "lead1Company": "Tech Corp",
-      "lead1Value": "R$ 5.000 • Hoje",
-      "lead2Name": "Maria Santos",
-      "lead2Company": "StartUp XYZ",
-      "lead2Value": "R$ 8.000 • Hoje",
-      "neg1Name": "Pedro Costa",
-      "neg1Company": "Agência ABC",
-      "neg1Value": "R$ 12.000 • Hoje",
-      "neg2Name": "Ana Lima",
-      "neg2Company": "E-commerce Plus",
-      "neg2Value": "R$ 15.000 • Hoje",
-      "closed1Name": "Carlos Rocha",
-      "closed1Company": "Mega Store",
-      "closed1Value": "R$ 20.000 • Hoje",
+      "today": "Ao vivo",
+      "dragHint": "Arraste contatos aqui",
+      "colNovos": "Novos",
+      "colNovosCount": "12 contatos",
+      "colAtendimento": "Em atendimento",
+      "colAtendimentoCount": "1 contato",
+      "colAguardando": "Aguardando",
+      "colAguardandoCount": "0 contatos",
+      "colFinalizados": "Finalizados",
+      "colFinalizadosCount": "1 contato",
+      "colArquivados": "Arquivados",
+      "colArquivadosCount": "0 contatos",
+      "labelInstagram": "Instagram",
+      "labelWhatsApp": "WhatsApp",
+      "labelWhatsAppApi": "WhatsApp API",
+      "c1Name": "João Silva",
+      "c1Handle": "+55 62 99123-4567",
+      "c1Preview": "Boa tarde! Quero saber do plano Pro",
+      "c2Name": "Maria Santos",
+      "c2Handle": "@mariastore",
+      "c2Preview": "imagem",
+      "c3Name": "Pedro Costa",
+      "c3Handle": "+55 11 98888-7777",
+      "c3Preview": "Show de bola!",
+      "c4Name": "Carlos Rocha",
+      "c4Handle": "+55 21 97777-6655",
+      "c4Preview": "Fechamos! Muito obrigado",
       "agentTitle": "Agente de IA - Vendedor",
       "agentLine1": "\"Olá! Como posso ajudar você hoje?\"",
       "agentLine2": "\"Quero saber mais sobre o plano Pro\"",
-      "agentLine3": "\"O Plano Pro inclui mensagens ilimitadas, agentes ilimitados, CRM Kanban, automação de Instagram e gestão de grupos. Posso te enviar uma demonstração?\""
+      "agentLine3": "\"O Plano Pro inclui mensagens ilimitadas, agentes ilimitados, CRM Kanban com vários números e Instagram Direct, automação de Instagram e gestão de grupos. Posso te enviar uma demonstração?\"",
+      "explainerTitle": "O que é CRM no estilo Kanban?",
+      "explainerBody": "CRM (Customer Relationship Management) é a gestão do relacionamento com clientes: reúne contatos, conversas e oportunidades em um só lugar para acompanhar vendas e atendimento. No formato Kanban, cada pessoa ou negócio vira um card em colunas — como Novos, Em atendimento ou Finalizados — que você pode reorganizar conforme a etapa do funil, com visão clara do que está parado, em andamento ou concluído."
     },
     "testimonials": {
       "label": "O que nossos clientes dizem",
@@ -808,7 +819,8 @@
       "docsTitle": "API Documentation - OnlyFlow",
       "sucessoTitle": "Payment confirmed - OnlyFlow",
       "canceladoTitle": "Payment cancelled - OnlyFlow",
-      "expiradoTitle": "Link expired - OnlyFlow"
+      "expiradoTitle": "Link expired - OnlyFlow",
+      "homeMetaDescription": "Automation and communication management platform that centralizes WhatsApp, Instagram Direct (DM) and more in one place — Kanban CRM for multiple numbers, AI and bulk messaging."
     },
     "sucesso": {
       "heading": "Payment confirmed",
@@ -846,14 +858,14 @@
       "badge": "Complete AI-powered communication platform",
       "title": "Multi-channel communication automation and management",
       "titleHighlight": "platform",
-      "description": "OnlyFlow is an automation and communication management platform that centralizes WhatsApp, Instagram and other channels in a single environment. Automate customer service, manage customer relationships and run campaigns at scale.",
+      "description": "OnlyFlow is an automation and communication management platform that centralizes WhatsApp, Instagram and other channels in a single environment. In the Kanban CRM, bring together multiple WhatsApp numbers and Instagram Direct (DM) in one workflow. Automate customer service, manage customer relationships and run campaigns at scale.",
       "ctaStart": "Get started",
       "ctaIntegrations": "View integrations",
       "ctaWhatsApp": "Talk on WhatsApp",
       "featureAI": "No-code AI",
-      "featureWhatsApp": "WhatsApp & Instagram",
+      "featureWhatsApp": "WhatsApp & Instagram Direct",
       "featureWorkflows": "Visual workflows",
-      "featureCRM": "Kanban CRM",
+      "featureCRM": "CRM · multiple numbers",
       "featureBulk": "Bulk messaging",
       "featureApps": "iOS & Android apps",
       "trustedBy": "Companies that trust OnlyFlow"
@@ -861,12 +873,12 @@
     "about": {
       "label": "About the application",
       "title": "Everything you need to centralize your conversations in one place.",
-      "description1": "OnlyFlow is a platform created for companies that need to automate customer service, manage customer relationships and run communication campaigns at scale. Connect multiple WhatsApp, Instagram and other channel accounts, create AI agents, build visual workflows and organize everything in the Kanban CRM.",
+      "description1": "OnlyFlow is a platform created for companies that need to automate customer service, manage customer relationships and run communication campaigns at scale. Connect multiple WhatsApp accounts, Instagram (Direct/DM) and other channels; the CRM brings multiple numbers and Instagram conversations together in one panel. Create AI agents, build visual workflows and organize everything in the Kanban CRM.",
       "description2": "Also available in native apps for iOS and Android, with biometric authentication and real-time synchronization.",
       "integrationsTitle": "Integrations and permissions",
       "integrationsDesc": "OnlyFlow connects to various services to offer a complete solution. All permissions are used exclusively for the functionalities described below.",
       "google": "Google (Sheets and Drive): lead synchronization with spreadsheets and file storage.",
-      "meta": "Meta (Instagram): automations in DMs, comments and message sequences.",
+      "meta": "Meta (Instagram): Direct (DM) connection, comment automations and message sequences.",
       "openai": "OpenAI: AI agents, contextual responses and audio transcription.",
       "typebot": "Typebot: external chatbots connected to MindOnlyFlow.",
       "whatsapp": "WhatsApp: multiple instances, groups and conversation history.",
@@ -893,7 +905,7 @@
       },
       "crm": {
         "title": "Integrated Kanban CRM",
-        "desc": "Organize contacts in customizable columns, view history, send messages and filter quickly."
+        "desc": "Multiple WhatsApp numbers and Instagram Direct in one CRM: customizable columns, unified history, messaging and quick filters."
       },
       "bulk": {
         "title": "Bulk messaging",
@@ -926,7 +938,7 @@
       "step4": {
         "label": "Step 4",
         "title": "Monitor and scale",
-        "desc": "Monitor conversations in Kanban CRM, run campaigns and track metrics in real time."
+        "desc": "Monitor conversations in Kanban CRM — multiple numbers and Instagram Direct together — run campaigns and track metrics in real time."
       }
     },
     "integrations": {
@@ -1000,29 +1012,39 @@
     },
     "heroMockup": {
       "crmLabel": "Kanban CRM",
-      "today": "Today",
-      "novosLeads": "New Leads",
-      "emNegociacao": "In negotiation",
-      "fechados": "Closed",
-      "lead1Name": "João Silva",
-      "lead1Company": "Tech Corp",
-      "lead1Value": "R$ 5,000 • Today",
-      "lead2Name": "Maria Santos",
-      "lead2Company": "StartUp XYZ",
-      "lead2Value": "R$ 8,000 • Today",
-      "neg1Name": "Pedro Costa",
-      "neg1Company": "Agência ABC",
-      "neg1Value": "R$ 12,000 • Today",
-      "neg2Name": "Ana Lima",
-      "neg2Company": "E-commerce Plus",
-      "neg2Value": "R$ 15,000 • Today",
-      "closed1Name": "Carlos Rocha",
-      "closed1Company": "Mega Store",
-      "closed1Value": "R$ 20,000 • Today",
+      "today": "Live",
+      "dragHint": "Drag contacts here",
+      "colNovos": "New",
+      "colNovosCount": "12 contacts",
+      "colAtendimento": "In progress",
+      "colAtendimentoCount": "1 contact",
+      "colAguardando": "Waiting",
+      "colAguardandoCount": "0 contacts",
+      "colFinalizados": "Completed",
+      "colFinalizadosCount": "1 contact",
+      "colArquivados": "Archived",
+      "colArquivadosCount": "0 contacts",
+      "labelInstagram": "Instagram",
+      "labelWhatsApp": "WhatsApp",
+      "labelWhatsAppApi": "WhatsApp API",
+      "c1Name": "João Silva",
+      "c1Handle": "+55 62 99123-4567",
+      "c1Preview": "Good afternoon! I want to know about the Pro plan",
+      "c2Name": "Maria Santos",
+      "c2Handle": "@mariastore",
+      "c2Preview": "image",
+      "c3Name": "Pedro Costa",
+      "c3Handle": "+55 11 98888-7777",
+      "c3Preview": "Awesome!",
+      "c4Name": "Carlos Rocha",
+      "c4Handle": "+55 21 97777-6655",
+      "c4Preview": "We closed! Thank you",
       "agentTitle": "AI Agent - Sales",
       "agentLine1": "\"Hello! How can I help you today?\"",
       "agentLine2": "\"I want to know more about the Pro plan\"",
-      "agentLine3": "\"The Pro plan includes unlimited messages, unlimited agents, Kanban CRM, Instagram automation and group management. Can I send you a demo?\""
+      "agentLine3": "\"The Pro plan includes unlimited messages, unlimited agents, Kanban CRM with multiple numbers and Instagram Direct, Instagram automation and group management. Can I send you a demo?\"",
+      "explainerTitle": "What is Kanban-style CRM?",
+      "explainerBody": "CRM (Customer Relationship Management) is how you manage customer relationships: it brings contacts, conversations and opportunities together so you can track sales and support. In Kanban style, each person or deal is a card in columns — such as New, In progress or Completed — that you move as they advance through the funnel, with a clear picture of what is waiting, active or done."
     },
     "testimonials": {
       "label": "What our clients say",

@@ -36,7 +36,7 @@
 
     currentLang = lang;
     localStorage.setItem(STORAGE_KEY, lang);
-    document.documentElement.lang = lang;
+    document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
 
     // Update all elements with data-i18n attribute
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -55,12 +55,34 @@
       }
     });
 
-    // Update title
+    // Update title + SEO meta (home)
     const pageType = document.body.getAttribute('data-page') || 'home';
     const titleKey = `site.${pageType}Title`;
     const title = t(titleKey, lang);
     if (title && title !== titleKey) {
       document.title = title;
+    }
+
+    if (pageType === 'home') {
+      const homeDesc = t('site.homeMetaDescription', lang);
+      if (homeDesc && homeDesc !== 'site.homeMetaDescription') {
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', homeDesc);
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', homeDesc);
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc) twDesc.setAttribute('content', homeDesc);
+      }
+      if (title && title !== titleKey) {
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', title);
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', title);
+      }
+      const ogLocale = document.querySelector('meta[property="og:locale"]');
+      if (ogLocale) {
+        ogLocale.setAttribute('content', lang === 'en' ? 'en_US' : 'pt_BR');
+      }
     }
 
     // Update language switcher button
