@@ -558,6 +558,10 @@ html[data-theme='light'] .skip-link:focus {
   background: #e8ecf4;
 }
 
+.hero-crm-screenshot {
+  display: block;
+}
+
 .hero-crm-col-head {
   border-bottom: 1px solid rgba(148, 163, 184, 0.35);
 }

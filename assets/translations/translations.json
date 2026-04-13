@@ -204,6 +204,7 @@
     "heroMockup": {
       "crmLabel": "CRM Kanban",
       "today": "Ao vivo",
+      "demoBadge": "Demonstração",
       "dragHint": "Arraste contatos aqui",
       "colNovos": "Novos",
       "colNovosCount": "12 contatos",
@@ -1013,6 +1014,7 @@
     "heroMockup": {
       "crmLabel": "Kanban CRM",
       "today": "Live",
+      "demoBadge": "Demo",
       "dragHint": "Drag contacts here",
       "colNovos": "New",
       "colNovosCount": "12 contacts",

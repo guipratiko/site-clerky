@@ -1,0 +1,88 @@
+/* OnlyFlow — página de captura (/captura) */
+
+:root {
+  --captura-glow: rgba(28, 134, 255, 0.35);
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  background: #1c86ff;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.captura-hero-glow {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% -20%,
+    var(--captura-glow),
+    transparent 70%
+  );
+}
+
+.captura-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+  color: #f8fafc;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.captura-input::placeholder {
+  color: rgba(148, 163, 184, 0.85);
+}
+
+.captura-input:focus {
+  border-color: rgba(28, 134, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(28, 134, 255, 0.2);
+}
+
+html[data-theme='light'] .captura-input {
+  background: #ffffff;
+  border-color: rgba(15, 23, 42, 0.15);
+  color: #0f172a;
+}
+
+html[data-theme='light'] .captura-input::placeholder {
+  color: rgba(100, 116, 139, 0.9);
+}
+
+html[data-theme='light'] .captura-input:focus {
+  border-color: #1c86ff;
+  box-shadow: 0 0 0 3px rgba(28, 134, 255, 0.15);
+}
+
+.captura-crm-screenshot {
+  display: block;
+}
+
+.captura-pulse {
+  animation: captura-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes captura-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}

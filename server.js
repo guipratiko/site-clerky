@@ -100,6 +100,15 @@ app.get('/crm-insta', (req, res) => {
   serveHTML(path.join(publicPath, 'instagram-crm-kanban.html'), res);
 });
 
+// Página de captura (funil / ads) — HTML estático, sem injeção de language.js
+app.get('/captura', (req, res) => {
+  const fp = path.join(publicPath, 'captura', 'index.html');
+  if (!fs.existsSync(fp)) {
+    return res.status(404).send('File not found');
+  }
+  res.type('html').send(fs.readFileSync(fp, 'utf8'));
+});
+
 // Checkout result pages
 app.get('/sucesso', (req, res) => {
   serveHTML(path.join(publicPath, 'sucesso.html'), res);
